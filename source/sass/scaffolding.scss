@@ -1,0 +1,59 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+
+body {
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+  color: $black;
+  background-color: $white-background;
+  font-family: $font;
+  font-weight: 500;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 21px;
+}
+
+a {
+  text-decoration: none;
+  color: $black;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+
+  border: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+}
+
+.button {
+  color: $white;
+  background-color: $brown;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
