@@ -1,0 +1,23 @@
+@media (min-width: $desktop-width) {
+  .user-navigation {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 53px;
+    padding-left: 0;
+    list-style: none;
+  }
+
+  .user-navigation__cart-icon {
+    display: none;
+  }
+
+  .user-navigation__cart-link {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .user-navigation__cart-counter {
+    margin-left: 3px;
+  }
+}

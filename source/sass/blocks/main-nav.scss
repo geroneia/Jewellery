@@ -1,1 +1,4 @@
-.main-nav {}
+.main-nav__wrapper {
+  display: flex;
+  border-bottom: 1px solid $gray;
+}

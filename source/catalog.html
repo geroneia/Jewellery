@@ -8,5 +8,72 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
+  <div style="display:none">
+    <include src="build/img/sprite_auto.svg"></include>
+  </div>
+
+  <header class="page-header">
+    <div class="page-header__wrapper">
+      <form class="page-header__search" method="get" action="#">
+        <button type="submit" class="page-header__search-button" aria-label="Search">
+          <svg class="page-header__search-icon" width="14" height="14">
+            <use xlink:href="#icon-loupe"></use>
+          </svg>
+        </button>
+        <label for="page-header__search"><span class="visually-hidden">Searching</span></label>
+        <input type="search" id="search" class="page-header__search-input" placeholder="Type here to search">
+      </form>
+      <a class="page-heder__logo" href="#">
+        <svg class="page-heder__logo-icon" width="66" height="66">
+          <use xlink:href="#icon-logo"></use>
+        </svg>
+      </a>
+      <ul class="page-header__user-navigation user-navigation">
+        <li class="user-navigation__login">
+          <a class="user-navigation__login-link" href="#">Login</a>
+        </li>
+        <li class="user-navigation__cart">
+          <a class="user-navigation__cart-link" href="#">Cart<span class="user-navigation__cart-counter">0</span>
+            <svg class="user-navigation__cart-icon" width="20" height="18">
+              <use xlink:href="#icon-cart"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <nav class="main-nav main-nav--opened main-nav--nojs">
+      <button class="main-nav__toggle" type="button"></button>
+      <div class="main-nav__wrapper">
+        <ul class="main-nav__list products-list">
+          <li class="products-list__item">
+            <a class="products-list__item-link">What’s new</a>
+          </li>
+          <li class="products-list__item">
+            <a class="products-list__item-link">Chokers</a>
+          </li>
+          <li class="products-list__item">
+            <a class="products-list__item-link">Necklaces</a>
+          </li>
+          <li class="products-list__item">
+            <a class="products-list__item-link">Rings</a>
+          </li>
+          <li class="products-list__item">
+            <a class="products-list__item-link">Earrings</a>
+          </li>
+        </ul>
+        <ul class="main-nav__list info-list info-list--desktop-main-only">
+          <li class="info-list__item">
+            <a class="info-list__item-link">About CH</a>
+          </li>
+          <li class="info-list__item">
+            <a class="info-list__item-link">Stores & Hours</a>
+          </li>
+          <li class="info-list__item">
+            <a class="info-list__item-link">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
 </body>
 </html>
