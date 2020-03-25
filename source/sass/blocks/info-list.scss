@@ -1,0 +1,21 @@
+@media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+  .info-list {
+    margin-top: 0;
+    padding-left: 0;
+    list-style: none;
+  }
+
+  .info-list__item {
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .info-list__item-link {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    color: $pale-white;
+  }
+}

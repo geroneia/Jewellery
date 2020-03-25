@@ -23,3 +23,28 @@
     margin-right: 0;
   }
 }
+
+@media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+  .products-list {
+    flex-direction: column;
+    margin-top: 47px;
+    margin-bottom: 40px;
+  }
+
+  .products-list__item {
+    margin-right: 0;
+    margin-bottom: 21px;
+    padding-top: 0;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .products-list__item-link {
+    color: $white;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+  }
+}

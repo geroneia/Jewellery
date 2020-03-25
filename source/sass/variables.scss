@@ -19,11 +19,15 @@ $black: #1d1613;
 $white: #ffffff;
 $gray-font: #9b9997;
 $transparent-gray: rgba(29, 22, 19, 0.25);
+$input-background: rgba(255, 255, 255, 0.15);
+$pale-white: rgba(255, 255, 255, 0.75);
 
 // Viewport
 
-$mobile-width: 320px;
-$tablet-width: 768px;
+$min-mobile-width: 320px;
+$maxx-mobile-width: 767px;
+$min-tablet-width: 768px;
+$max-tablet-width: 1023px;
 $desktop-width: 1024px;
 $retina-dpi: 144dpi;
 $retina-dppx: 1.5dppx;
