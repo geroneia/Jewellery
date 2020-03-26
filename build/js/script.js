@@ -7,8 +7,6 @@ var userNavigation = pageHeader.querySelector('.page-header__user-navigation');
 var mainNav = document.querySelector('.main-nav');
 var mainNavToggle = mainNav.querySelector('.main-nav__toggle');
 
-mainNav.classList.remove('main-nav--nojs');
-
 var openMenu = function () {
   pageHeader.classList.remove('page-header--menu-closed');
   pageHeaderSearch.classList.remove('page-header__search--closed');
@@ -36,6 +34,9 @@ var closeMenu = function () {
   userNavigation.classList.add('user-navigation--menu-closed');
   mainNav.classList.add('main-nav--closed');
 };
+
+mainNav.classList.remove('main-nav--nojs');
+closeMenu();
 
 if (document.body.clientWidth <= DESKTOP_WIDTH) {
   mainNavToggle.addEventListener('click', function () {

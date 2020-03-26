@@ -28,23 +28,23 @@
     <include src="build/img/sprite_auto.svg"></include>
   </div>
 
-  <header class="page-header">
+  <header class="page-header page-header--menu-opened">
     <div class="page-header__wrapper">
-      <form class="page-header__search page-header__search--closed" method="POST" action="#">
+      <form class="page-header__search page-header__search-opened" method="POST" action="#">
         <button type="submit" class="page-header__search-button" aria-label="Search">
           <svg class="page-header__search-icon" width="14" height="14">
             <use xlink:href="#icon-loupe"></use>
           </svg>
         </button>
         <label for="page-header__search"><span class="visually-hidden">Searching</span></label>
-        <input type="search" id="search" class="page-header__search-input" placeholder="Type here to search">
+        <input type="search" id="search" class="page-header__search-input page-header__search-input--menu-opened" placeholder="Type here to search">
       </form>
-      <a class="page-heder__logo" href="#">
-        <svg class="page-heder__logo-icon" width="66" height="66" role="img" aria-label="CH shop logo">
+      <a class="page-header__logo" href="main.html">
+        <svg class="page-header__logo-icon" width="66" height="66" role="img" aria-label="CH shop logo">
           <use xlink:href="#icon-logo"></use>
         </svg>
       </a>
-      <ul class="page-header__user-navigation user-navigation user-navigation--menu-closed">
+      <ul class="page-header__user-navigation user-navigation user-navigation--menu-opened">
         <li class="user-navigation__login">
           <a class="user-navigation__login-link" href="#">Login</a>
         </li>
@@ -52,14 +52,14 @@
           <a class="user-navigation__cart-link" href="#">
             <span class="user-navigation__cart-text">Cart</span>
             <span class="user-navigation__cart-counter">0</span>
-            <svg class="user-navigation__cart-icon" width="20" height="18" viewBox="0 0 20 18" fill="none">
+            <svg class="user-navigation__cart-icon" width="20" height="18" viewBox="0 0 20 18">
               <use xlink:href="#icon-cart"></use>
             </svg>
           </a>
         </li>
       </ul>
     </div>
-    <nav class="main-nav main-nav--closed main-nav--nojs">
+    <nav class="main-nav main-nav--opened main-nav--nojs">
       <button class="main-nav__toggle" type="button">
         <svg class="main-nav__toggle-icon" width="25" height="18">
           <use xlink:href="#icon-toggle"></use>
@@ -97,5 +97,6 @@
       </div>
     </nav>
   </header>
+  <script src="js/script.js"></script>
 </body>
 </html>
