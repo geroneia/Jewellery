@@ -1,7 +1,17 @@
+.main-nav--nojs {
+  .main-nav__toggle {
+    display: none;
+  }
+}
+
+.main-nav__toggle-icon {
+  stroke: $black;
+}
+
 @media (min-width: $desktop-width) {
-.main-nav__wrapper {
-  display: flex;
-  border-bottom: 1px solid $gray;
+  .main-nav__wrapper {
+    display: flex;
+    border-bottom: 1px solid $gray;
   }
 
   .main-nav__toggle {
@@ -10,9 +20,9 @@
 }
 
 @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
-.main-nav {
-  position: relative;
-}
+  .main-nav {
+    position: relative;
+  }
 
   .main-nav--closed {
     .main-nav__wrapper {
@@ -46,7 +56,6 @@
     }
 
     .main-nav__toggle-icon {
-      fill: $white;
       stroke: $white;
     }
 
@@ -58,6 +67,51 @@
     .main-nav__list {
       margin-left: 5.7%;
       margin-right: 5.7%;
+    }
+  }
+}
+
+@media (min-width: $min-mobile-width) and (max-width: $max-mobile-width) {
+  .main-nav__toggle {
+    display: block;
+    padding: 0;
+    width: 25px;
+    height: 18px;
+    position: absolute;
+    top: 37px;
+    left: 4.68%;
+    border: none;
+  }
+
+  .main-nav--closed {
+    .main-nav__wrapper {
+      display: none;
+    }
+
+    .main-nav__toggle {
+      background-color: $white;
+      stroke: $black;
+    }
+  }
+
+  .main-nav--opened {
+    .main-nav__toggle {
+      background-color: transparent;
+    }
+
+    .main-nav__toggle-icon {
+      fill: $white;
+      stroke: $white;
+    }
+
+    .main-nav__wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .main-nav__list {
+      margin-left: 5%;
+      margin-right: 5%;
     }
   }
 }
