@@ -39,6 +39,7 @@ mainNav.classList.remove('main-nav--nojs');
 closeMenu();
 
 if (document.body.clientWidth <= DESKTOP_WIDTH) {
+
   mainNavToggle.addEventListener('click', function () {
     if (pageHeader.classList.contains('page-header--menu-closed')) {
       openMenu();
