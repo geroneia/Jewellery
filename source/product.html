@@ -97,6 +97,84 @@
       </div>
     </nav>
   </header>
-  <script src="js/script.js"></script>
-</body>
-</html>
+  <div class="page-wrapper">
+    <main class="main">
+      <!-- содержимое главной страницы -->
+    </main>
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+      <div class="page-footer__subscription subscription">
+        <h2 class="subscription__heading">
+          The good stuff in your inbox
+        </h2>
+        <p class="subscription__text">
+          News and updates from CH. No spam, we promise.
+        </p>
+        <form class="subscription__form" method="GET" action="#">
+          <label class="subscription__label" for="email"><span class="visually-hidden">E-mail</span></label>
+          <input class="subscription__input" type="email" name="email" id="email" placeholder="Your E-mail" required>
+          <button class="subscription__submit" type="submit">Sign Up
+            <svg class="subscription__submit-icon" width="29" height="9">
+              <use xlink:href="#icon-arrow"></use>
+            </svg>
+          </button>
+        </form>
+      </div>
+      <div class="page-footer__order-information order-information">
+        <ul class="order-information__list">
+          <li class="order-information__item"><a class="order-information__link" href="#">Ordering & Payment</a></li>
+          <li class="order-information__item"><a class="order-information__link" href="#">Terms & Conditions</a></li>
+          <li class="order-information__item"><a class="order-information__link" href="#">Returns & Exchanges</a></li>
+          <li class="order-information__item"><a class="order-information__link" href="#">Delivery</a></li>
+        </ul>
+      </div>
+      <div class="page-footer__shop-information shop-information">
+        <ul class="shop-information__list">
+          <li class="shop-information__item"><a class="shop-information__link" href="#">About CH</a></li>
+          <li class="shop-information__item"><a class="shop-information__link" href="#">Stores & Hours</a></li>
+          <li class="shop-information__item"><a class="shop-information__link" href="#">Jobs</a></li>
+          <li class="shop-information__item"><a class="shop-information__link" href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="page-footer__social social">
+        <ul class="social__list">
+          <li class="social__item social__item-fb">
+            <a class="social__link" href="#">
+              <svg class="social__icon social__icon-fb" width="8" height="15">
+                <use xlink:href="#icon-fb"></use>
+              </svg>
+              <span class="social__label">Facebook</span>
+            </a>
+          </li>
+          <li class="social__item social__item-instagram">
+            <a class="social__link" href="#">
+              <svg class="social__icon social__icon-inst" width="15" height="15">
+                <use xlink:href="#icon-inst"></use>
+              </svg>
+              <span class="social__label">Instagram</span>
+            </a>
+          </li>
+          <li class="social__item social__item-pin">
+            <a class="social__link" href="#">
+              <svg class="social__icon social__icon-pin" width="15" height="15">
+                <use xlink:href="#icon-pin"></use>
+              </svg>
+              <span class="social__label">Pinterest</span>
+            </a>
+          </li>
+          <li class="social__item social__item-twitter">
+            <a class="social__link" href="#">
+              <svg class="social__icon social__icon-tw" width="15" height="13">
+                <use xlink:href="#icon-tw"></use>
+              </svg>
+              <span class="social__label">Twitter</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    </footer>
+  </div>
+    <script src="js/script.js"></script>
+  </body>
+  </html>
