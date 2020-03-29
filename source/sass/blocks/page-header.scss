@@ -22,10 +22,13 @@
 
 .page-header__search-button {
   position: absolute;
+  padding: 0;
   border: none;
   background-color: transparent;
+  width: 16px;
+  height: 17px;
   top: 11px;
-  left: 7px;
+  left: 11px;
 }
 
 .page-header__search-input {
@@ -80,12 +83,11 @@
     text-align: left;
     vertical-align: middle;
     position: relative;
-    // margin-right: 32.7%;
   }
 
   .page-header__search-button {
-    top: 55px;
-    left: -6px;
+    top: 54px;
+    left: -1px;
   }
 
   .page-header__search-icon {

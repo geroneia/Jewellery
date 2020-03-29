@@ -6,7 +6,6 @@
   padding-left: 0;
   min-height: 60px;
   min-width: 493px;
-  // Посмотреть, как можно поменять ширину на 100%
   margin-left: auto;
   margin-right: auto;
   list-style: none;
@@ -36,7 +35,7 @@
     display: block;
     flex-direction: column;
     min-width: 280px;
-    margin-top: 47px;
+    margin-top: 46px;
     margin-bottom: 40px;
   }
 
@@ -61,7 +60,7 @@
 @media (min-width: $min-mobile-width) and (max-width: $max-mobile-width) {
   .products-list {
     flex-direction: column;
-    margin-top: 38px;
+    margin-top: 36px;
     margin-bottom: 29px;
     display: block;
   }
