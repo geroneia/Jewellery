@@ -1,1 +1,37 @@
-.page-footer {}
+.page-footer {
+  background-color: $black-background;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.page-footer__wrapper {
+  display: flex;
+  vertical-align: middle;
+}
+
+@media (min-width: $desktop-width) {
+  .page-footer__wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    min-height: 338px;
+    padding-left: 7.17%;
+    padding-right: 7.17%;
+    padding-bottom: 100px;
+  }
+
+  .page-footer__subscription {
+    min-width: 510px;
+  }
+
+  .page-footer__order-information {
+    min-width: 168px;
+  }
+
+  .page-footer__shop-information {
+    min-width: 116px;
+  }
+
+  .page-footer__social {
+    min-width: 115px;
+  }
+}
