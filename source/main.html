@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,6 +24,7 @@
   <link rel="preload" href="fonts/Cormorant-Garamond/cormorant-garamond-v7-latin-700.woff2" as="font">
   <link rel="preload" href="fonts/Cormorant-Garamond/cormorant-garamond-v7-latin-700.woff" as="font"> -->
 </head>
+
 <body>
   <div style="display:none">
     <include src="build/img/sprite_auto.svg"></include>
@@ -37,7 +39,8 @@
           </svg>
         </button>
         <label for="page-header__search"><span class="visually-hidden">Searching</span></label>
-        <input type="search" id="search" class="page-header__search-input page-header__search-input--menu-opened" placeholder="Type here to search">
+        <input type="search" id="search" class="page-header__search-input page-header__search-input--menu-opened"
+          placeholder="Type here to search">
       </form>
       <a class="page-header__logo" href="#">
         <svg class="page-header__logo-icon" width="66" height="66" role="img" aria-label="CH shop logo">
@@ -98,83 +101,386 @@
     </nav>
   </header>
   <div class="page-wrapper">
-  <main class="main">
-    <!-- содержимое главной страницы -->
-  </main>
-  <footer class="page-footer">
-    <div class="page-footer__wrapper">
-    <div class="page-footer__subscription subscription">
-      <h2 class="subscription__heading">
-        The good stuff in your inbox
-      </h2>
-      <p class="subscription__text">
-        News and updates from CH. No spam, we promise.
-      </p>
-      <form class="subscription__form" method="GET" action="#">
-        <label class="subscription__label" for="email"><span class="visually-hidden">E-mail</span></label>
-        <input class="subscription__input" type="email" name="email" id="email" placeholder="Your E-mail" required>
-        <button class="subscription__submit" type="submit">Sign Up
-          <svg class="subscription__submit-icon" width="29" height="9">
-            <use xlink:href="#icon-arrow"></use>
-          </svg>
-        </button>
-      </form>
-    </div>
-    <div class="page-footer__order-information order-information">
-      <ul class="order-information__list">
-        <li class="order-information__item"><a class="order-information__link" href="#">Ordering & Payment</a></li>
-        <li class="order-information__item"><a class="order-information__link" href="#">Terms & Conditions</a></li>
-        <li class="order-information__item"><a class="order-information__link" href="#">Returns & Exchanges</a></li>
-        <li class="order-information__item"><a class="order-information__link" href="#">Delivery</a></li>
-      </ul>
-    </div>
-    <div class="page-footer__shop-information shop-information">
-      <ul class="shop-information__list">
-        <li class="shop-information__item"><a class="shop-information__link" href="#">About CH</a></li>
-        <li class="shop-information__item"><a class="shop-information__link" href="#">Stores & Hours</a></li>
-        <li class="shop-information__item"><a class="shop-information__link" href="#">Jobs</a></li>
-        <li class="shop-information__item"><a class="shop-information__link" href="#">Contact Us</a></li>
-      </ul>
-    </div>
-    <div class="page-footer__social social">
-      <ul class="social__list">
-        <li class="social__item social__item-fb">
-          <a class="social__link" href="#">
-            <svg class="social__icon social__icon-fb" width="8" height="15">
-              <use xlink:href="#icon-fb"></use>
+    <main class="main">
+      <section class="main__promo">
+        <h2 class="visually-hidden">Slogan</h2>
+        <span class="main__promo-slogan">
+          <b class="main__promo-definition">Perfection</b>
+          made to be yours</span>
+      </section>
+      <section class="main__new-arrivals new-arrivals">
+        <h2 class="new-arrivals__heading">New In</h2>
+        <a class="new-arrivals__link" href="#">Shop Now</a>
+        <div class="new-arrivals__slider slider">
+          <a class="slider__controls slider__control-left" href="#">
+            <svg class="slider__left-arrow" width="29" height="9">
+              <use xlink:href="#icon-arrow"></use>
             </svg>
-            <span class="social__label">Facebook</span>
           </a>
-        </li>
-        <li class="social__item social__item-instagram">
-          <a class="social__link" href="#">
-            <svg class="social__icon social__icon-inst" width="15" height="15">
-              <use xlink:href="#icon-inst"></use>
+          <a class="slider__controls slider__control-right" href="#">
+            <svg class="slider__right-arrow" width="29" height="9">
+              <use xlink:href="#icon-arrow"></use>
             </svg>
-            <span class="social__label">Instagram</span>
           </a>
-        </li>
-        <li class="social__item social__item-pin">
-          <a class="social__link" href="#">
-            <svg class="social__icon social__icon-pin" width="15" height="15">
-              <use xlink:href="#icon-pin"></use>
-            </svg>
-            <span class="social__label">Pinterest</span>
-          </a>
-        </li>
-        <li class="social__item social__item-twitter">
-          <a class="social__link" href="#">
-            <svg class="social__icon social__icon-tw" width="15" height="13">
-              <use xlink:href="#icon-tw"></use>
-            </svg>
-            <span class="social__label">Twitter</span>
-          </a>
-        </li>
-      </ul>
-    </div>
+          <div class="slider__wrapper">
+            <ul class="slider__product-list">
+              <li class="slider__product-item">
+                <a class="slider__product-description" href="#">
+                  <picture class="slider__product-image-wrap">
+                    <source media="(min-width: 1024px)"
+                      srcset="img/purple-gemstone-necklace-desktop@1x.png 1x, img/purple-gemstone-necklace-desktop@2x.png 2x">
+                      <!-- 270*284 -->
+                    <source media="(min-width: 768px)"
+                      srcset="img/amethyst-gemstone-necklace-tablet@1x.png 1x, img/amethyst-gemstone-necklace-tablet@2x.png 2x">
+                      <!-- 324*340 -->
+                    <img class="slider__product-image" src="img/amethyst-gemstone-necklace-mobile@1x.png"
+                      srcset="img/amethyst-gemstone-necklace-mobile@2x.png 2x" width="130" height="136" alt="Purple gemstone necklace">
+                  </picture>
+                </a>
+              </li>
+              <li class="slider__product-item">
+                <a class="slider__product-description" href="#">
+                  <picture class="slider__product-image-wrap">
+                    <source media="(min-width: 1024px)"
+                      srcset="img/layered-choker-necklace-desktop@1x.png 1x, img\layered-choker-necklace-desktop@2x.png 2x">
+                      <!-- 270*284 -->
+                    <source media="(min-width: 768px)"
+                      srcset="img/layered-choker-necklace-tablet@1x.png 1x, layered-choker-necklace-tablet@2x.png 2x">
+                      <!-- 324*340 -->
+                    <img class="slider__product-image" src="img/layered-choker-necklace-mobile@1x.png"
+                      srcset="img/layered-choker-necklace-mobile@2x.png 2x" width="130" height="136" alt="Layered choker necklace">
+                  </picture>
+                </a>
+              </li>
+              <li class="slider__product-item">
+                <a class="slider__product-description" href="#">
+                  <picture class="slider__product-image-wrap">
+                    <source media="(min-width: 1024px)"
+                      srcset="img/dainty-gold-necklace-desktop@1x.png 1x, img/dainty-gold-necklace-desktop@2x.png 2x">
+                      <!-- 270*284 -->
+                    <source media="(min-width: 768px)"
+                      srcset="img/dainty-gold-necklace-tablet@1x.png 1x, img/dainty-gold-necklace-tablet@2x.png 2x">
+                      <!-- 324*340 -->
+                    <img class="slider__product-image" src="img/dainty-gold-necklace-mobile@1x.png"
+                      srcset="img/dainty-gold-necklace-mobile@2x.png 2x" width="130" height="136" alt="Dainty gold necklace">
+                  </picture>
+                </a>
+              </li>
+              <li class="slider__product-item">
+                <a class="slider__product-description" href="#">
+                  <picture class="slider__product-image-wrap">
+                    <source media="(min-width: 1024px)"
+                      srcset="img/galaxy-earrings-desktop@1x.png 1x, img/galaxy-earrings-desktop@2x.png 2x">
+                      <!-- 270*284 -->
+                    <source media="(min-width: 768px)"
+                      srcset="img/galaxy-earrings-tablet@1x.png 1x, img/galaxy-earrings-tablet@2x.png 2x">
+                      <!-- 324*340 -->
+                    <img class="slider__product-image" src="img/galaxy-earrings-mobile@1x.png"
+                      srcset="img/galaxy-earrings-mobile@2x.png 2x" width="130" height="136" alt="Galaxy earrings">
+                  </picture>
+                </a>
+              </li>
+              <li class="slider__product-item">
+                <a class="slider__product-description" href="#">
+                  <picture class="slider__product-image-wrap">
+                    <source media="(min-width: 1024px)"
+                      srcset="img/bird-necklace-slider-desktop@1x.png 1x, img/bird-necklace-slider-desktop@2x.png 2x">
+                    <source media="(min-width: 768px)"
+                      srcset="img/bird-necklace-slider-tablet@1x.png 1x, img/bird-necklace-slider-tablet@2x.png 2x">
+                    <img class="slider__product-image" src="img/bird-necklace-slider-mobile@1x.png"
+                      srcset="img/bird-necklace-slider-mobile@2x.png 2x" width="130" height="136" alt="Bird necklace">
+                  </picture>
+                </a>
+              </li>
+              <li class="slider__product-item">
+                <a class="slider__product-description" href="#">
+                  <picture class="slider__product-image-wrap">
+                    <source media="(min-width: 1024px)"
+                      srcset="img/black-choker-gold-bead-slider-desktop@1x.png 1x, img/black-choker-gold-bead-slider-desktop@2x.png 2x">
+                    <source media="(min-width: 768px)"
+                      srcset="img/black-choker-gold-bead-slider-tablet@1x.png 1x, img/black-choker-gold-bead-slider-tablet@2x.png 2x">
+                    <img class="slider__product-image" src="img/black-choker-gold-bead-slider-mobile@1x.png"
+                      srcset="img/black-choker-gold-bead-slider-mobile@2x.png 2x" width="130" height="136" alt="Black choker with gold bead">
+                  </picture>
+                </a>
+              </li>
+              <li class="slider__product-item">
+                <a class="slider__product-description" href="#">
+                  <picture class="slider__product-image-wrap">
+                    <source media="(min-width: 1024px)"
+                      srcset="img/black-leather-choker-slider-desktop@1x.png 1x, img/black-leather-choker-slider-desktop@2x.png 2x">
+                    <source media="(min-width: 768px)"
+                      srcset="img/black-leather-choker-slider-tablet@1x.png 1x, img/black-leather-choker-slider-tablet@2x.png 2x">
+                    <img class="slider__product-image" src="img/black-leather-choker-slider-mobile@1x.png"
+                      srcset="img/black-leather-choker-slider-mobile@2x.png 2x" width="130" height="136" alt="Black leather choker">
+                  </picture>
+                </a>
+              </li>
+              <li class="slider__product-item">
+                <a class="slider__product-description" href="#">
+                  <picture class="slider__product-image-wrap">
+                    <source media="(min-width: 1024px)"
+                      srcset="img/boho-earrings-slider-desktop@1x.png 1x, img/boho-earrings-slider-desktop@2x.png 2x">
+                    <source media="(min-width: 768px)"
+                      srcset="img/boho-earrings-slider-tablet@1x.png 1x, img/boho-earrings-slider-tablet@2x.png 2x">
+                    <img class="slider__product-image" src="img/dainty-gold-necklace-mobile@1x.png"
+                      srcset="img/dainty-gold-necklace-mobile@2x.png 2x" width="130" height="136" alt="Boho earrings">
+                  </picture>
+                </a>
+              </li>
+              <li class="slider__product-item">
+                <a class="slider__product-description" href="#">
+                  <picture class="slider__product-image-wrap">
+                    <source media="(min-width: 1024px)"
+                      srcset="img/elephant-earrings-slider-desktop@1x.png 1x, img/elephant-earrings-slider-desktop@2x.png 2x">
+                    <source media="(min-width: 768px)"
+                      srcset="img/elephant-earrings-slider-tablet@1x.png 1x, img/elephant-earrings-slider-tablet@2x.png 2x">
+                    <img class="slider__product-image" src="img/elephant-earrings-slider-mobile@1x.png"
+                      srcset="img/elephant-earrings-slider-mobile@2x.png 2x" width="130" height="136" alt="Elephant earrings">
+                  </picture>
+                </a>
+              </li>
+              <li class="slider__product-item">
+                <a class="slider__product-description" href="#">
+                  <picture class="slider__product-image-wrap">
+                    <source media="(min-width: 1024px)"
+                      srcset="img/origami-crane-necklace-slider-desktop@1x.png 1x, img/origami-crane-necklace-slider-desktop@2x.png 2x">
+                    <source media="(min-width: 768px)"
+                      srcset="img/origami-crane-necklace-slider-tablet@1x.png 1x, img/origami-crane-necklace-slider-tablet@2x.png 2x">
+                    <img class="slider__product-image" src="img/origami-crane-necklace-slider-mobile@1x.png"
+                      srcset="img/origami-crane-necklace-slider-mobile@2x.png 2x" width="130" height="136" alt="Origami crane necklace">
+                  </picture>
+                </a>
+              </li>
+              <li class="slider__product-item">
+                <a class="slider__product-description" href="#">
+                  <picture class="slider__product-image-wrap">
+                    <source media="(min-width: 1024px)"
+                      srcset="img/pearl-earrings-slider-desktop@1x.png 1x, img/pearl-earrings-slider-desktop@2x.png 2x">
+                    <source media="(min-width: 768px)"
+                      srcset="img/pearl-earrings-slider-tablet@1x.png 1x, img/pearl-earrings-slider-tablet@2x.png 2x">
+                    <img class="slider__product-image" src="img/pearl-earrings-slider-mobile@1x.png"
+                      srcset="img/pearl-earrings-slider-mobile@2x.png 2x" width="130" height="136" alt="Pearl earrings">
+                  </picture>
+                </a>
+              </li>
+              <li class="slider__product-item">
+                <a class="slider__product-description" href="#">
+                  <picture class="slider__product-image-wrap">
+                    <source media="(min-width: 1024px)"
+                      srcset="img/threader-necklace-slider-desktop@1x.png 1x, img/threader-necklace-slider-desktop@2x.png 2x">
+                    <source media="(min-width: 768px)"
+                      srcset="img/threader-necklace-slider-tablet@1x.png 1x, img/threader-necklace-slider-tablet@2x.png 2x">
+                    <img class="slider__product-image" src="img/threader-necklace-slider-mobile@1x.png"
+                      srcset="img/threader-necklace-slider-mobile@2x.png 2x" width="130" height="136" alt="Threader necklace">
+                  </picture>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <ul class="slider__pagination">
+            <li class="slider__pagination-item">
+              <a class="slider__pagination-link">1</a>
+            </li>
+            <li class="slider__pagination-item">
+              <a class="slider__pagination-link">2</a>
+            </li>
+            <li class="slider__pagination-item">
+              <a class="slider__pagination-link">3</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="main-blog blog">
+        <h2 class="blog__heading">Blog</h2>
+        <a class="blog__link" href="#">Read All</a>
+        <article class="blog__article article article__first">
+          <p class="article__date">September 30, 2019</p>
+          <h3 class="article__heading">How to care for your jewellery</h3>
+          <a class="article__link" href="#">Read Article</a>
+        </article>
+        <article class="blog__article article article__second">
+          <p class="article__date">September 16, 2019</p>
+          <h3 class="article__heading">AW 19 trends</h3>
+          <a class="article__link" href="#">Read Article</a>
+        </article>
+        <article class="blog__article article article__third">
+          <p class="article__date">September 23, 2019</p>
+          <h3 class="article__heading">Power of crystals</h3>
+          <a class="article__link" href="#">Read Article</a>
+        </article>
+      </section>
+      <section class="main__faq faq">
+        <h2 class="faq__heading">Frequently asked questions</h2>
+        <ul class="faq__list">
+          <li class="faq__item">
+            <p class="faq__question">What materials are the jewellery made of?</p>
+            <p class="faq__answer">Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and semiprecious stones and crystals.</p>
+          </li>
+          <li class="faq__item">
+            <p class="faq__question">Which countries do you deliver to?</p>
+            <p class="faq__answer"></p>
+          </li>
+          <li class="faq__item">
+            <p class="faq__question">What are the payment methods?</p>
+            <p class="faq__answer"></p>
+          </li>
+          <li class="faq__item">
+            <p class="faq__question">Can I return the jewellery if it didn’t fit me?</p>
+            <p class="faq__answer"></p>
+          </li>
+        </ul>
+      </section>
+      <section class="main__contacts contacts">
+        <h2 class="contacts__heading"><span>@</span>Chjewellery</h2>
+        <a class="contacts__link" href="#">Follow Us</a>
+      </section>
+      <section class="main__gallery gallery">
+        <ul class="gallery__images-list">
+          <li class="gallery__images-item">
+            <picture class="gallery__images-wrap">
+              <source media="(min-width: 1024px)"
+                srcset="img/square-earrings-desktop@1x.png 1x, img/square-earrings-desktop@2x.png 2x">
+              <source media="(min-width: 768px)"
+                srcset="img/quare-earrings-tablet@1x.png 1x, img/quare-earrings-tablet@2x.png 2x">
+              <img class="gallery__image" src="img/square-earrings-mobile@1x.png"
+                srcset="img/pearl-earrings-slider-mobile@2x.png 2x" width="130" height="130" alt="Square earrings">
+            </picture>
+          </li>
+          <li class="gallery__images-item">
+            <picture class="gallery__images-wrap">
+              <source media="(min-width: 1024px)"
+                srcset="img/big-gem-earrings-desktop@1x.png 1x, img/big-gem-earrings-desktop@2x.png 2x">
+              <source media="(min-width: 768px)"
+                srcset="img/big-gem-earrings-tablet@1x.png 1x, img/big-gem-earrings-tablet@2x.png 2x">
+              <img class="gallery__image" src="img/big-gem-earrings-mobile@1x.png"
+                srcset="img/big-gem-earrings-mobile@2x.png 2x" width="130" height="87" alt="Big gem earrings">
+            </picture>
+          </li>
+          <li class="gallery__images-item">
+            <picture class="gallery__images-wrap">
+              <source media="(min-width: 1024px)"
+                srcset="img/woman-hands-up-desktop@1x.png 1x, img/woman-hands-up-desktop@1x.png 2x">
+              <source media="(min-width: 768px)"
+                srcset="img/woman-hands-up-tablet@1x.jpg 1x, img/woman-hands-up-tablet@2x.jpg 2x">
+              <img class="gallery__image" src="img/woman-hands-up-mobile@1x.jpg"
+                srcset="img/woman-hands-up-mobile@2x.jpg 2x" width="145" height="226" alt="Woman with hands up">
+            </picture>
+          </li>
+          <li class="gallery__images-item">
+            <picture class="gallery__images-wrap">
+              <source media="(min-width: 1024px)"
+                srcset="img/hands-in-bracelets-desktop@1x.png 1x, img/hands-in-bracelets-desktop@2x.png 2x">
+              <source media="(min-width: 768px)"
+                srcset="img/hands-in-bracelets-tablet@1x.jpg 1x, img/hands-in-bracelets-tablet@2x.jpg 2x">
+              <img class="gallery__image" src="img/hands-in-bracelets-mobile@1x.png"
+                srcset="img/hands-in-bracelets-mobile@2x.png 2x" width="145" height="121" alt="Hands in bracelets">
+            </picture>
+          </li>
+          <li class="gallery__images-item">
+            <picture class="gallery__images-wrap">
+              <source media="(min-width: 1024px)"
+                srcset="img/kit-desktop@1x.png 1x, img/kit-desktop@2x.png 2x">
+              <source media="(min-width: 768px)"
+                srcset="img/kit-tablet@1x.jpg 1x, img/kit-tablet@2x.jpg 2x">
+              <img class="gallery__image" src="img/kit-mobile@1x.png"
+                srcset="img/kit-mobile@2x.png 2x" width="130" height="115" alt="Jewelry set">
+            </picture>
+          </li>
+          <li class="gallery__images-item">
+            <picture class="gallery__images-wrap">
+              <source media="(min-width: 1024px)"
+                srcset="img/twisted-earrings-desktop@1x.png 1x, img/twisted-earrings-desktop@2x.png 2x">
+              <img class="gallery__image gallery__image-mobile-no" src="img/twisted-earrings-tablet@1x.jpg"
+                srcset="img/twisted-earrings-tablet@1x.jpg 2x" width="126" height="126" alt="Twisted earrings">
+            </picture>
+          </li>
+          <li class="gallery__images-item">
+            <picture class="gallery__images-wrap">
+              <source media="(min-width: 1024px)"
+                srcset="img/hands-cross-desktop@1x.png 1x, img/hands-cross-desktop@1x.png 2x">
+              <img class="gallery__image gallery__image-mobile-no" src="img/hands-cross-tablet@1x.png"
+                srcset="img/hands-cross-tablet@2x.png 2x" width="134" height="96" alt="Crossed heands">
+            </picture>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+        <div class="page-footer__subscription subscription">
+          <h2 class="subscription__heading">
+            The good stuff in your inbox
+          </h2>
+          <p class="subscription__text">
+            News and updates from CH. No spam, we promise.
+          </p>
+          <form class="subscription__form" method="GET" action="#">
+            <label class="subscription__label" for="email"><span class="visually-hidden">E-mail</span></label>
+            <input class="subscription__input" type="email" name="email" id="email" placeholder="Your E-mail" required>
+            <button class="subscription__submit" type="submit">Sign Up
+              <svg class="subscription__submit-icon" width="29" height="9">
+                <use xlink:href="#icon-arrow"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
+        <div class="page-footer__order-information order-information">
+          <ul class="order-information__list">
+            <li class="order-information__item"><a class="order-information__link" href="#">Ordering & Payment</a></li>
+            <li class="order-information__item"><a class="order-information__link" href="#">Terms & Conditions</a></li>
+            <li class="order-information__item"><a class="order-information__link" href="#">Returns & Exchanges</a></li>
+            <li class="order-information__item"><a class="order-information__link" href="#">Delivery</a></li>
+          </ul>
+        </div>
+        <div class="page-footer__shop-information shop-information">
+          <ul class="shop-information__list">
+            <li class="shop-information__item"><a class="shop-information__link" href="#">About CH</a></li>
+            <li class="shop-information__item"><a class="shop-information__link" href="#">Stores & Hours</a></li>
+            <li class="shop-information__item"><a class="shop-information__link" href="#">Jobs</a></li>
+            <li class="shop-information__item"><a class="shop-information__link" href="#">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="page-footer__social social">
+          <ul class="social__list">
+            <li class="social__item social__item-fb">
+              <a class="social__link" href="#">
+                <svg class="social__icon social__icon-fb" width="8" height="15">
+                  <use xlink:href="#icon-fb"></use>
+                </svg>
+                <span class="social__label">Facebook</span>
+              </a>
+            </li>
+            <li class="social__item social__item-instagram">
+              <a class="social__link" href="#">
+                <svg class="social__icon social__icon-inst" width="15" height="15">
+                  <use xlink:href="#icon-inst"></use>
+                </svg>
+                <span class="social__label">Instagram</span>
+              </a>
+            </li>
+            <li class="social__item social__item-pin">
+              <a class="social__link" href="#">
+                <svg class="social__icon social__icon-pin" width="15" height="15">
+                  <use xlink:href="#icon-pin"></use>
+                </svg>
+                <span class="social__label">Pinterest</span>
+              </a>
+            </li>
+            <li class="social__item social__item-twitter">
+              <a class="social__link" href="#">
+                <svg class="social__icon social__icon-tw" width="15" height="13">
+                  <use xlink:href="#icon-tw"></use>
+                </svg>
+                <span class="social__label">Twitter</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
   </div>
-  </footer>
-</div>
   <script src="js/script.js"></script>
 </body>
+
 </html>
