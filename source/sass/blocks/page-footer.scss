@@ -35,3 +35,59 @@
     min-width: 115px;
   }
 }
+
+@media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+  .page-footer__wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    min-height: 446px;
+    padding-left: 5.9%;
+    padding-right: 19.5%;
+    padding-bottom: 55px;
+  }
+
+  .page-footer__subscription {
+    min-width: 100%;
+  }
+
+  .page-footer__order-information {
+    min-width: 168px;
+  }
+
+  .page-footer__shop-information {
+    min-width: 116px;
+  }
+
+  .page-footer__social {
+    min-width: 115px;
+  }
+}
+
+@media (min-width: $min-mobile-width) and (max-width: $max-mobile-width) {
+  .page-footer__wrapper {
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    min-height: 773px;
+    padding-left: 4.68%;
+    padding-right: 4.68%;
+    padding-bottom: 37px;
+  }
+
+  .page-footer__subscription {
+    min-width: 100%;
+  }
+
+  .page-footer__order-information {
+    min-width: 168px;
+  }
+
+  .page-footer__shop-information {
+    min-width: 116px;
+  }
+
+  .page-footer__social {
+    min-width: 162px;
+  }
+}

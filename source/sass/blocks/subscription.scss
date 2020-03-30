@@ -29,7 +29,7 @@
     content: "";
     bottom: 0;
     left: 0;
-    width: 500px;
+    width: calc(100% - 10px);
     height: 1px;
     background-color: $white;
   }
@@ -40,7 +40,8 @@
   border: none;
   margin-right: auto;
   height: 40px;
-  // outline: 1px solid red;
+  color: $white;
+
   &::placeholder {
     font-family: $font;
     font-weight: 500;
@@ -89,5 +90,68 @@
     display: flex;
     justify-content: space-between;
     margin-right: 8px;
+  }
+}
+
+@media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+  .subscription {
+    padding-top: 50px;
+    padding-bottom: 46px;
+  }
+
+  .subscription__heading {
+    margin-bottom: 9px;
+  }
+
+  .subscription__text {
+    margin-bottom: 34px;
+  }
+
+  .subscription__submit {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 11px;
+  }
+
+  .subscription__form {
+    &::after {
+      width: calc(100% - 13px);
+    }
+  }
+}
+
+@media (min-width: $min-mobile-width) and (max-width: $max-mobile-width) {
+  .subscription {
+    padding-top: 50px;
+    padding-bottom: 46px;
+    padding-right: 0;
+  }
+
+  .subscription__heading {
+    margin-bottom: 13px;
+    margin-right: 24%;
+  }
+
+  .subscription__text {
+    margin-bottom: 31px;
+    margin-right: 15%;
+    line-height: 22px;
+  }
+
+  .subscription__submit {
+    display: flex;
+    justify-content: space-between;
+    width: 102px;
+    margin-right: 0;
+  }
+
+  .subscription__submit-icon {
+    margin-right: 0;
+  }
+
+  .subscription__form {
+    &::after {
+      width: 100%;
+    }
   }
 }

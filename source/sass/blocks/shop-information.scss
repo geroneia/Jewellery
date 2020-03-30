@@ -26,3 +26,9 @@
     padding-top: 96px;
   }
 }
+
+@media (min-width: $min-mobile-width) and (max-width: $max-mobile-width) {
+  .shop-information {
+    padding-bottom: 45px;
+  }
+}
