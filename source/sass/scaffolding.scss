@@ -65,3 +65,8 @@ img {
   flex-direction: column;
   min-height: 100%;
 }
+
+.modal-open {
+  height: 100vh;
+  overflow: hidden;
+}
