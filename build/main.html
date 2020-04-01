@@ -58,10 +58,10 @@
             <use xlink:href="#icon-loupe"></use>
           </svg>
         </button>
-        <label for="page-header__search"><span class="visually-hidden">Searching</span></label>
+        <label for="search"><span class="visually-hidden">Searching</span></label>
         <input type="search" id="search" class="page-header__search-input page-header__search-input--menu-opened" placeholder="Type here to search">
       </form>
-      <a class="page-header__logo" href="#">
+      <a class="page-header__logo">
         <svg class="page-header__logo-icon" width="66" height="66" role="img" aria-label="CH shop logo">
           <use xlink:href="#icon-logo"></use>
         </svg>
@@ -71,10 +71,10 @@
           <a class="user-navigation__login-link" href="#">Login</a>
         </li>
         <li class="user-navigation__cart">
-          <a class="user-navigation__cart-link" href="#">
+          <a class="user-navigation__cart-link" href="#" aria-label="Go to cart">
             <span class="user-navigation__cart-text">Cart</span>
             <span class="user-navigation__cart-counter">0</span>
-            <svg class="user-navigation__cart-icon" width="20" height="18" fill="none">
+            <svg class="user-navigation__cart-icon" width="20" height="18" fill="none" role="img" aria-label="Cart icon">
               <use xlink:href="#icon-cart"></use>
             </svg>
           </a>
@@ -82,7 +82,7 @@
       </ul>
     </div>
     <nav class="main-nav main-nav--opened main-nav--nojs">
-      <button class="main-nav__toggle" type="button">
+      <button class="main-nav__toggle" type="button" aria-label="Go to main menu">
         <svg class="main-nav__toggle-icon" width="25" height="18">
           <use xlink:href="#icon-toggle"></use>
         </svg>
@@ -90,30 +90,30 @@
       <div class="main-nav__wrapper">
         <ul class="main-nav__list products-list products-list--desktop-main-only">
           <li class="products-list__item">
-            <a class="products-list__item-link">What’s new</a>
+            <a class="products-list__item-link" href="#">What’s new</a>
           </li>
           <li class="products-list__item">
-            <a class="products-list__item-link">Chokers</a>
+            <a class="products-list__item-link" href="#">Chokers</a>
           </li>
           <li class="products-list__item">
-            <a class="products-list__item-link">Necklaces</a>
+            <a class="products-list__item-link" href="#">Necklaces</a>
           </li>
           <li class="products-list__item">
-            <a class="products-list__item-link">Rings</a>
+            <a class="products-list__item-link" href="#">Rings</a>
           </li>
           <li class="products-list__item">
-            <a class="products-list__item-link">Earrings</a>
+            <a class="products-list__item-link" href="#">Earrings</a>
           </li>
         </ul>
         <ul class="main-nav__list info-list info-list--desktop-main-only">
           <li class="info-list__item">
-            <a class="info-list__item-link">About CH</a>
+            <a class="info-list__item-link" href="#">About CH</a>
           </li>
           <li class="info-list__item">
-            <a class="info-list__item-link">Stores & Hours</a>
+            <a class="info-list__item-link" href="#">Stores & Hours</a>
           </li>
           <li class="info-list__item">
-            <a class="info-list__item-link">Contact Us</a>
+            <a class="info-list__item-link" href="#">Contact Us</a>
           </li>
         </ul>
       </div>
@@ -131,12 +131,12 @@
         <h2 class="new-arrivals__heading">New In</h2>
         <a class="new-arrivals__link" href="#">Shop Now</a>
         <div class="new-arrivals__slider slider">
-          <a class="slider__controls slider__control-left" href="#">
+          <a class="slider__controls slider__control-left" href="#" aria-label="Move slider left">
             <svg class="slider__left-arrow" width="29" height="9">
               <use xlink:href="#icon-arrow"></use>
             </svg>
           </a>
-          <a class="slider__controls slider__control-right" href="#">
+          <a class="slider__controls slider__control-right" href="#" aria-label="Move slider right">
             <svg class="slider__right-arrow" width="29" height="9">
               <use xlink:href="#icon-arrow"></use>
             </svg>
@@ -157,7 +157,7 @@
               <li class="slider__product-item">
                 <a class="slider__product-description" href="#">
                   <picture class="slider__product-image-wrap">
-                    <source media="(min-width: 1024px)" srcset="img/layered-choker-necklace-desktop@1x.png 1x, img\layered-choker-necklace-desktop@2x.png 2x">
+                    <source media="(min-width: 1024px)" srcset="img/layered-choker-necklace-desktop@1x.png 1x, img/layered-choker-necklace-desktop@2x.png 2x">
                     <!-- 270*284 -->
                     <source media="(min-width: 768px)" srcset="img/layered-choker-necklace-tablet@1x.png 1x, layered-choker-necklace-tablet@2x.png 2x">
                     <!-- 324*340 -->
@@ -266,10 +266,10 @@
               <a class="slider__pagination-link">1</a>
             </li>
             <li class="slider__pagination-item">
-              <a class="slider__pagination-link">2</a>
+              <a class="slider__pagination-link" href="#">2</a>
             </li>
             <li class="slider__pagination-item">
-              <a class="slider__pagination-link">3</a>
+              <a class="slider__pagination-link" href="#"> 3</a>
             </li>
           </ul>
         </div>
@@ -320,6 +320,7 @@
         <a class="contacts__link" href="#">Follow Us</a>
       </section>
       <section class="main__gallery gallery">
+        <h2 class="visually-hidden">Gallery</h2>
         <ul class="gallery__images-list">
           <li class="gallery__images-item">
             <picture class="gallery__images-wrap">
@@ -381,8 +382,8 @@
             News and updates from CH. No spam, we promise.
           </p>
           <form class="subscription__form" method="GET" action="#">
-            <label class="subscription__label" for="email"><span class="visually-hidden">E-mail</span></label>
-            <input class="subscription__input" type="email" name="email" id="email" placeholder="Your E-mail" required="">
+            <label class="subscription__label" for="subscription-email"><span class="visually-hidden">E-mail</span></label>
+            <input class="subscription__input" type="email" name="email" id="subscription-email" placeholder="Your E-mail" required="">
             <button class="subscription__submit" type="submit">Sign Up
               <svg class="subscription__submit-icon" width="29" height="9">
                 <use xlink:href="#icon-arrow"></use>
@@ -410,7 +411,7 @@
           <ul class="social__list">
             <li class="social__item social__item-fb">
               <a class="social__link" href="#">
-                <svg class="social__icon social__icon-fb" width="8" height="15">
+                <svg class="social__icon social__icon-fb" width="8" height="15" role="img" aria-label="We on Facebook">
                   <use xlink:href="#icon-fb"></use>
                 </svg>
                 <span class="social__label">Facebook</span>
@@ -418,7 +419,7 @@
             </li>
             <li class="social__item social__item-instagram">
               <a class="social__link" href="#">
-                <svg class="social__icon social__icon-inst" width="15" height="15">
+                <svg class="social__icon social__icon-inst" width="15" height="15" role="img" aria-label="We on Instagram">
                   <use xlink:href="#icon-inst"></use>
                 </svg>
                 <span class="social__label">Instagram</span>
@@ -426,7 +427,7 @@
             </li>
             <li class="social__item social__item-pin">
               <a class="social__link" href="#">
-                <svg class="social__icon social__icon-pin" width="15" height="15">
+                <svg class="social__icon social__icon-pin" width="15" height="15" role="img" aria-label="We on Pinterest">
                   <use xlink:href="#icon-pin"></use>
                 </svg>
                 <span class="social__label">Pinterest</span>
@@ -434,7 +435,7 @@
             </li>
             <li class="social__item social__item-twitter">
               <a class="social__link" href="#">
-                <svg class="social__icon social__icon-tw" width="15" height="13">
+                <svg class="social__icon social__icon-tw" width="15" height="13" role="img" aria-label="We on Twitter">
                   <use xlink:href="#icon-tw"></use>
                 </svg>
                 <span class="social__label">Twitter</span>
@@ -447,11 +448,11 @@
   </div>
   <div class="modal modal__login login modal--close">
     <div class="login__wrapper">
-      <a class="login__close-button" tabindex="0"><span class="visually-hidden">Close modal</span>
-        <svg class="login__icon" width="15" height="13">
+      <button class="login__close-button" tabindex="0" type="button"><span class="visually-hidden">Close modal</span>
+        <svg class="login__icon" width="14" height="14">
           <use xlink:href="#icon-cross"></use>
         </svg>
-      </a>
+      </button>
       <h2 class="login__heading">Log In</h2>
       <form class="login__form" method="GET" action="#">
         <ul class="login__list">

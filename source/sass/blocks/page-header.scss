@@ -4,6 +4,10 @@
   left: 47.6%;
   top: 30px;
   stroke: $brown;
+
+  &:hover {
+    stroke: $brown;
+  }
 }
 
 .page-header__user-navigation {
@@ -29,6 +33,10 @@
   height: 17px;
   top: 11px;
   left: 11px;
+
+  &:hover {
+    background-color: transparent;
+  }
 }
 
 .page-header__search-input {
@@ -43,6 +51,10 @@
     line-height: 21px;
     font-weight: 500;
     color: $gray-font;
+  }
+
+  &:hover {
+    background-color: $white;
   }
 }
 

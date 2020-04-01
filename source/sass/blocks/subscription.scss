@@ -49,6 +49,10 @@
     line-height: 21px;
     color: $gray-font;
   }
+
+  &:hover {
+    color: $gray-font;
+  }
 }
 
 .subscription__submit {
@@ -63,6 +67,11 @@
   font-size: 16px;
   line-height: 21px;
   color: $white;
+  cursor: pointer;
+
+  &:hover {
+    color: $white;
+  }
 }
 
 .subscription__submit-icon {

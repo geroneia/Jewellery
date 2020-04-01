@@ -39,6 +39,10 @@
       left: 5.85%;
       border: none;
       background-color: $white;
+
+      &:hover {
+        background-color: $white;
+      }
     }
   }
 

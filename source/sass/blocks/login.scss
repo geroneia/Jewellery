@@ -20,7 +20,7 @@
 }
 
 .login__form {
-  min-width: 340px;
+  width: 340px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -51,6 +51,10 @@
     line-height: 21px;
     color: $gray-font;
   }
+
+  &:hover {
+    background-color: $pink-gray;
+  }
 }
 
 .login__forgot-password-link {
@@ -63,16 +67,30 @@
   font-size: 12px;
   line-height: 18px;
   color: $gray-font;
+
+  &:hover {
+    color: $gray-font;
+  }
 }
 
 .login__submit-button {
   display: block;
   width: 100%;
   min-height: 68px;
+  font-family: $font;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+
+  &:hover {
+    color: $white;
+  }
 }
 
 .login__new-account {
   padding-left: 103px;
+  margin-top: 15px;
+  margin-bottom: 14px;
   font-family: $font;
   font-weight: 500;
   font-size: 14px;
@@ -81,12 +99,29 @@
 }
 
 .login__new-account-link {
-  margin-left: 5px;
+  margin-left: 2px;
   font-family: $font;
   font-weight: 500;
   font-size: 14px;
   line-height: 21px;
   color: $black;
+
+  &:hover {
+    color: $black;
+  }
+}
+
+.login__close-button {
+  display: block;
+  padding: 0;
+  width: 14px;
+  height: 14px;
+  border: none;
+  background-color: transparent;
+
+  &:hover {
+    background-color: transparent;
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -105,15 +140,12 @@
   }
 
   .login__close-button {
-    display: block;
-    width: 14px;
-    height: 14px;
     margin-top: 20px;
     margin-left: 396px;
   }
 
   .login__heading {
-    margin-top: 168px;
+    margin-top: 154px;
     margin-bottom: 33px;
   }
 
@@ -121,5 +153,113 @@
     &:first-child {
       margin-bottom: 34px;
     }
+  }
+}
+
+@media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+  .login__wrapper {
+    width: 442px;
+    height: 586px;
+    background-color: $pink-gray;
+    background-image: url("../img/sweet-ice-cream-tablet@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/sweet-ice-cream-tablet@2x.jpg");
+      background-size: 442px auto;
+    }
+  }
+
+  .login__close-button {
+    width: 20px;
+    height: 20px;
+    margin-top: 20px;
+    margin-left: 402px;
+  }
+
+  .login__icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .login__heading {
+    margin-top: 147px;
+    margin-bottom: 33px;
+  }
+
+  .login__item {
+    &:first-child {
+      margin-bottom: 34px;
+    }
+  }
+
+  .login__new-account {
+    padding-left: 108px;
+    margin-top: 15px;
+    margin-bottom: 14px;
+  }
+
+  .login__new-account-link {
+    margin-left: 3px;
+  }
+}
+
+@media (min-width: $min-mobile-width) and (max-width: $max-mobile-width) {
+  .login__wrapper {
+    width: 270px;
+    height: 470px;
+    background-color: $pink-gray;
+    background-image: url("../img/sweet-ice-cream-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/sweet-ice-cream-mobile@2x.jpg");
+      background-size: 270px auto;
+    }
+  }
+
+  .login__close-button {
+    margin-top: 15px;
+    margin-left: 241px;
+  }
+
+  .login__icon {
+    width: 14px;
+    height: 14px;
+  }
+
+  .login__heading {
+    margin-top: 92px;
+    margin-bottom: 26px;
+    font-size: 24px;
+    line-height: 31px;
+  }
+
+  .login__form {
+    width: 240px;
+  }
+
+  .login__item {
+    &:first-child {
+      margin-bottom: 30px;
+    }
+  }
+
+  .login__forgot-password-link {
+    margin-left: 102px;
+    margin-right: 0;
+    margin-bottom: 35px;
+  }
+
+  .login__new-account {
+    padding-left: 23px;
+    margin-top: 15px;
+    margin-bottom: 14px;
+  }
+
+  .login__new-account-link {
+    margin-left: 2px;
   }
 }

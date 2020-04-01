@@ -60,14 +60,15 @@
   var overlay = document.querySelector('.login');
 
   // Устанавливает фокус на поле e-mail
-  var setFocus = function () {
-    document.getElementById('email').focus();
-  };
+  // var setFocus = function () {
+  //   document.querySelector('#email').focus();
+  // };
 
   var openLogIn = function () {
     overlay.classList.remove('modal--close');
     overlay.classList.add('modal--open');
-    setFocus();
+    // setFocus();
+    closeMenu();
     body.classList.add('modal-open');
   };
 

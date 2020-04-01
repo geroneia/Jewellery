@@ -36,10 +36,10 @@
             <use xlink:href="#icon-loupe"></use>
           </svg>
         </button>
-        <label for="page-header__search"><span class="visually-hidden">Searching</span></label>
+        <label for="search"><span class="visually-hidden">Searching</span></label>
         <input type="search" id="search" class="page-header__search-input page-header__search-input--menu-opened" placeholder="Type here to search">
       </form>
-      <a class="page-header__logo" href="main.html">
+      <a class="page-header__logo" href="main.html" aria-label="Go to main page">
         <svg class="page-header__logo-icon" width="66" height="66" role="img" aria-label="CH shop logo">
           <use xlink:href="#icon-logo"></use>
         </svg>
@@ -49,10 +49,10 @@
           <a class="user-navigation__login-link" href="#">Login</a>
         </li>
         <li class="user-navigation__cart">
-          <a class="user-navigation__cart-link" href="#">
+          <a class="user-navigation__cart-link" href="#" aria-label="Go to cart">
             <span class="user-navigation__cart-text">Cart</span>
             <span class="user-navigation__cart-counter">0</span>
-            <svg class="user-navigation__cart-icon" width="20" height="18" viewBox="0 0 20 18" fill="none">
+            <svg class="user-navigation__cart-icon" width="20" height="18" viewBox="0 0 20 18" fill="none" role="img" aria-label="Cart icon">
               <use xlink:href="#icon-cart"></use>
             </svg>
           </a>
@@ -60,7 +60,7 @@
       </ul>
     </div>
     <nav class="main-nav main-nav--opened main-nav--nojs">
-      <button class="main-nav__toggle" type="button">
+      <button class="main-nav__toggle" type="button" aria-label="Go to main menu">
         <svg class="main-nav__toggle-icon" width="25" height="18">
           <use xlink:href="#icon-toggle"></use>
         </svg>
@@ -68,30 +68,30 @@
       <div class="main-nav__wrapper">
         <ul class="main-nav__list products-list">
           <li class="products-list__item">
-            <a class="products-list__item-link">What’s new</a>
+            <a class="products-list__item-link" href="#">What’s new</a>
           </li>
           <li class="products-list__item">
-            <a class="products-list__item-link">Chokers</a>
+            <a class="products-list__item-link" href="#">Chokers</a>
           </li>
           <li class="products-list__item">
-            <a class="products-list__item-link">Necklaces</a>
+            <a class="products-list__item-link" href="#">Necklaces</a>
           </li>
           <li class="products-list__item">
-            <a class="products-list__item-link">Rings</a>
+            <a class="products-list__item-link" href="#">Rings</a>
           </li>
           <li class="products-list__item">
-            <a class="products-list__item-link">Earrings</a>
+            <a class="products-list__item-link" href="#">Earrings</a>
           </li>
         </ul>
         <ul class="main-nav__list info-list info-list--desktop-main-only">
           <li class="info-list__item">
-            <a class="info-list__item-link">About CH</a>
+            <a class="info-list__item-link" href="#">About CH</a>
           </li>
           <li class="info-list__item">
-            <a class="info-list__item-link">Stores & Hours</a>
+            <a class="info-list__item-link" href="#">Stores & Hours</a>
           </li>
           <li class="info-list__item">
-            <a class="info-list__item-link">Contact Us</a>
+            <a class="info-list__item-link" href="#">Contact Us</a>
           </li>
         </ul>
       </div>
@@ -111,8 +111,8 @@
           News and updates from CH. No spam, we promise.
         </p>
         <form class="subscription__form" method="GET" action="#">
-          <label class="subscription__label" for="email"><span class="visually-hidden">E-mail</span></label>
-          <input class="subscription__input" type="email" name="email" id="email" placeholder="Your E-mail" required>
+          <label class="subscription__label" for="subscription-email"><span class="visually-hidden">E-mail</span></label>
+          <input class="subscription__input" type="email" name="email" id="subscription-email" placeholder="Your E-mail" required>
           <button class="subscription__submit" type="submit">Sign Up
             <svg class="subscription__submit-icon" width="29" height="9">
               <use xlink:href="#icon-arrow"></use>
@@ -140,7 +140,7 @@
         <ul class="social__list">
           <li class="social__item social__item-fb">
             <a class="social__link" href="#">
-              <svg class="social__icon social__icon-fb" width="8" height="15">
+              <svg class="social__icon social__icon-fb" width="8" height="15" role="img" aria-label="We on Facebook">
                 <use xlink:href="#icon-fb"></use>
               </svg>
               <span class="social__label">Facebook</span>
@@ -148,7 +148,7 @@
           </li>
           <li class="social__item social__item-instagram">
             <a class="social__link" href="#">
-              <svg class="social__icon social__icon-inst" width="15" height="15">
+              <svg class="social__icon social__icon-inst" width="15" height="15" role="img" aria-label="We on Instagram">
                 <use xlink:href="#icon-inst"></use>
               </svg>
               <span class="social__label">Instagram</span>
@@ -156,7 +156,7 @@
           </li>
           <li class="social__item social__item-pin">
             <a class="social__link" href="#">
-              <svg class="social__icon social__icon-pin" width="15" height="15">
+              <svg class="social__icon social__icon-pin" width="15" height="15" role="img" aria-label="We on Pinterest">
                 <use xlink:href="#icon-pin"></use>
               </svg>
               <span class="social__label">Pinterest</span>
@@ -164,7 +164,7 @@
           </li>
           <li class="social__item social__item-twitter">
             <a class="social__link" href="#">
-              <svg class="social__icon social__icon-tw" width="15" height="13">
+              <svg class="social__icon social__icon-tw" width="15" height="13" role="img" aria-label="We on Twitter">
                 <use xlink:href="#icon-tw"></use>
               </svg>
               <span class="social__label">Twitter</span>
@@ -174,6 +174,37 @@
       </div>
     </div>
     </footer>
+  </div>
+  <div class="modal modal__login login modal--close">
+    <div class="login__wrapper">
+      <button class="login__close-button" tabindex="0" type="button"><span class="visually-hidden">Close modal</span>
+        <svg class="login__icon" width="15" height="13">
+          <use xlink:href="#icon-cross"></use>
+        </svg>
+      </button>
+      <h2 class="login__heading">Log In</h2>
+      <form class="login__form" method="GET" action="#">
+        <ul class="login__list">
+          <li class="login__item">
+            <label for="email">
+              <span class="visually-hidden">Your E-mail</span>
+            </label>
+            <input type="email" id="email" name="email" placeholder="Your E-mail" autofocus>
+          </li>
+          <li class="login__item">
+            <label for="password">
+              <span class="visually-hidden">Password</span>
+            </label>
+            <input type="password" id="password" name="password" placeholder="Password">
+          </li>
+        </ul>
+        <a class="login__forgot-password-link" href="#">Forgot your password?</a>
+        <button class="login__submit-button button">Log In</button>
+      </form>
+      <p class="login__new-account">Don’t have an account?
+        <a class="login__new-account-link" href="#">Sign up</a>
+      </p>
+    </div>
   </div>
     <script src="js/script.js"></script>
   </body>

@@ -1,3 +1,13 @@
+.user-navigation__login-link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+
+  &:hover {
+    color: $black;
+  }
+}
+
 @media (min-width: $desktop-width) {
   .user-navigation {
     display: flex;
@@ -11,6 +21,10 @@
   .user-navigation__cart-link {
     display: flex;
     justify-content: space-between;
+
+    &:hover {
+      color: $black;
+    }
   }
 
   .user-navigation__cart-counter {
@@ -61,8 +75,8 @@
       left: 5.9%;
     }
 
-    .user-navigation__login-link {
-      font-weight: 500;
+    .user-navigation__login-link,
+    .user-navigation__login-link:hover {
       font-size: 18px;
       line-height: 23px;
       color: $white;
@@ -104,8 +118,8 @@
       left: 4.68%;
     }
 
-    .user-navigation__login-link {
-      font-weight: 500;
+    .user-navigation__login-link,
+    .user-navigation__login-link:hover {
       font-size: 18px;
       line-height: 23px;
       color: $white;

@@ -1,6 +1,7 @@
 .modal {
   width: 100%;
   background-color: $white;
+  z-index: 2;
 }
 
 .modal--open {
@@ -19,6 +20,28 @@
 
   .modal--open {
     top: 126px;
+    left: 0;
+  }
+}
+
+@media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+  .modal {
+    height: 746px;
+  }
+
+  .modal--open {
+    top: 126px;
+    left: 0;
+  }
+}
+
+@media (min-width: $min-mobile-width) and (max-width: $max-mobile-width) {
+  .modal {
+    height: 570px;
+  }
+
+  .modal--open {
+    top: 96px;
     left: 0;
   }
 }
