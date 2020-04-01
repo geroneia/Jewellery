@@ -1,3 +1,54 @@
 .main {
   flex: 1 0 auto;
 }
+
+.main__promo {
+  width: 100%;
+  font-family: $font-headings;
+  background-color: $pink-background;
+  color: $white;
+  text-align: center;
+}
+
+.main__promo-definition {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.main__promo-slogan {
+  display: flex;
+  margin-top: 0;
+  margin-bottom: 0;
+  flex-direction: column;
+  font-style: italic;
+  font-weight: 400;
+}
+
+@media (min-width: $desktop-width) {
+  .main__promo {
+    height: 463px;
+    background-image: url("../img/main-desktop@1x.jpg");
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/main-desktop@2x.jpg");
+      background-size: cover;
+    }
+  }
+
+  .main__promo-slogan {
+    padding-top: 185px;
+    font-size: 38px;
+    line-height: 49px;
+  }
+
+  .main__promo-definition {
+    padding-bottom: 0;
+    font-size: 45px;
+    line-height: 49px;
+  }
+}

@@ -27,7 +27,9 @@
 
 <body>
   <div style="display:none">
-    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-arrow" viewBox="0 0 29 9">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-arrow-left" viewBox="0 0 30 11">
+<path d="M30 5.5L1 5.5M1 5.5L6.48649 10M1 5.5L6.48649 1"></path>
+</symbol><symbol id="icon-arrow-right" viewBox="0 0 29 9">
 <path d="M0 5.5H29M29 5.5L23.5135 1M29 5.5L23.5135 10"></path>
 </symbol><symbol id="icon-cart" viewBox="0 0 20 18">
 <path d="M14 5C14 6.06087 13.5786 7.07828 12.8284 7.82843C12.0783 8.57857 11.0609 9 10 9C8.93913 9 7.92172 8.57857 7.17157 7.82843C6.42143 7.07828 6 6.06087 6 5M1 1H19V17H1V1Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -123,9 +125,10 @@
     <main class="main">
       <section class="main__promo">
         <h2 class="visually-hidden">Slogan</h2>
-        <span class="main__promo-slogan">
+        <p class="main__promo-slogan">
           <b class="main__promo-definition">Perfection</b>
-          made to be yours</span>
+          <span>made to be yours</span>
+          </p>
       </section>
       <section class="main__new-arrivals new-arrivals">
         <h2 class="new-arrivals__heading">New In</h2>
@@ -133,137 +136,273 @@
         <div class="new-arrivals__slider slider">
           <a class="slider__controls slider__control-left" href="#" aria-label="Move slider left">
             <svg class="slider__left-arrow" width="29" height="9">
-              <use xlink:href="#icon-arrow"></use>
+              <use xlink:href="#icon-arrow-left"></use>
             </svg>
           </a>
           <a class="slider__controls slider__control-right" href="#" aria-label="Move slider right">
             <svg class="slider__right-arrow" width="29" height="9">
-              <use xlink:href="#icon-arrow"></use>
+              <use xlink:href="#icon-arrow-right"></use>
             </svg>
           </a>
           <div class="slider__wrapper">
             <ul class="slider__product-list">
-              <li class="slider__product-item">
-                <a class="slider__product-description" href="#">
+              <li class="slider__product-description">
+                <a class="slider__product-link" href="#">
                   <picture class="slider__product-image-wrap">
+                    <!-- 1х: 270px*284px; 2x: 540px*568px -->
+                    <source media="(min-width: 1024px)" type="image/webp" srcset="img/purple-gemstone-necklace-desktop@1x.webp 1x, img/purple-gemstone-necklace-desktop@2x.webp 2x">
+                    <!-- 1x: 324px*340px; 2x: 648px*680px -->
+                    <source media="(min-width: 768px)" type="image/webp" srcset="img/amethyst-gemstone-necklace-tablet@1x.webp 1x, img/amethyst-gemstone-necklace-tablet@2x.webp 2x">
+                    <!-- 1x: 130px*136px; 2x: 260*272px -->
+                    <source type="image/webp" srcset="img/amethyst-gemstone-necklace-mobile@1x.webp, img/amethyst-gemstone-necklace-mobile@2x.webp 2x">
+
+                    <!-- 1х: 270px*284px; 2x: 540px*568px -->
                     <source media="(min-width: 1024px)" srcset="img/purple-gemstone-necklace-desktop@1x.png 1x, img/purple-gemstone-necklace-desktop@2x.png 2x">
-                    <!-- 270*284 -->
+                    <!-- 1x: 324px*340px; 2x: 648px*680px -->
                     <source media="(min-width: 768px)" srcset="img/amethyst-gemstone-necklace-tablet@1x.png 1x, img/amethyst-gemstone-necklace-tablet@2x.png 2x">
-                    <!-- 324*340 -->
-                    <img class="slider__product-image" src="img/amethyst-gemstone-necklace-mobile@1x.png" srcset="img/amethyst-gemstone-necklace-mobile@2x.png 2x" width="130" height="136" alt="Purple gemstone necklace">
+                    <!-- 1x: 130px*136px; 2x: 260*272px -->
+                    <img class="slider__product-image" src="img/amethyst-gemstone-necklace-mobile@1x.png" srcset="img/amethyst-gemstone-necklace-mobile@2x.png 2x" width="130" height="136" alt="Necklace with amethyst">
                   </picture>
                 </a>
+                <p class="slider__product-name">Necklace with amethyst</p>
+                <span class="slider__product-price">$ 145</span>
               </li>
-              <li class="slider__product-item">
-                <a class="slider__product-description" href="#">
+              <li class="slider__product-description">
+                <a class="slider__product-link" href="#">
                   <picture class="slider__product-image-wrap">
+                    <!-- 1х: 270px*284px; 2x: 540px*568px -->
+                    <source media="(min-width: 1024px)" type="image/webp" srcset="layered-choker-necklace-desktop@1x.webp 1x, img/layered-choker-necklace-desktop@2x.webp 2x">
+                    <!-- 1x: 324px*340px; 2x: 648px*680px -->
+                    <source media="(min-width: 768px)" type="image/webp" srcset="img/layered-choker-necklace-tablet@1x.webp 1x, img/layered-choker-necklace-desktop@2x.webp 2x">
+                    <!-- 1x: 130px*136px; 2x: 260*272px -->
+                    <source type="image/webp" srcset="img/layered-choker-necklace-mobile@1x.webp, img/layered-choker-necklace-mobile@2x.webp 2x">
+
+                    <!-- 1х: 270px*284px; 2x: 540px*568px -->
                     <source media="(min-width: 1024px)" srcset="img/layered-choker-necklace-desktop@1x.png 1x, img/layered-choker-necklace-desktop@2x.png 2x">
-                    <!-- 270*284 -->
+                    <!-- 1x: 324px*340px; 2x: 648px*680px -->
                     <source media="(min-width: 768px)" srcset="img/layered-choker-necklace-tablet@1x.png 1x, layered-choker-necklace-tablet@2x.png 2x">
-                    <!-- 324*340 -->
-                    <img class="slider__product-image" src="img/layered-choker-necklace-mobile@1x.png" srcset="img/layered-choker-necklace-mobile@2x.png 2x" width="130" height="136" alt="Layered choker necklace">
+                    <!-- 1x: 130px*136px; 2x: 260*272px -->
+                    <img class="slider__product-image" src="img/layered-choker-necklace-mobile@1x.png" srcset="img/layered-choker-necklace-mobile@2x.png 2x" width="130" height="136" alt="Layered сhoker">
                   </picture>
                 </a>
+                <p class="slider__product-name">Layered сhoker</p>
+                <span class="slider__product-price">$ 115</span>
               </li>
-              <li class="slider__product-item">
-                <a class="slider__product-description" href="#">
+              <li class="slider__product-description">
+                <a class="slider__product-link" href="#">
                   <picture class="slider__product-image-wrap">
+                    <!-- 1х: 270px*284px; 2x: 540px*568px -->
+                    <source media="(min-width: 1024px)" type="image/webp" srcset="img/dainty-gold-necklace-desktop@1x.webp 1x, img/dainty-gold-necklace-desktop@2x.webp 2x">
+                    <!-- 1x: 324px*340px; 2x: 648px*680px -->
+                    <source media="(min-width: 768px)" type="image/webp" srcset="img/dainty-gold-necklace-tablet@1x.webp 1x, img/dainty-gold-necklace-tablet@2x.png.webp 2x">
+                    <!-- 1x: 130px*136px; 2x: 260*272px -->
+                    <source type="image/webp" srcset="img/dainty-gold-necklace-mobile@1x.webp, img/dainty-gold-necklace-mobile@2x.webp 2x">
+
+                    <!-- 1х: 270px*284px; 2x: 540px*568px -->
                     <source media="(min-width: 1024px)" srcset="img/dainty-gold-necklace-desktop@1x.png 1x, img/dainty-gold-necklace-desktop@2x.png 2x">
-                    <!-- 270*284 -->
+                    <!-- 1x: 324px*340px; 2x: 648px*680px -->
                     <source media="(min-width: 768px)" srcset="img/dainty-gold-necklace-tablet@1x.png 1x, img/dainty-gold-necklace-tablet@2x.png 2x">
-                    <!-- 324*340 -->
-                    <img class="slider__product-image" src="img/dainty-gold-necklace-mobile@1x.png" srcset="img/dainty-gold-necklace-mobile@2x.png 2x" width="130" height="136" alt="Dainty gold necklace">
+                    <!-- 1x: 130px*136px; 2x: 260*272px -->
+                    <img class="slider__product-image" src="img/dainty-gold-necklace-mobile@1x.png" srcset="img/dainty-gold-necklace-mobile@2x.png 2x" width="130" height="136" alt="Gold chain">
                   </picture>
                 </a>
+                <p class="slider__product-name">Gold chain</p>
+                <span class="slider__product-price">$ 215</span>
               </li>
-              <li class="slider__product-item">
-                <a class="slider__product-description" href="#">
+              <li class="slider__product-description">
+                <a class="slider__product-link" href="#">
                   <picture class="slider__product-image-wrap">
+                    <!-- 1х: 270px*284px; 2x: 540px*568px -->
+                    <source media="(min-width: 1024px)" type="image/webp" srcset="img/galaxy-earrings-desktop@1x.webp 1x, img/galaxy-earrings-desktop@2x.webp 2x">
+                    <!-- 1x: 324px*340px; 2x: 648px*680px -->
+                    <source media="(min-width: 768px)" type="image/webp" srcset="img/galaxy-earrings-tablet@1x.webp 1x, img/galaxy-earrings-tablet@2x.webp 2x">
+                    <!-- 1x: 130px*136px; 2x: 260*272px -->
+                    <source type="image/webp" srcset="img/galaxy-earrings-mobile@1x.webp, img/galaxy-earrings-mobile@2x.webp 2x">
+
+                     <!-- 1х: 270px*284px; 2x: 540px*568px -->
                     <source media="(min-width: 1024px)" srcset="img/galaxy-earrings-desktop@1x.png 1x, img/galaxy-earrings-desktop@2x.png 2x">
-                    <!-- 270*284 -->
+                    <!-- 1x: 324px*340px; 2x: 648px*680px -->
                     <source media="(min-width: 768px)" srcset="img/galaxy-earrings-tablet@1x.png 1x, img/galaxy-earrings-tablet@2x.png 2x">
-                    <!-- 324*340 -->
+                    <!-- 1x: 130px*136px; 2x: 260*272px -->
                     <img class="slider__product-image" src="img/galaxy-earrings-mobile@1x.png" srcset="img/galaxy-earrings-mobile@2x.png 2x" width="130" height="136" alt="Galaxy earrings">
                   </picture>
                 </a>
+                <p class="slider__product-name">Galaxy earrings</p>
+                <span class="slider__product-price">$ 95</span>
               </li>
-              <li class="slider__product-item">
-                <a class="slider__product-description" href="#">
+              <li class="slider__product-description">
+                <a class="slider__product-link" href="#">
                   <picture class="slider__product-image-wrap">
+                    <!-- 1х: 270px*284px; 2x: 540px*568px -->
+                    <source media="(min-width: 1024px)" type="image/webp" srcset="img/bird-necklace-slider-desktop@1x.webp 1x, img/bird-necklace-slider-desktop@2x.webp 2x">
+                    <!-- 1x: 324px*340px; 2x: 648px*680px -->
+                    <source media="(min-width: 768px)" type="image/webp" srcset="img/bird-necklace-slider-tablet@1x.webp 1x, img/bird-necklace-slider-tablet@2x.webp 2x">
+                    <!-- 1x: 130px*136px; 2x: 260*272px -->
+                    <source type="image/webp" srcset="img/bird-necklace-slider-mobile@1x.webp, img/bird-necklace-slider-mobile@2x.webp 2x">
+
+                     <!-- 1х: 270px*284px; 2x: 540px*568px -->
                     <source media="(min-width: 1024px)" srcset="img/bird-necklace-slider-desktop@1x.png 1x, img/bird-necklace-slider-desktop@2x.png 2x">
+                    <!-- 1x: 324px*340px; 2x: 648px*680px -->
                     <source media="(min-width: 768px)" srcset="img/bird-necklace-slider-tablet@1x.png 1x, img/bird-necklace-slider-tablet@2x.png 2x">
-                    <img class="slider__product-image" src="img/bird-necklace-slider-mobile@1x.png" srcset="img/bird-necklace-slider-mobile@2x.png 2x" width="130" height="136" alt="Bird necklace">
+                    <!-- 1x: 130px*136px; 2x: 260*272px -->
+                    <img class="slider__product-image" src="img/bird-necklace-slider-mobile@1x.png" srcset="img/bird-necklace-slider-mobile@2x.png 2x" width="130" height="136" alt="Gold bird necklace">
                   </picture>
                 </a>
+                <p class="slider__product-name">Gold bird necklace</p>
+                <span class="slider__product-price">$ 135</span>
               </li>
-              <li class="slider__product-item">
-                <a class="slider__product-description" href="#">
+              <li class="slider__product-description">
+                <a class="slider__product-link" href="#">
                   <picture class="slider__product-image-wrap">
+                    <!-- 1х: 270px*284px; 2x: 540px*568px -->
+                    <source media="(min-width: 1024px)" type="image/webp" srcset="img/black-choker-gold-bead-slider-desktop@1x.webp 1x, img/black-choker-gold-bead-slider-desktop@2x.webp 2x">
+                    <!-- 1x: 324px*340px; 2x: 648px*680px -->
+                    <source media="(min-width: 768px)" type="image/webp" srcset="img/black-choker-gold-bead-slider-tablet@1x.webp 1x, img/black-choker-gold-bead-slider-tablet@2x.webp 2x">
+                    <!-- 1x: 130px*136px; 2x: 260*272px -->
+                    <source type="image/webp" srcset="img/black-choker-gold-bead-slider-mobile@1x.webp, img/black-choker-gold-bead-slider-mobile@2x.webp 2x">
+
+                     <!-- 1х: 270px*284px; 2x: 540px*568px -->
                     <source media="(min-width: 1024px)" srcset="img/black-choker-gold-bead-slider-desktop@1x.png 1x, img/black-choker-gold-bead-slider-desktop@2x.png 2x">
+                    <!-- 1x: 324px*340px; 2x: 648px*680px -->
                     <source media="(min-width: 768px)" srcset="img/black-choker-gold-bead-slider-tablet@1x.png 1x, img/black-choker-gold-bead-slider-tablet@2x.png 2x">
-                    <img class="slider__product-image" src="img/black-choker-gold-bead-slider-mobile@1x.png" srcset="img/black-choker-gold-bead-slider-mobile@2x.png 2x" width="130" height="136" alt="Black choker with gold bead">
+                    <!-- 1x: 130px*136px; 2x: 260*272px -->
+                    <img class="slider__product-image" src="img/black-choker-gold-bead-slider-mobile@1x.png" srcset="img/black-choker-gold-bead-slider-mobile@2x.png 2x" width="130" height="136" alt="Choker with gold bead">
                   </picture>
                 </a>
+                <p class="slider__product-name">Choker with gold bead</p>
+                <span class="slider__product-price">$ 55</span>
               </li>
-              <li class="slider__product-item">
-                <a class="slider__product-description" href="#">
+              <li class="slider__product-description">
+                <a class="slider__product-link" href="#">
                   <picture class="slider__product-image-wrap">
+                    <!-- 1х: 270px*284px; 2x: 540px*568px -->
+                    <source media="(min-width: 1024px)" type="image/webp" srcset="img/black-leather-choker-slider-desktop@1x.webp 1x, img/black-leather-choker-slider-desktop@2x.webp 2x">
+                    <!-- 1x: 324px*340px; 2x: 648px*680px -->
+                    <source media="(min-width: 768px)" type="image/webp" srcset="img/black-leather-choker-slider-tablet@1x.webp 1x, img/black-leather-choker-slider-tablet@2x.webp 2x">
+                    <!-- 1x: 130px*136px; 2x: 260*272px -->
+                    <source type="image/webp" srcset="img/black-leather-choker-slider-mobile@1x.webp, img/black-leather-choker-slider-mobile@2x.webp 2x">
+
+                     <!-- 1х: 270px*284px; 2x: 540px*568px -->
                     <source media="(min-width: 1024px)" srcset="img/black-leather-choker-slider-desktop@1x.png 1x, img/black-leather-choker-slider-desktop@2x.png 2x">
+                    <!-- 1x: 324px*340px; 2x: 648px*680px -->
                     <source media="(min-width: 768px)" srcset="img/black-leather-choker-slider-tablet@1x.png 1x, img/black-leather-choker-slider-tablet@2x.png 2x">
+                    <!-- 1x: 130px*136px; 2x: 260*272px -->
                     <img class="slider__product-image" src="img/black-leather-choker-slider-mobile@1x.png" srcset="img/black-leather-choker-slider-mobile@2x.png 2x" width="130" height="136" alt="Black leather choker">
                   </picture>
                 </a>
+                <p class="slider__product-name">Black leather choker</p>
+                <span class="slider__product-price">$ 85</span>
               </li>
-              <li class="slider__product-item">
-                <a class="slider__product-description" href="#">
+              <li class="slider__product-description">
+                <a class="slider__product-link" href="#">
                   <picture class="slider__product-image-wrap">
+                    <!-- 1х: 270px*284px; 2x: 540px*568px -->
+                    <source media="(min-width: 1024px)" type="image/webp" srcset="img/boho-earrings-slider-desktop@1x.webp 1x, img/boho-earrings-slider-desktop@2x.webp 2x">
+                    <!-- 1x: 324px*340px; 2x: 648px*680px -->
+                    <source media="(min-width: 768px)" type="image/webp" srcset="img/boho-earrings-slider-tablet@1x.webp 1x, img/boho-earrings-slider-tablet@2x.webp 2x">
+                    <!-- 1x: 130px*136px; 2x: 260*272px -->
+                    <source type="image/webp" srcset="img/boho-earrings-slider-mobile@1x.webp, img/boho-earrings-slider-mobile@2x.webp 2x">
+
+                     <!-- 1х: 270px*284px; 2x: 540px*568px -->
                     <source media="(min-width: 1024px)" srcset="img/boho-earrings-slider-desktop@1x.png 1x, img/boho-earrings-slider-desktop@2x.png 2x">
+                    <!-- 1x: 324px*340px; 2x: 648px*680px -->
                     <source media="(min-width: 768px)" srcset="img/boho-earrings-slider-tablet@1x.png 1x, img/boho-earrings-slider-tablet@2x.png 2x">
-                    <img class="slider__product-image" src="img/dainty-gold-necklace-mobile@1x.png" srcset="img/dainty-gold-necklace-mobile@2x.png 2x" width="130" height="136" alt="Boho earrings">
+                    <!-- 1x: 130px*136px; 2x: 260*272px -->
+                    <img class="slider__product-image" src="img/boho-earrings-slider-mobile@1x.png" srcset="img/boho-earrings-slider-mobile@2x.png 2x" width="130" height="136" alt="Boho earrings">
                   </picture>
                 </a>
-              </li>
-              <li class="slider__product-item">
-                <a class="slider__product-description" href="#">
+                <p class="slider__product-name">Boho earrings/p>
+                <span class="slider__product-price">$ 75</span>
+              </p></li>
+              <li class="slider__product-description">
+                <a class="slider__product-link" href="#">
                   <picture class="slider__product-image-wrap">
+                    <!-- 1х: 270px*284px; 2x: 540px*568px -->
+                    <source media="(min-width: 1024px)" type="image/webp" srcset="img/elephant-earrings-slider-desktop@1x.webp 1x, img/elephant-earrings-slider-desktop@2x.webp 2x">
+                    <!-- 1x: 324px*340px; 2x: 648px*680px -->
+                    <source media="(min-width: 768px)" type="image/webp" srcset="img/elephant-earrings-slider-tablet@1x.webp 1x, img/elephant-earrings-slider-tablet@2x.webp 2x">
+                    <!-- 1x: 130px*136px; 2x: 260*272px -->
+                    <source type="image/webp" srcset="img/elephant-earrings-slider-mobile@1x.webp, img/elephant-earrings-slider-mobile@2x.webp 2x">
+
+                     <!-- 1х: 270px*284px; 2x: 540px*568px -->
                     <source media="(min-width: 1024px)" srcset="img/elephant-earrings-slider-desktop@1x.png 1x, img/elephant-earrings-slider-desktop@2x.png 2x">
+                    <!-- 1x: 324px*340px; 2x: 648px*680px -->
                     <source media="(min-width: 768px)" srcset="img/elephant-earrings-slider-tablet@1x.png 1x, img/elephant-earrings-slider-tablet@2x.png 2x">
+                    <!-- 1x: 130px*136px; 2x: 260*272px -->
                     <img class="slider__product-image" src="img/elephant-earrings-slider-mobile@1x.png" srcset="img/elephant-earrings-slider-mobile@2x.png 2x" width="130" height="136" alt="Elephant earrings">
                   </picture>
                 </a>
+                <p class="slider__product-name">Elephant earrings</p>
+                <span class="slider__product-price">$ 95</span>
               </li>
-              <li class="slider__product-item">
-                <a class="slider__product-description" href="#">
+              <li class="slider__product-description">
+                <a class="slider__product-link" href="#">
                   <picture class="slider__product-image-wrap">
+                    <!-- 1х: 270px*284px; 2x: 540px*568px -->
+                    <source media="(min-width: 1024px)" type="image/webp" srcset="img/origami-crane-necklace-slider-desktop@1x.webp 1x, img/origami-crane-necklace-slider-desktop@2x.webp 2x">
+                    <!-- 1x: 324px*340px; 2x: 648px*680px -->
+                    <source media="(min-width: 768px)" type="image/webp" srcset="img/origami-crane-necklace-slider-tablet@1x.webp 1x, img/origami-crane-necklace-slider-tablet@2x.webp 2x">
+                    <!-- 1x: 130px*136px; 2x: 260*272px -->
+                    <source type="image/webp" srcset="img/origami-crane-necklace-slider-mobile@1x.webp, img/origami-crane-necklace-slider-mobile@2x.webp 2x">
+
+                     <!-- 1х: 270px*284px; 2x: 540px*568px -->
                     <source media="(min-width: 1024px)" srcset="img/origami-crane-necklace-slider-desktop@1x.png 1x, img/origami-crane-necklace-slider-desktop@2x.png 2x">
+                    <!-- 1x: 324px*340px; 2x: 648px*680px -->
                     <source media="(min-width: 768px)" srcset="img/origami-crane-necklace-slider-tablet@1x.png 1x, img/origami-crane-necklace-slider-tablet@2x.png 2x">
+                    <!-- 1x: 130px*136px; 2x: 260*272px -->
                     <img class="slider__product-image" src="img/origami-crane-necklace-slider-mobile@1x.png" srcset="img/origami-crane-necklace-slider-mobile@2x.png 2x" width="130" height="136" alt="Origami crane necklace">
                   </picture>
                 </a>
+                <p class="slider__product-name">Origami crane necklace</p>
+                <span class="slider__product-price">$ 105</span>
               </li>
-              <li class="slider__product-item">
-                <a class="slider__product-description" href="#">
+              <li class="slider__product-description">
+                <a class="slider__product-link" href="#">
                   <picture class="slider__product-image-wrap">
+                    <!-- 1х: 270px*284px; 2x: 540px*568px -->
+                    <source media="(min-width: 1024px)" type="image/webp" srcset="img/pearl-earrings-slider-desktop@1x.webp 1x, img/pearl-earrings-slider-desktop@2x.webp 2x">
+                    <!-- 1x: 324px*340px; 2x: 648px*680px -->
+                    <source media="(min-width: 768px)" type="image/webp" srcset="img/pearl-earrings-slider-tablet@1x.webp 1x, img/pearl-earrings-slider-tablet@2x.webp 2x">
+                    <!-- 1x: 130px*136px; 2x: 260*272px -->
+                    <source type="image/webp" srcset="img/pearl-earrings-slider-mobile@1x.webp, img/pearl-earrings-slider-mobile@2x.webp 2x">
+
+                     <!-- 1х: 270px*284px; 2x: 540px*568px -->
                     <source media="(min-width: 1024px)" srcset="img/pearl-earrings-slider-desktop@1x.png 1x, img/pearl-earrings-slider-desktop@2x.png 2x">
+                    <!-- 1x: 324px*340px; 2x: 648px*680px -->
                     <source media="(min-width: 768px)" srcset="img/pearl-earrings-slider-tablet@1x.png 1x, img/pearl-earrings-slider-tablet@2x.png 2x">
-                    <img class="slider__product-image" src="img/pearl-earrings-slider-mobile@1x.png" srcset="img/pearl-earrings-slider-mobile@2x.png 2x" width="130" height="136" alt="Pearl earrings">
+                    <!-- 1x: 130px*136px; 2x: 260*272px -->
+                    <img class="slider__product-image" src="img/pearl-earrings-slider-mobile@1x.png" srcset="img/pearl-earrings-slider-mobile@2x.png 2x" width="130" height="136" alt="Double pearl earrings">
                   </picture>
                 </a>
+                <p class="slider__product-name">Double pearl earrings</p>
+                <span class="slider__product-price">$ 115</span>
               </li>
-              <li class="slider__product-item">
-                <a class="slider__product-description" href="#">
+              <li class="slider__product-description">
+                <a class="slider__product-link" href="#">
                   <picture class="slider__product-image-wrap">
+                    <!-- 1х: 270px*284px; 2x: 540px*568px -->
+                    <source media="(min-width: 1024px)" type="image/webp" srcset="img/threader-necklace-slider-desktop@1x.webp 1x, img/threader-necklace-slider-desktop@2x.webp 2x">
+                    <!-- 1x: 324px*340px; 2x: 648px*680px -->
+                    <source media="(min-width: 768px)" type="image/webp" srcset="img/threader-necklace-slider-tablet@1x.webp 1x, img/threader-necklace-slider-tablet@2x.webp 2x">
+                    <!-- 1x: 130px*136px; 2x: 260*272px -->
+                    <source type="image/webp" srcset="img/threader-necklace-slider-mobile@1x.webp, img/threader-necklace-slider-mobile@2x.webp 2x">
+
+                     <!-- 1х: 270px*284px; 2x: 540px*568px -->
                     <source media="(min-width: 1024px)" srcset="img/threader-necklace-slider-desktop@1x.png 1x, img/threader-necklace-slider-desktop@2x.png 2x">
+                    <!-- 1x: 324px*340px; 2x: 648px*680px -->
                     <source media="(min-width: 768px)" srcset="img/threader-necklace-slider-tablet@1x.png 1x, img/threader-necklace-slider-tablet@2x.png 2x">
+                    <!-- 1x: 130px*136px; 2x: 260*272px -->
                     <img class="slider__product-image" src="img/threader-necklace-slider-mobile@1x.png" srcset="img/threader-necklace-slider-mobile@2x.png 2x" width="130" height="136" alt="Threader necklace">
                   </picture>
                 </a>
+                <p class="slider__product-name">Threader necklace</p>
+                <span class="slider__product-price">$ 115</span>
               </li>
             </ul>
           </div>
           <ul class="slider__pagination">
             <li class="slider__pagination-item">
-              <a class="slider__pagination-link">1</a>
+              <a class="slider__pagination-link slider__pagination-link--active">1</a>
             </li>
             <li class="slider__pagination-item">
               <a class="slider__pagination-link" href="#">2</a>
@@ -386,7 +525,7 @@
             <input class="subscription__input" type="email" name="email" id="subscription-email" placeholder="Your E-mail" required="">
             <button class="subscription__submit" type="submit">Sign Up
               <svg class="subscription__submit-icon" width="29" height="9">
-                <use xlink:href="#icon-arrow"></use>
+                <use xlink:href="#icon-arrow-right"></use>
               </svg>
             </button>
           </form>

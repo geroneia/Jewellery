@@ -10,6 +10,7 @@
   var mainNavToggle = mainNav.querySelector('.main-nav__toggle');
 
   var openMenu = function () {
+    closeLogIn();
     pageHeader.classList.remove('page-header--menu-closed');
     pageHeaderSearch.classList.remove('page-header__search--closed');
     searchInput.classList.remove('page-header__search-input--menu-closed');
@@ -60,14 +61,14 @@
   var overlay = document.querySelector('.login');
 
   // Устанавливает фокус на поле e-mail
-  // var setFocus = function () {
-  //   document.querySelector('#email').focus();
-  // };
+  var setFocus = function () {
+    document.querySelector('#email').focus();
+  };
 
   var openLogIn = function () {
     overlay.classList.remove('modal--close');
     overlay.classList.add('modal--open');
-    // setFocus();
+    setFocus();
     closeMenu();
     body.classList.add('modal-open');
   };
