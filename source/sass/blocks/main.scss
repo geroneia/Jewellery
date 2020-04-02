@@ -52,3 +52,59 @@
     line-height: 49px;
   }
 }
+
+@media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+  .main__promo {
+    height: 463px;
+    background-image: url("../img/main-tablet@1x.jpg");
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/main-tablet@2x.jpg");
+      background-size: cover;
+    }
+  }
+
+  .main__promo-slogan {
+    padding-top: 185px;
+    font-size: 38px;
+    line-height: 49px;
+  }
+
+  .main__promo-definition {
+    padding-bottom: 0;
+    font-size: 45px;
+    line-height: 49px;
+  }
+}
+
+@media (min-width: $min-mobile-width) and (max-width: $max-mobile-width) {
+  .main__promo {
+    height: 463px;
+    background-image: url("../img/main-mobile@1x.jpg");
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/main-mobile@2x.jpg");
+      background-size: cover;
+    }
+  }
+
+  .main__promo-slogan {
+    padding-top: 193px;
+    font-size: 34px;
+    line-height: 38px;
+  }
+
+  .main__promo-definition {
+    padding-bottom: 0;
+    font-size: 38px;
+    line-height: 42px;
+  }
+}

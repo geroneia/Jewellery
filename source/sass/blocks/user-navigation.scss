@@ -21,6 +21,9 @@
   .user-navigation__cart-link {
     display: flex;
     justify-content: space-between;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
 
     &:hover {
       color: $black;
@@ -28,7 +31,7 @@
   }
 
   .user-navigation__cart-counter {
-    margin-left: 3px;
+    margin-left: 6px;
   }
 
   .user-navigation__cart-icon {

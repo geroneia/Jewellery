@@ -1,0 +1,28 @@
+.new-arrivals {
+  background-color: $white;
+  font-family: $font;
+}
+
+.new-arrivals__heading {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: $font-headings;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 44px;
+  text-align: center;
+
+  &:hover {
+    color: $black;
+  }
+}
+
+.new-arrivals__slider {
+  width: 100%;
+}
+
+@media (min-width: $desktop-width) {
+  .new-arrivals__heading {
+    padding-top: 120px;
+  }
+}

@@ -1,0 +1,135 @@
+.slider {
+  position: relative;
+}
+
+.slider__catalog-link {
+  display: inline-block;
+  min-width: 83px;
+  margin-left: calc(50% - 41px);
+  font-family: $font;
+  font-weight: 500;
+  color: $black;
+  text-align: center;
+  border-bottom: 1px solid $brown;
+}
+
+.slider__controls,
+.slider__controls:hover {
+  stroke: $brown;
+  position: absolute;
+  width: 29px;
+  height: 9px;
+  cursor: pointer;
+}
+
+.slider__wrapper {
+  z-index: 2;
+  display: block;
+  overflow: hidden;
+  // outline: 1px solid brown;
+}
+
+.slider__product-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style: none;
+  width: 300%;
+  // transform: translateX(-66.6%);
+}
+
+.slider__product-description {
+  display: flex;
+  justify-content: space-around;
+  vertical-align: middle;
+  align-items: center;
+  flex-direction: column;
+  padding-right: 5px;
+  padding-left: 5px;
+  width: 23.93%;
+  flex-shrink: 2;
+}
+
+.slider__product-image-wrap {
+  display: flex;
+  width: 100%;
+  flex-shrink: 2;
+}
+
+.slider__product-name {
+  margin-top: 21px;
+  margin-bottom: 6px;
+}
+
+.slider__product-price {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.slider__pagination {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  justify-content: space-between;
+}
+
+.slider__pagination-link,
+.slider__pagination-link:hover {
+  font-family: $font;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  color: $gray-font;
+}
+
+.slider__pagination-link--active {
+  color: $black;
+}
+
+@media (min-width: $desktop-width) {
+  .slider {
+    min-width: 600px;
+    padding-top: 24px;
+    padding-left: 6.1%;
+    padding-right: 6.1%;
+  }
+
+  .slider__catalog-link {
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  .slider__controls {
+    top: -7px;
+  }
+
+  .slider__control-left {
+    left: 7.17%;
+  }
+
+  .slider__control-right {
+    right: 7.17%;
+  }
+
+  .slider__wrapper {
+    height: 410px;
+    padding-top: 60px;
+  }
+
+  .slider__product-image {
+    width: 100%;
+    height: auto;
+    flex-grow: 0;
+  }
+
+  .slider__pagination {
+    width: 48px;
+    padding-top: 36px;
+    margin-left: calc(50% - 24px);
+  }
+}
