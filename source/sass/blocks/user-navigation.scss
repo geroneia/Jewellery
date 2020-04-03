@@ -13,14 +13,19 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding-top: 53px;
+    padding-top: 52px;
     padding-left: 0;
     list-style: none;
+  }
+
+  .user-navigation__login-link {
+    padding-bottom: 2px;
   }
 
   .user-navigation__cart-link {
     display: flex;
     justify-content: space-between;
+    padding-top: 1px;
     font-weight: 500;
     font-size: 14px;
     line-height: 21px;

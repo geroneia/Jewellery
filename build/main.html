@@ -312,7 +312,7 @@
                   </picture>
                 </a>
                 <p class="slider__product-name">Boho earrings</p>
-                  <span class="slider__product-price">$ 75</span>
+                <span class="slider__product-price">$ 75</span>
               </li>
               <li class="slider__product-description">
                 <a class="slider__product-link" href="#">
@@ -416,47 +416,67 @@
       <section class="main-blog blog">
         <h2 class="blog__heading">Blog</h2>
         <a class="blog__link" href="#">Read All</a>
-        <article class="blog__article article article__first">
-          <p class="article__date">September 30, 2019</p>
-          <h3 class="article__heading">How to care for your jewellery</h3>
-          <a class="article__link" href="#">Read Article</a>
-        </article>
-        <article class="blog__article article article__second">
-          <p class="article__date">September 16, 2019</p>
-          <h3 class="article__heading">AW 19 trends</h3>
-          <a class="article__link" href="#">Read Article</a>
-        </article>
-        <article class="blog__article article article__third">
-          <p class="article__date">September 23, 2019</p>
-          <h3 class="article__heading">Power of crystals</h3>
-          <a class="article__link" href="#">Read Article</a>
-        </article>
+        <div class="blog__wrapper">
+          <div class="blog__column">
+            <article class="blog__article article article__first">
+              <div class="article__wrapper">
+                <p class="article__date">September 30, 2019</p>
+                <h3 class="article__heading">How to care for<br>your jewellery</h3>
+                <a class="article__link" href="#">Read Article</a>
+              </div>
+            </article>
+            <article class="blog__article article article__second">
+              <div class="article__wrapper">
+                <p class="article__date">September 23, 2019</p>
+                <h3 class="article__heading">Power of<br>crystals</h3>
+                <a class="article__link" href="#">Read Article</a>
+              </div>
+            </article>
+          </div>
+          <div class="blog__column">
+            <article class="blog__article article article__third">
+              <div class="article__wrapper">
+                <p class="article__date">September 16, 2019</p>
+                <h3 class="article__heading">AW 19 trends</h3>
+                <a class="article__link" href="#">Read Article</a>
+              </div>
+            </article>
+          </div>
+        </div>
       </section>
       <section class="main__faq faq">
         <h2 class="faq__heading">Frequently asked questions</h2>
         <ul class="faq__list">
           <li class="faq__item">
-            <p class="faq__question">What materials are the jewellery made of?</p>
-            <p class="faq__answer">Our jewellerry is made of solid gold, silver or leather. Also, some jewellery
-              contains precious and semiprecious stones and crystals.</p>
+            <a class="faq__link faq__question--open">
+              <p class="faq__question faq__question--open">What materials are the jewellery made of?</p>
+              <p class="faq__answer">Our jewellerry is made of solid gold, silver or leather. Also, some jewellery
+                contains precious and semiprecious stones and crystals.</p>
+            </a>
           </li>
           <li class="faq__item">
-            <p class="faq__question">Which countries do you deliver to?</p>
-            <p class="faq__answer"></p>
+            <a class="faq__link">
+              <p class="faq__question faq__question--close">Which countries do you deliver to?</p>
+              <p class="faq__answer"></p>
+            </a>
           </li>
           <li class="faq__item">
-            <p class="faq__question">What are the payment methods?</p>
-            <p class="faq__answer"></p>
+            <a class="faq__link">
+              <p class="faq__question faq__question--close">What are the payment methods?</p>
+              <p class="faq__answer"></p>
+            </a>
           </li>
           <li class="faq__item">
-            <p class="faq__question">Can I return the jewellery if it didn’t fit me?</p>
-            <p class="faq__answer"></p>
+            <a class="faq__link">
+              <p class="faq__question faq__question--close">Can I return the jewellery if it didn’t fit me?</p>
+              <p class="faq__answer"></p>
+            </a>
           </li>
         </ul>
       </section>
       <section class="main__contacts contacts">
         <h2 class="contacts__heading"><span>@</span>Chjewellery</h2>
-        <a class="contacts__link" href="#">Follow Us</a>
+        <a class="contacts__follow-link" href="#">Follow Us</a>
       </section>
       <section class="main__gallery gallery">
         <h2 class="visually-hidden">Gallery</h2>

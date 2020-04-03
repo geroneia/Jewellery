@@ -1,0 +1,103 @@
+.faq__link,
+.faq__link:hover {
+  position: relative;
+  display: block;
+  color: $black;
+  cursor: pointer;
+}
+
+.faq__heading {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: $font-headings;
+  font-weight: 700;
+  text-align: center;
+}
+
+.faq__list {
+  padding-left: 0;
+  list-style: none;
+  border: 1px solid $brown;
+}
+
+.faq__item {
+  font-family: $font;
+  border-bottom: 1px solid $brown;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.faq__question {
+  position: relative;
+  margin-top: 0;
+  font-weight: 500;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 8px;
+    top: calc(50% - 3px);
+    right: -69.9%;
+    // border: 1px solid red;
+    background-color: transparent;
+    // background-image: url("../img/angle-bottom.svg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 15px 8px;
+  }
+}
+
+.faq__question--close::after {
+  background-image: url("../img/angle-bottom.svg");
+}
+
+.faq__question--open::after {
+  background-image: url("../img/angle-top.svg");
+}
+
+.faq__answer {
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+@media (min-width: $desktop-width) {
+  .faq {
+    padding-top: 91px;
+  }
+
+  .faq__heading {
+    font-size: 34px;
+    line-height: 44px;
+  }
+
+  .faq__list {
+    margin-top: 47px;
+    margin-left: 14.49%;
+    margin-right: 14.49%;
+    margin-bottom: 0;
+  }
+
+  .faq__link {
+    padding-top: 42px;
+    padding-left: 50px;
+    padding-right: 42%;
+    padding-bottom: 29px;
+  }
+
+  .faq__question {
+    margin-bottom: 0;
+    font-size: 18px;
+    line-height: 23px;
+  }
+
+  .faq__answer {
+    margin-top: 16px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    line-height: 21px;
+  }
+}
