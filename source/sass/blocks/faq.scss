@@ -1,17 +1,19 @@
-.faq__link,
-.faq__link:hover {
-  position: relative;
-  display: block;
-  color: $black;
-  cursor: pointer;
-}
-
 .faq__heading {
   margin-top: 0;
   margin-bottom: 0;
   font-family: $font-headings;
   font-weight: 700;
   text-align: center;
+  font-size: 34px;
+  line-height: 44px;
+}
+
+.faq__link,
+.faq__link:hover {
+  position: relative;
+  display: block;
+  color: $black;
+  cursor: pointer;
 }
 
 .faq__list {
@@ -41,12 +43,14 @@
     height: 8px;
     top: calc(50% - 3px);
     right: -69.9%;
-    // border: 1px solid red;
     background-color: transparent;
-    // background-image: url("../img/angle-bottom.svg");
     background-position: 0 0;
     background-repeat: no-repeat;
     background-size: cover;
+  }
+
+  br {
+    display: none;
   }
 }
 
@@ -58,6 +62,10 @@
   background-image: url("../img/angle-top.svg");
 }
 
+.faq__question--close + .faq__answer {
+  display: none;
+}
+
 .faq__answer {
   font-weight: 400;
   margin-top: 0;
@@ -67,11 +75,6 @@
 @media (min-width: $desktop-width) {
   .faq {
     padding-top: 91px;
-  }
-
-  .faq__heading {
-    font-size: 34px;
-    line-height: 44px;
   }
 
   .faq__list {
@@ -107,11 +110,6 @@
     padding-top: 40px;
   }
 
-  .faq__heading {
-    font-size: 34px;
-    line-height: 44px;
-  }
-
   .faq__list {
     margin-top: 48px;
     margin-right: 5.86%;
@@ -145,5 +143,50 @@
     margin-bottom: 26px;
     font-size: 16px;
     line-height: 21px;
+  }
+}
+
+@media (min-width: $min-mobile-width) and (max-width: $max-mobile-width) {
+  .faq {
+    padding-top: 31px;
+  }
+
+  .faq__list {
+    margin-top: 27px;
+    margin-right: 4.66%;
+    margin-left: 4.66%;
+    margin-bottom: 0;
+  }
+
+  .faq__link {
+    padding-top: 17px;
+    padding-left: 25px;
+    padding-right: 19%;
+    padding-bottom: 20px;
+  }
+
+  .faq__question {
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 140%;
+
+    &::after {
+      width: 20px;
+      height: 10px;
+      top: calc(50% - 17px);
+      right: -14.5%;
+      background-size: cover;
+    }
+
+    br {
+      display: inline;
+    }
+  }
+
+  .faq__answer {
+    margin-top: 14px;
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 20px;
   }
 }

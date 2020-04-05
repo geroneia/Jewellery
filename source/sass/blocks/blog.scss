@@ -7,7 +7,7 @@
 
 .blog__heading {
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 19px;
   font-family: $font-headings;
   font-weight: 700;
   font-size: 34px;
@@ -17,6 +17,10 @@
 
 .blog__link {
   display: inline-block;
+  width: 64px;
+  margin-left: calc(50% - 33px);
+  padding-bottom: 4px;
+  margin-bottom: 60px;
   font-family: $font;
   font-weight: 500;
   font-size: 16px;
@@ -27,27 +31,13 @@
 .blog__wrapper {
   display: flex;
   justify-content: flex-start;
+  flex-grow: 2;
 }
 
 @media (min-width: $desktop-width) {
   .blog {
     margin-right: 7.17%;
     margin-left: 7.17%;
-  }
-
-  .blog__link {
-    width: 64px;
-    margin-left: calc(50% - 33px);
-    padding-bottom: 4px;
-    margin-bottom: 60px;
-  }
-
-  .blog__heading {
-    margin-bottom: 19px;
-  }
-
-  .blog__wrapper {
-    flex-grow: 2;
   }
 
   .blog__column {
@@ -73,20 +63,8 @@
     margin-left: 5.86%;
   }
 
-  .blog__heading {
-    margin-bottom: 19px;
-  }
-
-  .blog__link {
-    width: 64px;
-    margin-left: calc(50% - 33px);
-    padding-bottom: 4px;
-    margin-bottom: 60px;
-  }
-
   .blog__wrapper {
     flex-direction: column;
-    flex-grow: 2;
   }
 
   .blog__column {
@@ -98,6 +76,33 @@
 
     &:first-child {
       margin-bottom: 50px;
+    }
+  }
+}
+
+@media (min-width: $min-mobile-width) and (max-width: $max-mobile-width) {
+  .blog {
+    margin-right: 4.68%;
+    margin-left: 4.68%;
+  }
+
+  .blog__link {
+    margin-bottom: 50px;
+  }
+
+  .blog__wrapper {
+    flex-direction: column;
+  }
+
+  .blog__column {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2;
+    flex-shrink: 2;
+    width: 100%;
+
+    &:first-child {
+      margin-bottom: 40px;
     }
   }
 }

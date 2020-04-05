@@ -8,17 +8,26 @@
   font-family: $font;
   font-weight: 500;
   color: $gray-font;
+  font-size: 14px;
+  line-height: 18px;
 }
 
 .article__heading {
   margin-top: 0;
   font-family: $font-headings;
   font-weight: 600;
+  margin-bottom: 38px;
+  font-size: 26px;
+  line-height: 130%;
 }
 
 .article__link,
 .article__link:hover {
   display: inline-block;
+  width: 97px;
+  padding-bottom: 4px;
+  font-size: 16px;
+  line-height: 21px;
   font-family: $font;
   font-weight: 500;
   border-bottom: 1px solid $brown;
@@ -47,24 +56,6 @@
       margin-top: 67px;
       margin-bottom: 14px;
     }
-  }
-
-  .article__date {
-    font-size: 14px;
-    line-height: 18px;
-  }
-
-  .article__heading {
-    margin-bottom: 38px;
-    font-size: 26px;
-    line-height: 130%;
-  }
-
-  .article__link {
-    width: 97px;
-    padding-bottom: 4px;
-    font-size: 16px;
-    line-height: 21px;
   }
 
   .article__first {
@@ -154,24 +145,6 @@
     }
   }
 
-  .article__date {
-    font-size: 14px;
-    line-height: 18px;
-  }
-
-  .article__heading {
-    margin-bottom: 38px;
-    font-size: 26px;
-    line-height: 130%;
-  }
-
-  .article__link {
-    width: 97px;
-    padding-bottom: 4px;
-    font-size: 16px;
-    line-height: 21px;
-  }
-
   .article__first {
     margin-bottom: 50px;
     background-image: url("../img/jess-harper-tablet@1x.jpg");
@@ -225,6 +198,73 @@
     .article__date {
       margin-top: 83px;
       margin-bottom: 14px;
+    }
+  }
+}
+
+@media (min-width: $min-mobile-width) and (max-width: $max-mobile-width) {
+  .article {
+    display: flex;
+    width: 100%;
+    min-height: 512px;
+    flex-shrink: 2;
+    flex-grow: 2;
+    justify-content: space-between;
+  }
+
+  .article__wrapper {
+    width: 100%;
+    height: 256px;
+    background-color: $pink-gray;
+    margin-top: auto;
+  }
+
+  .article__date {
+    margin-top: 46px;
+    margin-bottom: 12px;
+  }
+
+  .article__first {
+    margin-bottom: 40px;
+    background-image: url("../img/jess-harper-sunday-mobile@1x.jpg");
+    background-position: 0 0;
+    background-size: contain;
+
+    @media (min-resolution: $retina-dpi),
+      (min-resolution: $retina-dppx) {
+      background-image: url("../img/jess-harper-mobile@2x.jpg");
+      background-size: contain;
+    }
+  }
+
+  .article__second {
+    margin-bottom: 0;
+    background-image: url("../img/alex-holyoake-mobile@1x.jpg");
+    background-position: 100% 0;
+    background-size: contain;
+
+    @media (min-resolution: $retina-dpi),
+      (min-resolution: $retina-dppx) {
+      background-image: url("../img/alex-holyoake-mobile@2x.jpg");
+      background-size: contain;
+    }
+  }
+
+  .article__third {
+    background-image: url("../img/alve-odonnell-mobile@1x.jpg");
+    background-position: 0 0;
+    background-size: contain;
+    margin-bottom: 30px;
+
+    @media (min-resolution: $retina-dpi),
+      (min-resolution: $retina-dppx) {
+      background-image: url("../img/alve-odonnell-mobile@2x.jpg");
+      background-size: contain;
+    }
+
+    .article__date {
+      margin-top: 63px;
+      margin-bottom: 12px;
     }
   }
 }
