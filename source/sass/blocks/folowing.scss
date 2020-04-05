@@ -1,8 +1,7 @@
-.folowing__heading {
+.following__heading {
   display: block;
   width: 200px;
-  margin-left: calc(50% - 100px);
-  margin-top: 117px;
+  margin-left: calc(50% - 98px);
   margin-bottom: 19px;
   padding-top: 0;
   font-family: $font-headings;
@@ -15,7 +14,7 @@
   }
 }
 
-.folowing__follow-link {
+.following__follow-link {
   display: inline-block;
   width: 74px;
   margin-left: calc(50% - 37px);
@@ -32,7 +31,7 @@
   display: flex;
 }
 
-.folowing__images-list {
+.following__images-list {
   width: 100%;
   height: 444px;
   // outline: 1px solid red;
@@ -49,7 +48,7 @@
   flex-shrink: 2;
 }
 
-.folowing__images-item {
+.following__images-item {
   display: flex;
   flex-shrink: 1;
   margin: 15px;
@@ -61,7 +60,7 @@
   }
 }
 
-.folowing__image {
+.following__image {
   display: flex;
   flex-grow: 0;
   width: 100%;
@@ -69,17 +68,21 @@
 }
 
 @media (min-width: $desktop-width) {
+  .following__heading {
+    margin-top: 117px;
+  }
+
   .following__wrapper {
     margin-left: 6.07%;
     margin-right: 6.07%;
     margin-bottom: 116px;
   }
 
-  .folowing__images-list {
+  .following__images-list {
     max-width: 1200px;
   }
 
-  .folowing__images-item {
+  .following__images-item {
     &:first-of-type {
       width: 19.16%;
       // height: 230px;
@@ -115,6 +118,68 @@
       // height: 166px;
       margin: 0;
       margin-top: 15px;
+    }
+  }
+}
+
+@media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+  .following__heading {
+    margin-top: 72px;
+  }
+
+  .following__follow-link {
+    margin-bottom: 50px;
+  }
+
+  .following__wrapper {
+    margin-left: 4.7%;
+    margin-right: 4.7%;
+    margin-bottom: 53px;
+  }
+
+
+  .following__images-list {
+    height: 276px;
+  }
+
+  .following__images-item {
+    margin: 9px;
+
+    &:first-of-type {
+      width: 19.16%;
+      // height: 230px;
+    }
+
+    &:nth-of-type(2) {
+      width: 19.16%;
+      // height: 154px;
+    }
+
+    &:nth-of-type(3) {
+      width: 33.1%;
+      // height: 414px;
+    }
+
+    &:nth-of-type(4) {
+      width: 19.33%;
+      // height: 193px;
+    }
+
+    &:nth-of-type(5) {
+      width: 18.1%;
+      // height: 191px;
+    }
+
+    &:nth-of-type(6) {
+      width: 18.1%;
+      // height: 218px;
+    }
+
+    &:nth-of-type(7) {
+      width: 19.33%;
+      // height: 166px;
+      margin: 0;
+      margin-top: 9px;
     }
   }
 }

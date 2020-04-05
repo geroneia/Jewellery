@@ -66,3 +66,38 @@
     }
   }
 }
+
+@media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+  .blog {
+    margin-right: 5.86%;
+    margin-left: 5.86%;
+  }
+
+  .blog__heading {
+    margin-bottom: 19px;
+  }
+
+  .blog__link {
+    width: 64px;
+    margin-left: calc(50% - 33px);
+    padding-bottom: 4px;
+    margin-bottom: 60px;
+  }
+
+  .blog__wrapper {
+    flex-direction: column;
+    flex-grow: 2;
+  }
+
+  .blog__column {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2;
+    flex-shrink: 2;
+    width: 100%;
+
+    &:first-child {
+      margin-bottom: 50px;
+    }
+  }
+}

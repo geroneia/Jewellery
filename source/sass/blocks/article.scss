@@ -128,3 +128,103 @@
     }
   }
 }
+
+@media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+  .article {
+    display: flex;
+    width: 100%;
+    flex-shrink: 2;
+    flex-grow: 2;
+    justify-content: space-between;
+  }
+
+  .article__wrapper {
+    width: 50%;
+    height: 300px;
+    background-color: $pink-gray;
+  }
+
+  .article__first,
+  .article__second {
+    min-height: 300px;
+
+    .article__date {
+      margin-top: 67px;
+      margin-bottom: 14px;
+    }
+  }
+
+  .article__date {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .article__heading {
+    margin-bottom: 38px;
+    font-size: 26px;
+    line-height: 130%;
+  }
+
+  .article__link {
+    width: 97px;
+    padding-bottom: 4px;
+    font-size: 16px;
+    line-height: 21px;
+  }
+
+  .article__first {
+    margin-bottom: 50px;
+    background-image: url("../img/jess-harper-tablet@1x.jpg");
+    background-position: 0 0;
+    background-size: contain;
+
+    @media (min-resolution: $retina-dpi),
+      (min-resolution: $retina-dppx) {
+      background-image: url("../img/jess-harper-tablet@2x.jpg");
+      background-size: contain;
+    }
+
+    .article__wrapper {
+      margin-left: auto;
+    }
+  }
+
+  .article__second {
+    margin-bottom: 0;
+    background-image: url("../img/alex-holyoake-tablet@1x.jpg");
+    background-position: 100% 0;
+    background-size: contain;
+
+    @media (min-resolution: $retina-dpi),
+      (min-resolution: $retina-dppx) {
+      background-image: url("../img/alex-holyoake-tablet@2x.jpg");
+      background-size: contain;
+    }
+
+    .article__wrapper {
+      margin-right: auto;
+    }
+  }
+
+  .article__third {
+    background-image: url("../img/alve-odonnell-tablet@1x.jpg");
+    background-position: 0 0;
+    background-size: contain;
+    margin-bottom: 30px;
+
+    @media (min-resolution: $retina-dpi),
+      (min-resolution: $retina-dppx) {
+      background-image: url("../img/alve-odonnell-tablet@2x.jpg");
+      background-size: contain;
+    }
+
+    .article__wrapper {
+      margin-left: auto;
+    }
+
+    .article__date {
+      margin-top: 83px;
+      margin-bottom: 14px;
+    }
+  }
+}
