@@ -47,6 +47,7 @@
     background-position: 0 0;
     background-repeat: no-repeat;
     background-size: cover;
+    background-image: url("../img/angle-bottom.svg");
   }
 
   br {
@@ -54,22 +55,19 @@
   }
 }
 
-.faq__question--close::after {
-  background-image: url("../img/angle-bottom.svg");
-}
-
-.faq__question--open::after {
-  background-image: url("../img/angle-top.svg");
-}
-
-.faq__question--close + .faq__answer {
-  display: none;
+.faq__link--open {
+  .faq__question::after {
+    background-image: url("../img/angle-top.svg");
+  }
 }
 
 .faq__answer {
+  display: none;
+}
+
+.faq__link--open > .faq__answer {
+  display: block;
   font-weight: 400;
-  margin-top: 0;
-  margin-bottom: 0;
 }
 
 @media (min-width: $desktop-width) {

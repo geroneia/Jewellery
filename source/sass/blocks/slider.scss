@@ -17,13 +17,16 @@
   border-bottom: 1px solid $brown;
 }
 
-.slider__controls,
-.slider__controls:hover {
+.slider__controls {
   stroke: $brown;
   position: absolute;
   width: 29px;
   height: 9px;
   cursor: pointer;
+
+  &:hover {
+    stroke: $brown;
+  }
 }
 
 .slider__wrapper {
@@ -141,6 +144,10 @@
   .slider__pagination-item--tablet-only {
     display: none;
   }
+
+  .slider__pagination--mobile-only {
+    display: none;
+  }
 }
 
 @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
@@ -201,6 +208,10 @@
     padding-top: 26px;
     margin-left: calc(50% - 59px);
     padding-bottom: 50px;
+  }
+
+  .slider__pagination--mobile-only {
+    display: none;
   }
 }
 

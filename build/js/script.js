@@ -2,6 +2,7 @@
 (function () {
   // Открытие/закрытие меню
   var DESKTOP_WIDTH = 1024;
+  var TABLET_WIDTH = 768;
   var pageHeader = document.querySelector('.page-header');
   var pageHeaderSearch = pageHeader.querySelector('.page-header__search');
   var searchInput = pageHeader.querySelector('.page-header__search-input');
@@ -114,4 +115,112 @@
   document.addEventListener('click', onOverlayClick, true);
 
   document.addEventListener('keydown', onEscPress);
+
+  // Перелистывание слайдера
+
+  var DESKTOP_STEP = 33.3;
+  var TABLET_STEP = 16.7;
+  var sliderControlLeft = document.querySelector('.slider__control-left');
+  var sliderControlRight = document.querySelector('.slider__control-right');
+  var list = document.querySelector('.slider__product-list');
+  // var paginationBlock = document.querySelector('.slider__pagination');
+  var pages = document.querySelectorAll('.slider__pagination-link');
+  var mobileCounter = document.querySelector('.slider__pagination-counter');
+  var factor = 0;
+  var counter = 0;
+
+  if (document.body.clientWidth >= DESKTOP_WIDTH) {
+    var step = DESKTOP_STEP;
+    var limit = -2;
+  }
+
+  if (document.body.clientWidth < DESKTOP_WIDTH) {
+    step = TABLET_STEP;
+    limit = -5;
+  }
+
+  var getTransform = function () {
+    var transform = 'translateX(' + factor * step + '%)';
+    return transform;
+  };
+
+  var onLeftControlClick = function () {
+    if (factor < 0) {
+      factor++;
+      counter--;
+      for (var i = 0; i < pages.length; i++) {
+        pages[i].classList.remove('slider__pagination-link--active');
+      }
+      list.style.transform = getTransform();
+      pages[counter].classList.add('slider__pagination-link--active');
+    }
+  };
+
+  var onRightControlClick = function () {
+    if (factor > limit) {
+      factor--;
+      counter++;
+      for (var i = 0; i < pages.length; i++) {
+        pages[i].classList.remove('slider__pagination-link--active');
+      }
+      list.style.transform = getTransform();
+      pages[counter].classList.add('slider__pagination-link--active');
+    }
+  };
+
+  sliderControlLeft.addEventListener('click', onLeftControlClick);
+  sliderControlRight.addEventListener('click', onRightControlClick);
+
+  // Перелистывание по свайпу
+  var distance = 0;
+  var startX = 0;
+  var startY = 0;
+  var threshold = 130;
+  list.addEventListener('touchstart', function (evt) {
+    var touchobj = evt.changedTouches[0];
+    distance = 0;
+    startX = touchobj.pageX;
+    startY = touchobj.pageY;
+    evt.preventDefault();
+  }, false);
+
+  list.addEventListener('touchmove', function (evt) {
+    evt.preventDefault();
+  }, false);
+
+  list.addEventListener('touchend', function (evt) {
+    var touchobj = evt.changedTouches[0];
+    distance = touchobj.pageX - startX;
+    if (distance >= threshold && Math.abs(touchobj.pageY - startY) <= 100) {
+      onLeftControlClick();
+    } else {
+      onRightControlClick();
+    }
+    evt.preventDefault();
+    if (document.body.clientWidth < TABLET_WIDTH) {
+      mobileCounter.innerHTML = '';
+      mobileCounter.innerHTML = counter + 1;
+    }
+  }, false);
+
+  // Открывание/закрывание ответа по щелчку на ворос
+  var questionList = document.querySelector('.faq__list');
+  var onQuestionClick = function (evt) {
+    var target = evt.target;
+    if (target.classList.contains('faq__link')) {
+      if (target.classList.contains('faq__link--open')) {
+        target.classList.remove('faq__link--open');
+      } else {
+        target.classList.add('faq__link--open');
+      }
+    } else if (target.classList.contains('faq__question')) {
+      var parent = target.offsetParent;
+      if (parent.classList.contains('faq__link--open')) {
+        parent.classList.remove('faq__link--open');
+      } else {
+        parent.classList.add('faq__link--open');
+      }
+    }
+  };
+  questionList.addEventListener('click', onQuestionClick);
 })();
