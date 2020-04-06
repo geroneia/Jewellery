@@ -27,6 +27,10 @@
   .products-list--desktop-main-only {
     display: none;
   }
+
+  .products-list {
+    padding-left: 7px;
+  }
 }
 
 @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {

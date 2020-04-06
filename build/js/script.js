@@ -123,7 +123,6 @@
   var sliderControlLeft = document.querySelector('.slider__control-left');
   var sliderControlRight = document.querySelector('.slider__control-right');
   var list = document.querySelector('.slider__product-list');
-  // var paginationBlock = document.querySelector('.slider__pagination');
   var pages = document.querySelectorAll('.slider__pagination-link');
   var mobileCounter = document.querySelector('.slider__pagination-counter');
   var factor = 0;
@@ -168,40 +167,45 @@
     }
   };
 
-  sliderControlLeft.addEventListener('click', onLeftControlClick);
-  sliderControlRight.addEventListener('click', onRightControlClick);
+  if (list) {
+    sliderControlLeft.addEventListener('click', onLeftControlClick);
+    sliderControlRight.addEventListener('click', onRightControlClick);
+  }
 
   // Перелистывание по свайпу
   var distance = 0;
   var startX = 0;
   var startY = 0;
   var threshold = 130;
-  list.addEventListener('touchstart', function (evt) {
-    var touchobj = evt.changedTouches[0];
-    distance = 0;
-    startX = touchobj.pageX;
-    startY = touchobj.pageY;
-    evt.preventDefault();
-  }, false);
 
-  list.addEventListener('touchmove', function (evt) {
-    evt.preventDefault();
-  }, false);
+  if (list) {
+    list.addEventListener('touchstart', function (evt) {
+      var touchobj = evt.changedTouches[0];
+      distance = 0;
+      startX = touchobj.pageX;
+      startY = touchobj.pageY;
+      evt.preventDefault();
+    }, false);
 
-  list.addEventListener('touchend', function (evt) {
-    var touchobj = evt.changedTouches[0];
-    distance = touchobj.pageX - startX;
-    if (distance >= threshold && Math.abs(touchobj.pageY - startY) <= 100) {
-      onLeftControlClick();
-    } else {
-      onRightControlClick();
-    }
-    evt.preventDefault();
-    if (document.body.clientWidth < TABLET_WIDTH) {
-      mobileCounter.innerHTML = '';
-      mobileCounter.innerHTML = counter + 1;
-    }
-  }, false);
+    list.addEventListener('touchmove', function (evt) {
+      evt.preventDefault();
+    }, false);
+
+    list.addEventListener('touchend', function (evt) {
+      var touchobj = evt.changedTouches[0];
+      distance = touchobj.pageX - startX;
+      if (distance >= threshold && Math.abs(touchobj.pageY - startY) <= 100) {
+        onLeftControlClick();
+      } else {
+        onRightControlClick();
+      }
+      evt.preventDefault();
+      if (document.body.clientWidth < TABLET_WIDTH) {
+        mobileCounter.innerHTML = '';
+        mobileCounter.innerHTML = counter + 1;
+      }
+    }, false);
+  }
 
   // Открывание/закрывание ответа по щелчку на ворос
   var questionList = document.querySelector('.faq__list');
@@ -222,5 +226,8 @@
       }
     }
   };
-  questionList.addEventListener('click', onQuestionClick);
+
+  if (questionList) {
+    questionList.addEventListener('click', onQuestionClick);
+  }
 })();

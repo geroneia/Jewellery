@@ -25,6 +25,48 @@
   font-weight: 400;
 }
 
+.main__inner-page-heading-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 261px;
+  font-family: $font-headings;
+  color: $white;
+  background-color: $pink-background;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+}
+
+.main__inner-page-heading {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 44px;
+  text-transform: uppercase;
+  text-align: center;
+  }
+
+.main__inner-page-slogan {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center;
+  font-weight: 500;
+  font-style: italic;
+  font-size: 22px;
+  line-height: 29px;
+}
+
+.main__catalog-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
 @media (min-width: $desktop-width) {
   .main__promo {
     height: 463px;
@@ -50,6 +92,27 @@
     padding-bottom: 0;
     font-size: 45px;
     line-height: 49px;
+  }
+
+  .main__inner-page-heading-wrapper {
+    background-image: url("../img/main-catalog-desktop@1x.jpg");
+
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/main-catalog-desktop@2x.jpg");
+      background-size: cover;
+    }
+  }
+
+  .main__inner-page-heading {
+    padding-top: 92px;
+    padding-bottom: 2px;
+  }
+
+  .main__catalog-wrapper {
+    flex-direction: row;
+    margin-left: 7%;
+    margin-right: 7%px;
   }
 }
 

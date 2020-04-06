@@ -120,12 +120,14 @@
     </nav>
   </header>
   <div class="page-wrapper">
-    <main class="main">
+    <main class="main main__inner-page">
+      <div class="main__inner-page-heading-wrapper">
       <h1 class="main__inner-page-heading">All Jewellery</h1>
       <p class="main__inner-page-slogan">Discover picks of fashion's finest trends in our jewellery catalog</p>
+    </div>
       <div class="main__catalog-wrapper">
         <section class="main__filter filter">
-          <h2>Filter</h2>
+          <h2 class="filter__heading">Filter</h2>
           <form class="filter__form">
             <fieldset class="filter__block">
               <legend class="filter__subtitile"><a class="filter__subtitle-link" tabindex="0">Product</a></legend>
@@ -150,7 +152,7 @@
             </fieldset>
             <fieldset class="filter__block">
               <legend class="filter__subtitile"><a class="filter__subtitle-link" tabindex="0">Material</a></legend>
-              <ul class="filter__list">
+              <ul class="filter__list filter__list--closed">
                 <li class="filter__option">
                   <input class="filter__input filter__input-checkbox" name="#">
                   <label></label>
@@ -171,7 +173,7 @@
             </fieldset>
             <fieldset class="filter__block">
               <legend class="filter__subtitile"><a class="filter__subtitle-link" tabindex="0">Collection</a></legend>
-              <ul class="filter__list">
+              <ul class="filter__list filter__list--closed">
                 <li class="filter__option">
                   <input class="filter__input filter__input-checkbox" name="#">
                   <label></label>
@@ -205,13 +207,13 @@
                 <label><input class="price-range__max-value" type="text" name="max-value" placeholder="$ 155"></label>
               </div>
             </fieldset>
-            <button class="filter__submit-button filter__apply-button" type="submit">Apply</button>
+            <button class="filter__submit-button filter__apply-button button" type="submit">Apply</button>
             <button class="filter__submit-button filter__clear-button" type="submit">Clear All</button>
           </form>
         </section>
 
       <section class="main__catalog catalog">
-        <h2 class="visually-hedden">Catalog</h2>
+        <h2 class="visually-hidden">Catalog</h2>
         <ul class="catalog__list">
           <li class="catalog__product-description">
             <a class="catalog__product-link" href="#">

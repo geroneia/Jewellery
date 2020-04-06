@@ -1,0 +1,28 @@
+.filter {
+  font-family: $font;
+  font-weight: 500;
+  color: $black;
+}
+
+.filter__block {
+  border: none;
+}
+
+.filter__list {
+  list-style: none;
+}
+
+.filter__list--closed {
+  display: none;
+}
+
+.filter__input-checkbox {
+  display: none;
+}
+
+@media (min-width: $desktop-width) {
+.filter__heading {
+  display: none;
+}
+
+}
