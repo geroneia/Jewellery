@@ -55,8 +55,8 @@
   }
 }
 
-.faq__link--open {
-  .faq__question::after {
+.faq__link--open > .faq__question {
+  &::after {
     background-image: url("../img/angle-top.svg");
   }
 }

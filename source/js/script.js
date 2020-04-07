@@ -207,6 +207,26 @@
     }, false);
   }
 
+  // Перелистывание по щелчку на номер страницы
+  var pagination = document.querySelector('.slider__pagination--mobile-no');
+  if (list) {
+    pagination.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      var target = evt.target;
+      if (target.classList.contains('slider__pagination-link')) {
+        for (var i = 0; i < pages.length; i++) {
+          pages[i].classList.remove('slider__pagination-link--active');
+          if (target === pages[i]) {
+            counter = i;
+            factor = -i;
+          }
+        }
+        pages[counter].classList.add('slider__pagination-link--active');
+        list.style.transform = getTransform();
+      }
+    });
+  }
+
   // Открывание/закрывание ответа по щелчку на ворос
   var questionList = document.querySelector('.faq__list');
   var onQuestionClick = function (evt) {

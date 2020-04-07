@@ -32,7 +32,7 @@
     <div class="page-header__wrapper">
       <form class="page-header__search page-header__search-opened" method="POST" action="#">
         <button type="submit" class="page-header__search-button" aria-label="Search">
-          <svg class="page-header__search-icon" width="14" height="14">
+          <svg class="page-header__search-icon" width="14" height="14" role="img" aria-label="Icon loupe">
             <use xlink:href="#icon-loupe"></use>
           </svg>
         </button>
@@ -52,7 +52,7 @@
           <a class="user-navigation__cart-link" href="#" aria-label="Go to cart">
             <span class="user-navigation__cart-text">Cart</span>
             <span class="user-navigation__cart-counter">0</span>
-            <svg class="user-navigation__cart-icon" width="20" height="18" viewBox="0 0 20 18" fill="none" role="img" aria-label="Cart icon">
+            <svg class="user-navigation__cart-icon" width="20" height="18" viewBox="0 0 20 18" fill="none" role="img" aria-label="Icon cart">
               <use xlink:href="#icon-cart"></use>
             </svg>
           </a>
@@ -61,7 +61,7 @@
     </div>
     <nav class="main-nav main-nav--opened main-nav--nojs">
       <button class="main-nav__toggle" type="button" aria-label="Go to main menu">
-        <svg class="main-nav__toggle-icon" width="25" height="18">
+        <svg class="main-nav__toggle-icon" width="25" height="18" role="img" aria-label="Icon toggle">
           <use xlink:href="#icon-toggle"></use>
         </svg>
       </button>
@@ -110,12 +110,12 @@
         <p class="subscription__text">
           News and updates from CH. No spam, we promise.
         </p>
-        <form class="subscription__form" method="GET" action="#">
+        <form class="subscription__form" method="POST" action="#">
           <label class="subscription__label" for="subscription-email"><span class="visually-hidden">E-mail</span></label>
           <input class="subscription__input" type="email" name="email" id="subscription-email" placeholder="Your E-mail" required>
           <button class="subscription__submit" type="submit">Sign Up
-            <svg class="subscription__submit-icon" width="29" height="9">
-              <use xlink:href="#icon-arrow"></use>
+            <svg class="subscription__submit-icon" width="29" height="9" role="img" aria-label="Icon right arrow">
+              <use xlink:href="#icon-arrow-right"></use>
             </svg>
           </button>
         </form>
@@ -178,12 +178,12 @@
   <div class="modal modal__login login modal--close">
     <div class="login__wrapper">
       <button class="login__close-button" tabindex="0" type="button"><span class="visually-hidden">Close modal</span>
-        <svg class="login__icon" width="15" height="13">
+        <svg class="login__icon" width="15" height="13" role="img" aria-label="Icon cross">
           <use xlink:href="#icon-cross"></use>
         </svg>
       </button>
       <h2 class="login__heading">Log In</h2>
-      <form class="login__form" method="GET" action="#">
+      <form class="login__form" method="POST" action="#">
         <ul class="login__list">
           <li class="login__item">
             <label for="email">
