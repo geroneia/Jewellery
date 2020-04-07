@@ -111,8 +111,10 @@
 
   .main__catalog-wrapper {
     flex-direction: row;
-    margin-left: 7%;
-    margin-right: 7%;
+    justify-content: space-between;
+    margin-left: 7.2%;
+    margin-right: 7.2%;
+    margin-top: 80px;
   }
 }
 

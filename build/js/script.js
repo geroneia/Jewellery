@@ -250,4 +250,26 @@
   if (questionList) {
     questionList.addEventListener('click', onQuestionClick);
   }
+
+  // Открытие/закрытие блоков фильтра
+  var filter = document.querySelector('.filter');
+  var filterlists = document.querySelectorAll('.filter__list');
+  var filterLinks = document.querySelectorAll('.filter__subtitle-link');
+  var priceBlock = document.querySelector('.price-range');
+
+  if (filter) {
+    filter.addEventListener('click', function (evt) {
+      var target = evt.target;
+      if (target.classList.contains('filter__subtitle-link')) {
+        for (var i = 0; i < filterLinks.length; i++) {
+          if (target === filterLinks[i] && target !== filterLinks[filterLinks.length - 1]) {
+            filterlists[i].classList.toggle('filter__list--close');
+          } else if (target === filterLinks[i] && target === filterLinks[filterLinks.length - 1]) {
+            priceBlock.classList.toggle('price-range--close');
+          }
+        }
+        target.classList.toggle('filter__subtitle-link--close');
+      }
+    });
+  }
 })();
