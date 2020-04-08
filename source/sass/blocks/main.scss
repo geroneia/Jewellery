@@ -144,6 +144,29 @@
     font-size: 45px;
     line-height: 49px;
   }
+
+  .main__inner-page-heading-wrapper {
+    background-image: url("../img/main-catalog-tablet@1x.jpg");
+
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/main-catalog-tablet@2x.jpg");
+      background-size: cover;
+    }
+  }
+
+  .main__inner-page-heading {
+    padding-top: 92px;
+    padding-bottom: 2px;
+  }
+
+  .main__catalog-wrapper {
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 5.85%;
+    margin-right: 5.85%;
+    margin-top: 50px;
+  }
 }
 
 @media (min-width: $min-mobile-width) and (max-width: $max-mobile-width) {

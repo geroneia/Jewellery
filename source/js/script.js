@@ -251,6 +251,20 @@
     questionList.addEventListener('click', onQuestionClick);
   }
 
+  // Открытие/закрытие фильтра
+  var filterHeading = document.querySelector('.filter__heading-link');
+  var filterForm = document.querySelector('.filter__form');
+  var closeFilterButton = document.querySelector('.filter__close-form-button');
+  filterForm.classList.add('filter__form--close');
+
+  var onCloseButtonClick = function () {
+    filterForm.classList.add('filter__form--close');
+  };
+  var onFilterHeadingClick = function () {
+    filterForm.classList.remove('filter__form--close');
+    closeFilterButton.addEventListener('click', onCloseButtonClick);
+  };
+
   // Открытие/закрытие блоков фильтра
   var filter = document.querySelector('.filter');
   var filterlists = document.querySelectorAll('.filter__list');
@@ -271,5 +285,6 @@
         target.classList.toggle('filter__subtitle-link--close');
       }
     });
+    filterHeading.addEventListener('click', onFilterHeadingClick);
   }
 })();
