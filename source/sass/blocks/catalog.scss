@@ -141,3 +141,47 @@
     }
   }
 }
+
+@media (min-width: $min-mobile-width) and (max-width: $max-mobile-width) {
+  .catalog {
+    width: 100%;
+  }
+
+  .catalog__list {
+    margin-left: -9.5%;
+  }
+
+  .catalog__product-description {
+    margin-left: 9%;
+    margin-bottom: 26px;
+    width: 41%;
+    justify-content: flex-start;
+  }
+
+  .catalog__product-name {
+    margin-top: 16px;
+    margin-bottom: 6px;
+    text-align: center;
+  }
+
+  .catalog__pagination {
+    margin-left: auto;
+    margin-right: auto;
+    width: 140px;
+    padding-top: 16px;
+    padding-bottom: 66px;
+  }
+
+  .pagination-item-previous,
+  .pagination-item-next {
+    display: none;
+  }
+
+  .catalog__pagination-item-page-number {
+    margin-right: 23px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

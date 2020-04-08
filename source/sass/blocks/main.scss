@@ -195,4 +195,33 @@
     font-size: 38px;
     line-height: 42px;
   }
+
+  .main__inner-page-heading-wrapper {
+    background-image: url("../img/main-catalog-mobile@1x.jpg");
+
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/main-catalog-mobile@2x.jpg");
+      background-size: cover;
+    }
+  }
+
+  .main__inner-page-heading {
+    padding-top: 80px;
+    padding-bottom: 2px;
+  }
+
+  .main__inner-page-slogan {
+    margin-left: 5.85%;
+    margin-right: 5.85%;
+    line-height: 26px;
+  }
+
+  .main__catalog-wrapper {
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 4.8%;
+    margin-right: 4.8%;
+    margin-top: 40px;
+  }
 }
