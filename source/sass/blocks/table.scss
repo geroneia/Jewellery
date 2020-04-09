@@ -34,8 +34,15 @@
   font-weight: 400;
 }
 
+.table__parameter,
+.table__value {
+  font-size: 14px;
+  line-height: 18px;
+}
+
 @media (min-width: $desktop-width) {
   .table {
+    margin-top: auto;
     padding-bottom: 50px;
 
     th {
@@ -43,10 +50,28 @@
       line-height: 21px;
     }
   }
+}
 
-  .table__parameter,
-  .table__value {
-    font-size: 14px;
-    line-height: 18px;
+@media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+  .table {
+    margin-top: auto;
+    padding-bottom: 50px;
+
+    th {
+      font-size: 16px;
+      line-height: 21px;
+    }
+  }
+}
+
+@media (min-width: $min-mobile-width) and (max-width: $max-mobile-width) {
+  .table {
+    margin-top: 25px;
+    padding-bottom: 38px;
+
+    th {
+      font-size: 16px;
+      line-height: 21px;
+    }
   }
 }

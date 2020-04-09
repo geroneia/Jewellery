@@ -30,3 +30,41 @@
     padding-bottom: 4px;
   }
 }
+
+@media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+  .similar-products {
+    margin-bottom: 25px;
+  }
+
+  .similar-products__heading {
+    padding-top: 70px;
+    padding-bottom: 0;
+  }
+
+  .similar-products__slider {
+    padding-top: 20px;
+  }
+
+  .slider__catalog-link--similar-product {
+    padding-bottom: 4px;
+  }
+}
+
+@media (min-width: $min-mobile-width) and (max-width: $max-mobile-width) {
+  .similar-products {
+    margin-bottom: 20px;
+  }
+
+  .similar-products__heading {
+    padding-top: 57px;
+    padding-bottom: 0;
+  }
+
+  .similar-products__slider {
+    padding-top: 20px;
+  }
+
+  .slider__catalog-link--similar-product {
+    padding-bottom: 4px;
+  }
+}
