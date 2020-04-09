@@ -8,7 +8,6 @@
   display: block;
   min-height: 68px;
   margin-top: 0;
-  margin-bottom: 69px;
   padding-top: 23px;
   font-family: $font;
   font-weight: 500;
@@ -148,7 +147,8 @@
 
 @media (min-width: $desktop-width) {
   .filter {
-    width: 21.36%;
+    width: 24%;
+    padding-right: 30px;
   }
 
   .filter__heading {
@@ -203,10 +203,15 @@
     position: relative;
   }
 
+  .filter__heading {
+    margin-bottom: 49px;
+  }
+
   .filter__form {
     display: flex;
     padding-bottom: 40px;
     margin-bottom: 50px;
+    margin-top: 68px;
     margin-left: 17.4%;
     margin-right: 17.4%;
     width: 65%;
@@ -294,13 +299,13 @@
     left: 0;
     bottom: 40px;
     width: 100%;
-    padding-top: 40px;
+    padding-top: 42px;
     padding-left: 9%;
     padding-right: 9%;
   }
 
   .filter__apply-button {
-    margin-bottom: 25px;
+    margin-bottom: 24px;
     height: 68px;
     padding: 0;
     width: 100%;
@@ -313,6 +318,7 @@
     line-height: 130%;
     width: 100%;
     min-height: 68px;
+    padding-bottom: 0;
     border: 1px solid $brown;
   }
 }

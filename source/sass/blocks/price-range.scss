@@ -4,7 +4,7 @@
 
 .price-range__scale {
   position: relative;
-  width: 200px;
+  width: 94%;
   height: 1px;
   margin-top: 5px;
   margin-bottom: 46px;
@@ -13,10 +13,10 @@
 
 .price-range__scale-fill {
   position: absolute;
-  width: 90px;
+  width: 53%;
   height: 1px;
   top: 0;
-  left: 60px;
+  left: 24%;
   background-color: $brown;
 }
 
@@ -30,17 +30,17 @@
 }
 
 .price-range__lever--left {
-  left: 45px;
+  left: 22.1%;
 }
 
 .price-range__lever--right {
-  right: 35px;
+  right: 17.8%;
 }
 
 .price-range__min-value,
 .price-range__max-value {
   position: absolute;
-  top: 13px;
+  top: 14px;
   font-family: $font;
   font-weight: 500;
   font-size: 14px;
@@ -62,11 +62,11 @@
 }
 
 .price-range__min-value {
-  left: 39px;
+  left: 19%;
 }
 
 .price-range__max-value {
-  right: 20px;
+  right: 9%;
 }
 
 @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
