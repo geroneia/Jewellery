@@ -251,25 +251,14 @@
     questionList.addEventListener('click', onQuestionClick);
   }
 
-  // Открытие/закрытие фильтра
-  var filterHeading = document.querySelector('.filter__heading-link');
-  var filterForm = document.querySelector('.filter__form');
-  var closeFilterButton = document.querySelector('.filter__close-form-button');
-  filterForm.classList.add('filter__form--close');
-
-  var onCloseButtonClick = function () {
-    filterForm.classList.add('filter__form--close');
-  };
-  var onFilterHeadingClick = function () {
-    filterForm.classList.remove('filter__form--close');
-    closeFilterButton.addEventListener('click', onCloseButtonClick);
-  };
-
   // Открытие/закрытие блоков фильтра
   var filter = document.querySelector('.filter');
   var filterlists = document.querySelectorAll('.filter__list');
   var filterLinks = document.querySelectorAll('.filter__subtitle-link');
   var priceBlock = document.querySelector('.price-range');
+  var filterHeading = document.querySelector('.filter__heading-link');
+  var filterForm = document.querySelector('.filter__form');
+  var closeFilterButton = document.querySelector('.filter__close-form-button');
 
   if (filter) {
     filter.addEventListener('click', function (evt) {
@@ -286,5 +275,17 @@
       }
     });
     filterHeading.addEventListener('click', onFilterHeadingClick);
+
+    // Открытие/закрытие фильтра
+
+    filterForm.classList.add('filter__form--close');
+
+    var onCloseButtonClick = function () {
+      filterForm.classList.add('filter__form--close');
+    };
+    var onFilterHeadingClick = function () {
+      filterForm.classList.remove('filter__form--close');
+      closeFilterButton.addEventListener('click', onCloseButtonClick);
+    };
   }
 })();

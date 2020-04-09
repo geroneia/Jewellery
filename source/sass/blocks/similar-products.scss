@@ -1,0 +1,32 @@
+.similar-products__heading {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: $font-headings;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 44px;
+  text-align: center;
+
+  &:hover {
+    color: $black;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .similar-products {
+    margin-bottom: 25px;
+  }
+
+  .similar-products__heading {
+    padding-top: 120px;
+    padding-bottom: 0;
+  }
+
+  .similar-products__slider {
+    padding-top: 20px;
+  }
+
+  .slider__catalog-link--similar-product {
+    padding-bottom: 4px;
+  }
+}

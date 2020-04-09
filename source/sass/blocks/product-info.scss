@@ -1,0 +1,122 @@
+.product-info {
+  display: flex;
+  font-family: $font;
+  font-weight: 400;
+  color: $black;
+}
+
+.product-info__heading {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: $font-headings;
+  font-weight: 700;
+}
+
+.product-info__table th {
+  font-weight: 500;
+}
+
+.product-info__order-conditions-list {
+  display: flex;
+  padding-left: 0;
+  margin-top: 0;
+  justify-content: space-between;
+  margin-bottom: 0;
+  font-weight: 500;
+  list-style: none;
+  color: $gray-font;
+}
+
+.product-info__column {
+  display: flex;
+}
+
+.product-info__image-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.product-info__preview {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.product-info__preview-wrapper,
+.product-info__image-item,
+.product-info__image-link,
+.product-info__image-wrapper {
+  display: flex;
+  width: 100%;
+}
+
+.product-info__preview-image,
+.product-info__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: $desktop-width) {
+  .product-info {
+    margin-left: 7%;
+    margin-right: 7%;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-top: 70px;
+  }
+
+  .product-info__heading {
+    margin-bottom: 12px;
+    font-size: 34px;
+    line-height: 44px;
+  }
+
+  .product-info__price {
+    margin-bottom: 35px;
+    font-size: 26px;
+    line-height: 34px;
+  }
+
+  .product-info__order-conditions-item {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .product-info__column:first-of-type {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 51.28%;
+    margin-right: 8.54%;
+    margin-top: 10px;
+  }
+
+  .product-info__column:nth-of-type(2) {
+    flex-direction: column;
+    width: 31.62%;
+  }
+
+  .product-info__image-list {
+    width: 16.66%;
+  }
+
+  .product-info__preview {
+    width: 78%;
+  }
+
+  .product-info__cart-button {
+    height: 68px;
+    margin-bottom: 16px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 130%;
+  }
+
+  .product-info__order-conditions-list {
+    width: 100%;
+  }
+}
