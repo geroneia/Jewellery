@@ -22,6 +22,12 @@
     top: 126px;
     left: 0;
   }
+
+  .modal__add-to-cart.modal--open{
+    top: -126px;
+    left: 0;
+    align-self: stretch;
+  }
 }
 
 @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
@@ -33,6 +39,12 @@
     top: 126px;
     left: 0;
   }
+
+  .modal__add-to-cart.modal--open{
+    top: -126px;
+    left: 0;
+    align-self: stretch;
+  }
 }
 
 @media (min-width: $min-mobile-width) and (max-width: $max-mobile-width) {
@@ -43,5 +55,11 @@
   .modal--open {
     top: 90px;
     left: 0;
+  }
+
+  .modal__add-to-cart.modal--open{
+    top: -126px;
+    left: 0;
+    align-self: stretch;
   }
 }
