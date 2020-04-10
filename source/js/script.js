@@ -142,6 +142,14 @@
       }
     };
 
+    // Закрытие по enter на "крестик"
+    var onCartCrossEnterPress = function (evt) {
+      if (evt.key === ENTER_KEY) {
+        evt.preventDefault();
+        closeCartModal();
+      }
+    };
+
     // Закрытие по esc
     var onCartEscPress = function (evt) {
       if (evt.key === ESC_KEY) {
@@ -164,12 +172,7 @@
 
     closeCartButton.addEventListener('click', closeCartModal);
 
-    closeCartButton.addEventListener('keydown', function (evt) {
-      if (evt.key === ENTER_KEY) {
-        evt.preventDefault();
-        closeCartModal();
-      }
-    });
+    closeCartButton.addEventListener('keydown', onCartCrossEnterPress);
 
     document.addEventListener('click', onCartOverlayClick, true);
 

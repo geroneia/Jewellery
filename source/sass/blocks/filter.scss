@@ -42,7 +42,7 @@
   }
 }
 
-.filter__subtitile {
+.filter__subtitle {
   padding-left: 0;
   padding-right: 0;
 }
@@ -118,6 +118,10 @@
   box-shadow: 0 0 2px $brown;
 }
 
+.filter__input-checkbox:focus + label::before {
+  box-shadow: 0 0 4px 2px $gray-font;
+}
+
 .filter__buttons-wrapper {
   display: flex;
   flex-direction: column;
@@ -165,7 +169,7 @@
   }
 
 
-  .filter__subtitile {
+  .filter__subtitle {
     padding-top: 22px;
     padding-bottom: 16px;
   }
@@ -290,7 +294,7 @@
     }
   }
 
-  .filter__subtitile {
+  .filter__subtitle {
     padding-top: 33px;
     padding-bottom: 18px;
   }
@@ -416,7 +420,7 @@
     }
   }
 
-  .filter__subtitile {
+  .filter__subtitle {
     padding-top: 24px;
     padding-bottom: 18px;
   }

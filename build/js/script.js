@@ -121,58 +121,63 @@
   var closeCartButton = document.querySelector('.add-to-cart__close-button');
   var cartOverlay = document.querySelector('.add-to-cart');
 
-  var openCartModal = function () {
-    cartOverlay.classList.remove('modal--close');
-    cartOverlay.classList.add('modal--open');
-    body.classList.add('modal-open');
-  };
+  if (cartOverlay) {
+    var openCartModal = function () {
+      cartOverlay.classList.remove('modal--close');
+      cartOverlay.classList.add('modal--open');
+      body.classList.add('modal-open');
+    };
 
-  var closeCartModal = function () {
-    cartOverlay.classList.remove('modal--open');
-    cartOverlay.classList.add('modal--close');
-    body.classList.remove('modal-open');
-  };
+    var closeCartModal = function () {
+      cartOverlay.classList.remove('modal--open');
+      cartOverlay.classList.add('modal--close');
+      body.classList.remove('modal-open');
+    };
 
-  // Открытие по enter
-  var onCartEnterPress = function (evt) {
-    if (evt.key === ENTER_KEY) {
-      evt.preventDefault();
-      openCartModal();
-    }
-  };
+    // Открытие по enter
+    var onCartEnterPress = function (evt) {
+      if (evt.key === ENTER_KEY) {
+        evt.preventDefault();
+        openCartModal();
+      }
+    };
 
-  // Закрытие по esc
-  var onCartEscPress = function (evt) {
-    if (evt.key === ESC_KEY) {
-      closeCartModal();
-    }
-  };
+    // Закрытие по enter на "крестик"
+    var onCartCrossEnterPress = function (evt) {
+      if (evt.key === ENTER_KEY) {
+        evt.preventDefault();
+        closeCartModal();
+      }
+    };
 
-  // Закрытие по нажатию вне окна
+    // Закрытие по esc
+    var onCartEscPress = function (evt) {
+      if (evt.key === ESC_KEY) {
+        closeCartModal();
+      }
+    };
 
-  var onCartOverlayClick = function (evt) {
-    var target = evt.target;
-    if (target.classList.contains('add-to-cart')) {
-      closeCartModal();
-    }
-  };
+    // Закрытие по нажатию вне окна
 
-  addToCartButton.addEventListener('click', openCartModal);
+    var onCartOverlayClick = function (evt) {
+      var target = evt.target;
+      if (target.classList.contains('add-to-cart')) {
+        closeCartModal();
+      }
+    };
 
-  addToCartButton.addEventListener('keydown', onCartEnterPress);
+    addToCartButton.addEventListener('click', openCartModal);
 
-  closeCartButton.addEventListener('click', closeCartModal);
+    addToCartButton.addEventListener('keydown', onCartEnterPress);
 
-  closeCartButton.addEventListener('keydown', function (evt) {
-    if (evt.key === ENTER_KEY) {
-      evt.preventDefault();
-      closeCartModal();
-    }
-  });
+    closeCartButton.addEventListener('click', closeCartModal);
 
-  document.addEventListener('click', onCartOverlayClick, true);
+    closeCartButton.addEventListener('keydown', onCartCrossEnterPress);
 
-  document.addEventListener('keydown', onCartEscPress);
+    document.addEventListener('click', onCartOverlayClick, true);
+
+    document.addEventListener('keydown', onCartEscPress);
+  }
 
   // Перелистывание слайдера
 
