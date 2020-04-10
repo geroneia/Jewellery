@@ -92,6 +92,10 @@
 
 .filter__input + label {
   position: relative;
+
+  &:focus {
+    color: $black;
+  }
 }
 
 .filter__input-checkbox + label::before {
@@ -116,10 +120,6 @@
 
 .filter__input-checkbox:hover + label::before {
   box-shadow: 0 0 2px $brown;
-}
-
-.filter__input-checkbox:focus + label::before {
-  box-shadow: 0 0 4px 2px $gray-font;
 }
 
 .filter__buttons-wrapper {
