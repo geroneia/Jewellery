@@ -2406,15 +2406,15 @@ img {
   border-radius: 50%; }
 
 .price-range__lever--left {
-  left: 22.1%; }
+  left: 23%; }
 
 .price-range__lever--right {
-  right: 17.8%; }
+  right: 17%; }
 
 .price-range__min-value,
 .price-range__max-value {
   position: absolute;
-  top: 14px;
+  top: 20px;
   font-family: "Poppins", "Arial", sans-serif;
   font-weight: 500;
   font-size: 14px;
@@ -2444,10 +2444,10 @@ img {
     background-color: #ffffff; }
 
 .price-range__min-value {
-  left: 19%; }
+  left: -5px; }
 
 .price-range__max-value {
-  right: 9%; }
+  right: -17px; }
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .price-range__scale {
@@ -2469,7 +2469,7 @@ img {
     right: 21%; }
   .price-range__min-value,
   .price-range__max-value {
-    top: 16px;
+    top: 20px;
     font-size: 16px; }
   .price-range__min-value {
     left: 12%; }
