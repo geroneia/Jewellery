@@ -1,7 +1,6 @@
 .add-to-cart {
   width: 100%;
   background-color: $transparent-gray;
-  min-height: 100vh;
 }
 
 .add-to-cart__wrapper {
@@ -161,9 +160,10 @@
 
 @media (min-width: $desktop-width) {
   .add-to-cart__wrapper {
+    position: fixed;
     width: 500px;
     height: 439px;
-    margin-top: 498px;
+    top: 20%;
     margin-left: calc(50% - 250px);
   }
 
@@ -211,14 +211,14 @@
   .add-to-cart__checkout-button {
     width: 200px;
   }
-
 }
 
 @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
   .add-to-cart__wrapper {
+    position: fixed;
     width: 502px;
     height: 439px;
-    margin-top: 384px;
+    top: -30%;
     margin-left: calc(50% - 251px);
   }
 
@@ -275,16 +275,17 @@
 
 @media (min-width: $min-mobile-width) and (max-width: $max-mobile-width) {
   .add-to-cart__wrapper {
+    position: fixed;
     width: 290px;
     height: 519px;
-    margin-top: 243px;
+    top: 20%;
     margin-left: calc(50% - 145px);
   }
 
   .add-to-cart__close-button {
     top: 15px;
     right: 15px;
-   }
+  }
 
   .add-to-cart__message {
     font-size: 24px;

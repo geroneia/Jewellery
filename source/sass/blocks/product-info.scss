@@ -180,6 +180,10 @@
     width: 100%;
     padding-bottom: 0;
   }
+
+  .product-info__preview-counter--mobile-only {
+    display: none;
+  }
 }
 
 @media (min-width: $min-mobile-width) and (max-width: $max-mobile-width) {

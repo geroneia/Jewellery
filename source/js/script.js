@@ -116,6 +116,66 @@
 
   document.addEventListener('keydown', onEscPress);
 
+  // Открытие/закрытие модального окна добавления в корзину
+  var addToCartButton = document.querySelector('.product-info__cart-button');
+  var closeCartButton = document.querySelector('.add-to-cart__close-button');
+  var cartOverlay = document.querySelector('.add-to-cart');
+
+  if (cartOverlay) {
+    var openCartModal = function () {
+      cartOverlay.classList.remove('modal--close');
+      cartOverlay.classList.add('modal--open');
+      body.classList.add('modal-open');
+    };
+
+    var closeCartModal = function () {
+      cartOverlay.classList.remove('modal--open');
+      cartOverlay.classList.add('modal--close');
+      body.classList.remove('modal-open');
+    };
+
+    // Открытие по enter
+    var onCartEnterPress = function (evt) {
+      if (evt.key === ENTER_KEY) {
+        evt.preventDefault();
+        openCartModal();
+      }
+    };
+
+    // Закрытие по esc
+    var onCartEscPress = function (evt) {
+      if (evt.key === ESC_KEY) {
+        closeCartModal();
+      }
+    };
+
+    // Закрытие по нажатию вне окна
+
+    var onCartOverlayClick = function (evt) {
+      var target = evt.target;
+      if (target.classList.contains('add-to-cart')) {
+        closeCartModal();
+      }
+    };
+
+    addToCartButton.addEventListener('click', openCartModal);
+
+    addToCartButton.addEventListener('keydown', onCartEnterPress);
+
+    closeCartButton.addEventListener('click', closeCartModal);
+
+    closeCartButton.addEventListener('keydown', function (evt) {
+      if (evt.key === ENTER_KEY) {
+        evt.preventDefault();
+        closeCartModal();
+      }
+    });
+
+    document.addEventListener('click', onCartOverlayClick, true);
+
+    document.addEventListener('keydown', onCartEscPress);
+  }
+
   // Перелистывание слайдера
 
   var DESKTOP_STEP = 33.3;
