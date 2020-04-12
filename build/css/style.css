@@ -2103,8 +2103,6 @@ img {
 
 .filter__input + label {
   position: relative; }
-  .filter__input + label:focus {
-    color: #1d1613; }
 
 .filter__input-checkbox + label::before {
   position: absolute;
@@ -2123,6 +2121,9 @@ img {
   height: 15px;
   content: "";
   background-color: #a87b62; }
+
+.filter__input-checkbox:focus + label::before {
+  outline: #3b99fc auto 5px; }
 
 .filter__input-checkbox:hover + label::before {
   -webkit-box-shadow: 0 0 2px #a87b62;

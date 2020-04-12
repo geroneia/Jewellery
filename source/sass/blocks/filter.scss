@@ -92,10 +92,6 @@
 
 .filter__input + label {
   position: relative;
-
-  &:focus {
-    color: $black;
-  }
 }
 
 .filter__input-checkbox + label::before {
@@ -116,6 +112,10 @@
   height: 15px;
   content: "";
   background-color: $brown;
+}
+
+.filter__input-checkbox:focus + label::before {
+  outline: rgb(59, 153, 252) auto 5px;
 }
 
 .filter__input-checkbox:hover + label::before {
