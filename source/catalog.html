@@ -642,10 +642,19 @@
   <div class="modal modal__login login modal--close">
     <div class="login__wrapper">
       <button class="login__close-button" tabindex="0" type="button"><span class="visually-hidden">Close modal</span>
-        <svg class="login__icon" width="15" height="13" role="img" aria-label="Icon cross">
+        <svg class="login__icon" width="14" height="14" role="img" aria-label="Icon cross">
           <use xlink:href="#icon-cross"></use>
         </svg>
       </button>
+      <picture>
+        <!-- 1х: 430px*138px; 2x: 860px*276px -->
+        <source media="(min-width: 1024px)" srcset="img/sweet-ice-cream-desktop@1x.png 1x, img/sweet-ice-cream-desktop@2x.png 2x">
+        <!-- 1х: 442px*138px; 2x: 884px*276px -->
+        <source media="(min-width: 768px)" srcset="img/sweet-ice-cream-tablet@1x.jpg 1x, img/sweet-ice-cream-tablet@2x.jpg 2x">
+        <!-- 1х: 270px*84px; 2x: 50px*168px -->
+        <img class="login__image" src="img/sweet-ice-cream-mobile@1x.jpg" srcset="img/sweet-ice-cream-mobile@2x.jpg 2x"
+          width="270" height="84" alt="Sweet earrings">
+      </picture>
       <h2 class="login__heading">Log In</h2>
       <form class="login__form" method="POST" action="#">
         <ul class="login__list">
@@ -653,17 +662,17 @@
             <label for="email">
               <span class="visually-hidden">Your E-mail</span>
             </label>
-            <input type="email" id="email" name="email" placeholder="Your E-mail" autofocus>
+            <input type="email" id="email" name="email" placeholder="Your E-mail" autofocus required>
           </li>
           <li class="login__item">
             <label for="password">
               <span class="visually-hidden">Password</span>
             </label>
-            <input type="password" id="password" name="password" placeholder="Password">
+            <input type="password" id="password" name="password" placeholder="Password" required>
           </li>
         </ul>
         <a class="login__forgot-password-link" href="#">Forgot your password?</a>
-        <button class=" button" type="submit">Log In</button>
+        <button class="button" type="submit">Log In</button>
       </form>
       <p class="login__new-account">Don’t have an account?
         <a class="login__new-account-link" href="#">Sign up</a>

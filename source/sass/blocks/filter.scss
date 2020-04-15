@@ -45,6 +45,7 @@
 .filter__form legend {
   padding-left: 0;
   padding-right: 0;
+  outline: none;
 }
 
 .filter__subtitle-link {
@@ -75,10 +76,6 @@
   margin-bottom: 0;
   padding-left: 10px;
   list-style: none;
-}
-
-.filter__form legend {
-  outline: none;
 }
 
 .filter__option label {

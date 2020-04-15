@@ -8,6 +8,8 @@
 .modal--open {
   position: absolute;
   display: flex;
+  top: 0;
+  left: 0;
 }
 
 .modal--close {
@@ -15,11 +17,6 @@
 }
 
 @media (min-width: $desktop-width) {
-  .modal--open {
-    top: 0;
-    left: 0;
-  }
-
   .modal__add-to-cart.modal--open {
     top: -126px;
     left: 0;
@@ -28,24 +25,14 @@
 }
 
 @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
-  .modal--open {
-    top: 0;
-    left: 0;
-  }
-
   .modal__add-to-cart.modal--open {
-    top: 126px;
+    top: 0;
     left: 0;
     min-height: 200vh;
   }
 }
 
 @media (min-width: $min-mobile-width) and (max-width: $max-mobile-width) {
-  .modal--open {
-    top: 0;
-    left: 0;
-  }
-
   .modal__add-to-cart.modal--open {
     top: 0;
     left: 0;
