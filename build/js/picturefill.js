@@ -1,16 +1,14 @@
-'use strict';
-
-/* ! picturefill - v3.0.2 - 2016-02-12
+/*! picturefill - v3.0.2 - 2016-02-12
  * https://scottjehl.github.io/picturefill/
  * Copyright (c) 2016 https://github.com/scottjehl/picturefill/blob/master/Authors.txt; Licensed MIT
  */
-/* ! Gecko-Picture - v1.0
+/*! Gecko-Picture - v1.0
  * https://github.com/scottjehl/picturefill/tree/3.0/src/plugins/gecko-picture
  * Firefox's early picture implementation (prior to FF41) is static and does
  * not react to viewport changes. This tiny module fixes this.
  */
 (function (window) {
-  /* jshint eqnull:true */
+  /*jshint eqnull:true */
   var ua = navigator.userAgent;
 
   if (window.HTMLPictureElement && ((/ecko/).test(ua) && ua.match(/rv\:(\d+)/) && RegExp.$1 < 45)) {
@@ -20,8 +18,7 @@
       var dummySrc = document.createElement('source');
 
       var fixRespimg = function (img) {
-        var source;
-        var sizes;
+        var source, sizes;
         var picture = img.parentNode;
 
         if (picture.nodeName.toUpperCase() === 'PICTURE') {
@@ -74,7 +71,7 @@
   }
 })(window);
 
-/* ! Picturefill - v3.0.2
+/*! Picturefill - v3.0.2
  * http://scottjehl.github.io/picturefill
  * Copyright (c) 2015 https://github.com/scottjehl/picturefill/blob/master/Authors.txt;
  *  License: MIT
@@ -82,14 +79,12 @@
 
 (function (window, document, undefined) {
   // Enable strict mode
+  'use strict';
 
   // HTML shim|v it for old IE (IE9 will still need the HTML video tag workaround)
   document.createElement('picture');
 
-  var warn;
-  var eminpx;
-  var alwaysCheckWDescriptor;
-  var evalId;
+  var warn, eminpx, alwaysCheckWDescriptor, evalId;
   // local object for method references and testing exposure
   var pf = {};
   var isSupportTestReady = false;
@@ -101,7 +96,7 @@
   var docElem = document.documentElement;
   var types = {};
   var cfg = {
-    // resource selection:
+    //resource selection:
     algorithm: ''
   };
   var srcAttr = 'data-pfsrc';
@@ -114,7 +109,7 @@
   var regWDesc = /\s+\+?\d+(e\d+)?w/;
   var regSize = /(\([^)]+\))?\s*(.+)/;
   var setOptions = window.picturefillCFG;
-  /*
+  /**
    * Shortcut property for https://w3c.github.io/webappsec/specs/mixedcontent/#restricts-mixed-content ( for easy overriding in tests )
    */
   // baseStyle also used by getEmValue (i.e.: width: 1em is important)
@@ -130,7 +125,7 @@
     'in': 96
   };
   var anchor = document.createElement('a');
-  /*
+  /**
    * alreadyRun flag used for setOptions. is it true setOptions will reevaluate
    * @type {boolean}
    */
@@ -139,18 +134,18 @@
   // Reusable, non-'g' Regexes
 
   // (Don't use \s, to avoid matching non-breaking space.)
-  var regexLeadingSpaces = /^[ \t\n\r\u000c]+/;
-  var regexLeadingCommasOrSpaces = /^[, \t\n\r\u000c]+/;
-  var regexLeadingNotSpaces = /^[^ \t\n\r\u000c]+/;
-  var regexTrailingCommas = /[,]+$/;
-  var regexNonNegativeInteger = /^\d+$/;
+  var regexLeadingSpaces = /^[ \t\n\r\u000c]+/,
+    regexLeadingCommasOrSpaces = /^[, \t\n\r\u000c]+/,
+    regexLeadingNotSpaces = /^[^ \t\n\r\u000c]+/,
+    regexTrailingCommas = /[,]+$/,
+    regexNonNegativeInteger = /^\d+$/,
 
-  // ( Positive or negative or unsigned integers or decimals, without or without exponents.
-  // Must include at least one digit.
-  // According to spec tests any decimal point must be followed by a digit.
-  // No leading plus sign is allowed.)
-  // https://html.spec.whatwg.org/multipage/infrastructure.html#valid-floating-point-number
-  var regexFloatingPoint = /^-?(?:[0-9]+|[0-9]*\.[0-9]+)(?:[eE][+-]?[0-9]+)?$/;
+    // ( Positive or negative or unsigned integers or decimals, without or without exponents.
+    // Must include at least one digit.
+    // According to spec tests any decimal point must be followed by a digit.
+    // No leading plus sign is allowed.)
+    // https://html.spec.whatwg.org/multipage/infrastructure.html#valid-floating-point-number
+    regexFloatingPoint = /^-?(?:[0-9]+|[0-9]*\.[0-9]+)(?:[eE][+-]?[0-9]+)?$/;
 
   var on = function (obj, evt, fn, capture) {
     if (obj.addEventListener) {
@@ -160,7 +155,7 @@
     }
   };
 
-  /*
+  /**
    * simple memoize function:
    */
 
@@ -186,7 +181,7 @@
       c === '\u000D'); // carriage return
   }
 
-  /*
+  /**
    * gets a mediaquery and returns a boolean or gets a css length and returns a number
    * @param css mediaqueries or css length
    * @returns {boolean|number}
@@ -197,9 +192,9 @@
 
     var regLength = /^([\d\.]+)(em|vw|px)$/;
     var replace = function () {
-      var args = arguments;
-      var index = 0;
-      var string = args[0];
+      var args = arguments,
+        index = 0,
+        string = args[0];
       while (++index in args) {
         string = string.replace(args[index], args[++index]);
       }
@@ -209,25 +204,25 @@
     var buildStr = memoize(function (css) {
 
       return 'return ' + replace((css || '').toLowerCase(),
-          // interpret `and`
-          /\band\b/g, '&&',
+        // interpret `and`
+        /\band\b/g, '&&',
 
-          // interpret `,`
-          /,/g, '||',
+        // interpret `,`
+        /,/g, '||',
 
-          // interpret `min-` as >=
-          /min-([a-z-\s]+):/g, 'e.$1>=',
+        // interpret `min-` as >=
+        /min-([a-z-\s]+):/g, 'e.$1>=',
 
-          // interpret `max-` as <=
-          /max-([a-z-\s]+):/g, 'e.$1<=',
+        // interpret `max-` as <=
+        /max-([a-z-\s]+):/g, 'e.$1<=',
 
-          // calc value
-          /calc([^)]+)/g, '($1)',
+        //calc value
+        /calc([^)]+)/g, '($1)',
 
-          // interpret css values
-          /(\d+[\.]*[\d]*)([a-z]+)/g, '($1 * e.$2)',
-          // make eval less evil
-          /^(?!(e.[a-z]|[0-9\.&=|><\+\-\*\(\)\/])).*/ig, ''
+        // interpret css values
+        /(\d+[\.]*[\d]*)([a-z]+)/g, '($1 * e.$2)',
+        //make eval less evil
+        /^(?!(e.[a-z]|[0-9\.&=|><\+\-\*\(\)\/])).*/ig, ''
       ) + ';';
     });
 
@@ -238,11 +233,11 @@
         if (length && (parsedLength = css.match(regLength))) {
           cssCache[css] = parsedLength[1] * units[parsedLength[2]];
         } else {
-          /* jshint evil:true */
+          /*jshint evil:true */
           try {
             cssCache[css] = new Function('e', buildStr(css))(units);
           } catch (e) {}
-          /* jshint evil:false */
+          /*jshint evil:false */
         }
       }
       return cssCache[css];
@@ -259,7 +254,7 @@
     return candidate;
   };
 
-  /*
+  /**
    *
    * @param opt
    */
@@ -269,9 +264,7 @@
       return;
     }
 
-    var elements;
-    var i;
-    var plen;
+    var elements, i, plen;
 
     var options = opt || {};
 
@@ -300,7 +293,7 @@
     }
   };
 
-  /*
+  /**
    * outputs a warning for the developer
    * @param {message}
    * @type {Function}
@@ -339,7 +332,7 @@
   // test svg support
   types['image/svg+xml'] = document.implementation.hasFeature('http://www.w3.org/TR/SVG11/feature#Image', '1.1');
 
-  /*
+  /**
    * updates the internal vW property with the current viewport width in px
    */
   function updateMetrics() {
@@ -364,12 +357,9 @@
   }
 
   function chooseLowRes(lowerValue, higherValue, dprValue, isCached) {
-    var bonusFactor;
-    var tooMuch;
-    var bonus;
-    var meanDensity;
+    var bonusFactor, tooMuch, bonus, meanDensity;
 
-    // experimental
+    //experimental
     if (cfg.algorithm === 'saveData') {
       if (lowerValue > 2.7) {
         meanDensity = dprValue + 1;
@@ -434,9 +424,7 @@
   }
 
   function getCandidateForSrc(src, set) {
-    var i;
-    var candidate;
-    var candidates;
+    var i, candidate, candidates;
     if (src && set) {
       candidates = pf.parseSet(set);
       src = pf.makeUrl(src);
@@ -451,10 +439,7 @@
   }
 
   function getAllSourceElements(picture, candidates) {
-    var i;
-    var len;
-    var source;
-    var srcset;
+    var i, len, source, srcset;
 
     // SPEC mismatch intended for size and perf:
     // actually only source elements preceding the img should be used
@@ -478,7 +463,7 @@
     }
   }
 
-  /*
+  /**
    * Srcset Parser
    * By Alex Bell |  MIT License
    *
@@ -496,8 +481,8 @@
   function parseSrcset(input, set) {
 
     function collectCharacters(regEx) {
-      var chars;
-      var match = regEx.exec(input.substring(pos));
+      var chars,
+        match = regEx.exec(input.substring(pos));
       if (match) {
         chars = match[0];
         pos += chars.length;
@@ -505,21 +490,21 @@
       }
     }
 
-    var inputLength = input.length;
-    var url;
-    var descriptors;
-    var currentDescriptor;
-    var state;
-    var c;
+    var inputLength = input.length,
+      url,
+      descriptors,
+      currentDescriptor,
+      state,
+      c,
 
-    // 2. Let position be a pointer into input, initially pointing at the start
-    //    of the string.
-    var pos = 0;
+      // 2. Let position be a pointer into input, initially pointing at the start
+      //    of the string.
+      pos = 0,
 
-    // 3. Let candidates be an initially empty source set.
-    var candidates = [];
+      // 3. Let candidates be an initially empty source set.
+      candidates = [];
 
-    /*
+    /**
      * Adds descriptor properties to a candidate, pushes to the candidates array
      * @return undefined
      */
@@ -529,21 +514,14 @@
     function parseDescriptors() {
 
       // 9. Descriptor parser: Let error be no.
-      var pError = false;
+      var pError = false,
 
-      // 10. Let width be absent.
-      // 11. Let density be absent.
-      // 12. Let future-compat-h be absent. (We're implementing it now as h)
-      var w;
-      var d;
-      var h;
-      var i;
-      var candidate = {};
-      var desc;
-      var lastChar;
-      var value;
-      var intVal;
-      var floatVal;
+        // 10. Let width be absent.
+        // 11. Let density be absent.
+        // 12. Let future-compat-h be absent. (We're implementing it now as h)
+        w, d, h, i,
+        candidate = {},
+        desc, lastChar, value, intVal, floatVal;
 
       // 13. For each descriptor in descriptors, run the appropriate set of steps
       // from the following list:
@@ -643,7 +621,7 @@
       }
     } // (close parseDescriptors fn)
 
-    /*
+    /**
      * Tokenizes descriptor properties prior to parsing
      * Returns undefined.
      * (Again, this fn is defined before it is used, in order to pass JSHINT.
@@ -1076,7 +1054,7 @@
   pf.sel = pf.selShort;
   pf.cfg = cfg;
 
-  /*
+  /**
    * Shortcut property for `devicePixelRatio` ( for easy overriding in tests )
    */
   pf.DPR = (DPR || 1);
@@ -1087,7 +1065,7 @@
 
   pf.setSize = noop;
 
-  /*
+  /**
    * Gets a string and returns the absolute URL
    * @param src
    * @returns {String} absolute URL
@@ -1098,7 +1076,7 @@
     return anchor.href;
   });
 
-  /*
+  /**
    * Gets a DOM element or document and a selctor and returns the found matches
    * Can be extended with jQuery/Sizzle for IE7 support
    * @param context
@@ -1109,7 +1087,7 @@
     return ('querySelector' in context) ? context.querySelectorAll(sel) : [];
   };
 
-  /*
+  /**
    * Shortcut method for matchMedia ( for easy overriding in tests )
    * wether native or pf.mMQ is used will be decided lazy on first call
    * @returns {boolean}
@@ -1126,7 +1104,7 @@
     return pf.matchesMedia.apply(this, arguments);
   };
 
-  /*
+  /**
    * A simplified matchMedia implementation for IE8 and IE9
    * handles only min-width/max-width with px or em values
    * @param media
@@ -1136,7 +1114,7 @@
     return media ? evalCSS(media) : true;
   };
 
-  /*
+  /**
    * Returns the calculated length in css pixel from the given sourceSizeValue
    * http://dev.w3.org/csswg/css-values-3/#length-value
    * intended Spec mismatches:
@@ -1155,7 +1133,7 @@
     return value;
   };
 
-  /*
+  /**
    * Takes a type string and checks if its supported
    */
 
@@ -1163,7 +1141,7 @@
     return (type) ? types[type] : true;
   };
 
-  /*
+  /**
    * Parses a sourceSize into mediaCondition (media) and sourceSizeValue (length)
    * @param sourceSizeStr
    * @returns {*}
@@ -1183,7 +1161,7 @@
     return set.cands;
   };
 
-  /*
+  /**
    * returns 1em in css px for html/body default size
    * function taken from respondjs
    * @returns {*|number}
@@ -1191,9 +1169,9 @@
   pf.getEmValue = function () {
     var body;
     if (!eminpx && (body = document.body)) {
-      var div = document.createElement('div');
-      var originalHTMLCSS = docElem.style.cssText;
-      var originalBodyCSS = body.style.cssText;
+      var div = document.createElement('div'),
+        originalHTMLCSS = docElem.style.cssText,
+        originalBodyCSS = body.style.cssText;
 
       div.style.cssText = baseStyle;
 
@@ -1206,7 +1184,7 @@
       eminpx = div.offsetWidth;
       body.removeChild(div);
 
-      // also update eminpx before returning
+      //also update eminpx before returning
       eminpx = parseFloat(eminpx, 10);
 
       // restore the original values
@@ -1217,7 +1195,7 @@
     return eminpx || 16;
   };
 
-  /*
+  /**
    * Takes a string of sizes and returns the width in pixels as a number
    */
   pf.calcListLength = function (sourceSizeListStr) {
@@ -1233,7 +1211,7 @@
     return sizeLengthCache[sourceSizeListStr];
   };
 
-  /*
+  /**
    * Takes a candidate object with a srcset property in the form of url/
    * ex. 'images/pic-medium.png 1x, images/pic-medium-2x.png 2x' or
    *     'images/pic-medium.png 400w, images/pic-medium-2x.png 800w' or
@@ -1262,15 +1240,15 @@
     if (!candidates.length) {
       return;
     }
-    var candidate;
-    var i;
-    var j;
-    var length;
-    var bestCandidate;
-    var curSrc;
-    var curCan;
-    var candidateSrc;
-    var abortCurSrc;
+    var candidate,
+      i,
+      j,
+      length,
+      bestCandidate,
+      curSrc,
+      curCan,
+      candidateSrc,
+      abortCurSrc;
 
     var imageData = img[pf.ns];
     var dpr = pf.DPR;
@@ -1357,9 +1335,7 @@
   };
 
   pf.getSet = function (img) {
-    var i;
-    var set;
-    var supportsType;
+    var i, set, supportsType;
     var match = false;
     var sets = img[pf.ns].sets;
 
@@ -1382,10 +1358,7 @@
   };
 
   pf.parseSets = function (element, parent, options) {
-    var srcsetAttribute;
-    var imageSet;
-    var isWDescripor;
-    var srcsetParsed;
+    var srcsetAttribute, imageSet, isWDescripor, srcsetParsed;
 
     var hasPicture = parent && parent.nodeName.toUpperCase() === 'PICTURE';
     var imageData = element[pf.ns];
@@ -1531,8 +1504,7 @@
       // Also attach picturefill on resize and readystatechange
       // http://modernjavascript.blogspot.com/2013/08/building-better-debounce.html
       var debounce = function (func, wait) {
-        var timeout;
-        var timestamp;
+        var timeout, timestamp;
         var later = function () {
           var last = (new Date()) - timestamp;
 
@@ -1567,7 +1539,7 @@
   }
 
   pf.picturefill = picturefill;
-  // use this internally for easy monkey patching/performance testing
+  //use this internally for easy monkey patching/performance testing
   pf.fillImgs = picturefill;
   pf.teardownRun = noop;
 
