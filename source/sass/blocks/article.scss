@@ -21,9 +21,9 @@
   line-height: 130%;
 }
 
-.article__link,
-.article__link:hover {
+.article__link {
   display: inline-block;
+  vertical-align: middle;
   width: 97px;
   padding-bottom: 4px;
   font-size: 16px;
@@ -31,6 +31,10 @@
   font-family: $font;
   font-weight: 500;
   border-bottom: 1px solid $brown;
+
+  &:hover {
+    color: $gray-font;
+  }
 }
 
 @media (min-width: $desktop-width) {

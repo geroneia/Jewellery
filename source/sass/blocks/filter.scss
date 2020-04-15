@@ -30,7 +30,7 @@
   display: none;
 }
 
-.filter__block {
+.filter__form fieldset {
   position: relative;
   margin-right: 0;
   margin-left: 0;
@@ -42,7 +42,7 @@
   }
 }
 
-.filter__subtitle {
+.filter__form legend {
   padding-left: 0;
   padding-right: 0;
 }
@@ -77,6 +77,10 @@
   list-style: none;
 }
 
+.filter__form legend {
+  outline: none;
+}
+
 .filter__option label {
   font-family: $font;
   font-weight: 500;
@@ -86,15 +90,15 @@
   display: none;
 }
 
-.filter__input {
+.filter__option input {
   opacity: 0;
 }
 
-.filter__input + label {
+.filter__option input + label {
   position: relative;
 }
 
-.filter__input-checkbox + label::before {
+.filter__option input + label::before {
   position: absolute;
   top: 3px;
   left: -24px;
@@ -102,9 +106,10 @@
   height: 15px;
   content: "";
   border: 1px solid $brown;
+  cursor: pointer;
 }
 
-.filter__input-checkbox:checked + label::after {
+.filter__option input:checked + label::after {
   position: absolute;
   top: 3px;
   left: -24px;
@@ -112,13 +117,10 @@
   height: 15px;
   content: "";
   background-color: $brown;
+  cursor: pointer;
 }
 
-.filter__input-checkbox:focus + label::before {
-  outline: rgb(59, 153, 252) auto 5px;
-}
-
-.filter__input-checkbox:hover + label::before {
+.filter__option input:hover + label::before {
   box-shadow: 0 0 2px $brown;
 }
 
@@ -135,6 +137,11 @@
   font-family: $font;
   font-weight: 500;
   color: $white;
+  cursor: pointer;
+
+  &:hover {
+    color: $black;
+  }
 }
 
 .filter__clear-button {
@@ -147,6 +154,11 @@
   border: none;
   border-bottom: 1px solid $brown;
   padding-bottom: 4px;
+  cursor: pointer;
+
+  &:hover {
+    color: $gray-font;
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -159,8 +171,8 @@
     display: none;
   }
 
-  .filter__block {
-    padding-left: 24px;
+  .filter__form fieldset {
+    padding-left: 26px;
     padding-bottom: 2px;
   }
 
@@ -169,7 +181,7 @@
   }
 
 
-  .filter__subtitle {
+  .filter__form legend {
     padding-top: 22px;
     padding-bottom: 16px;
   }
@@ -227,7 +239,7 @@
     display: none;
   }
 
-  .filter__block {
+  .filter__form fieldset {
     padding-left: 40px;
     padding-bottom: 11px;
 
@@ -262,7 +274,7 @@
     line-height: 21px;
   }
 
-  .filter__input-checkbox + label::before {
+  .filter__option input + label::before {
     position: absolute;
     top: 2px;
     left: -29px;
@@ -272,7 +284,7 @@
     border: 1px solid $brown;
   }
 
-  .filter__input-checkbox:checked + label::after {
+  .filter__option input:checked + label::after {
     position: absolute;
     top: 2px;
     left: -29px;
@@ -294,7 +306,7 @@
     }
   }
 
-  .filter__subtitle {
+  .filter__form legend {
     padding-top: 33px;
     padding-bottom: 18px;
   }
@@ -352,7 +364,7 @@
     display: none;
   }
 
-  .filter__block {
+  .filter__form fieldset {
     padding-left: 20px;
     padding-bottom: 0;
 
@@ -388,7 +400,7 @@
     line-height: 21px;
   }
 
-  .filter__input-checkbox + label::before {
+  .filter__option input + label::before {
     position: absolute;
     top: 2px;
     left: -30px;
@@ -398,7 +410,7 @@
     border: 1px solid $brown;
   }
 
-  .filter__input-checkbox:checked + label::after {
+  .filter__option input:checked + label::after {
     position: absolute;
     top: 2px;
     left: -30px;
@@ -420,7 +432,7 @@
     }
   }
 
-  .filter__subtitle {
+  .filter__form legend {
     padding-top: 24px;
     padding-bottom: 18px;
   }

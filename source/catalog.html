@@ -4,25 +4,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Catalog of Jewellery store SH">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Jellewelly</title>
+  <title>Catalog - Jewellery store</title>
   <link rel="stylesheet" href="css/style.min.css">
-  <link rel="preload" href="fonts/Poppins/poppins-v9-latin-regular.woff2" as="font">
-  <link rel="preload" href="fonts/Poppins/poppins-v9-latin-regular.woff" as="font">
-  <link rel="preload" href="fonts/Poppins/poppins-v9-latin-500.woff2" as="font">
-  <link rel="preload" href="fonts/Poppins/poppins-v9-latin-500.woff" as="font">
-  <link rel="preload" href="fonts/Poppins/poppins-v9-latin-700.woff2" as="font">
-  <link rel="preload" href="fonts/Poppins/poppins-v9-latin-700.woff" as="font">
-  <link rel="preload" href="fonts/Cormorant-Garamond/cormorant-garamond-v7-latin-italic.woff2" as="font">
-  <link rel="preload" href="fonts/Cormorant-Garamond/cormorant-garamond-v7-latin-italic.woff" as="font">
-  <link rel="preload" href="fonts/Cormorant-Garamond/cormorant-garamond-v7-latin-500.woff2" as="font">
-  <link rel="preload" href="fonts/Cormorant-Garamond/cormorant-garamond-v7-latin-500.woff" as="font">
-  <link rel="preload" href="fonts/Cormorant-Garamond/cormorant-garamond-v7-latin-500italic.woff2" as="font">
-  <link rel="preload" href="fonts/Cormorant-Garamond/cormorant-garamond-v7-latin-500italic.woff" as="font">
-  <link rel="preload" href="fonts/Cormorant-Garamond/cormorant-garamond-v7-latin-600.woff2" as="font">
-  <link rel="preload" href="fonts/Cormorant-Garamond/cormorant-garamond-v7-latin-600.woff" as="font">
-  <link rel="preload" href="fonts/Cormorant-Garamond/cormorant-garamond-v7-latin-700.woff2" as="font">
-  <link rel="preload" href="fonts/Cormorant-Garamond/cormorant-garamond-v7-latin-700.woff" as="font">
+  <link rel="preload" href="fonts/poppins/poppins-v9-latin-regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/poppins/poppins-v9-latin-regular.woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/poppins/poppins-v9-latin-500.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/poppins/poppins-v9-latin-500.woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/poppins/poppins-v9-latin-700.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/poppins/poppins-v9-latin-700.woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/cormorant-garamond/cormorant-garamond-v7-latin-italic.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/cormorant-garamond/cormorant-garamond-v7-latin-italic.woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/cormorant-garamond/cormorant-garamond-v7-latin-500italic.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/cormorant-garamond/cormorant-garamond-v7-latin-500italic.woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/cormorant-garamond/cormorant-garamond-v7-latin-600.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/cormorant-garamond/cormorant-garamond-v7-latin-600.woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/cormorant-garamond/cormorant-garamond-v7-latin-700.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/cormorant-garamond/cormorant-garamond-v7-latin-700.woff" as="font" crossorigin="anonymous">
 </head>
 
 <body>
@@ -33,7 +32,7 @@
   <header class="page-header page-header--menu-opened">
     <div class="page-header__wrapper">
       <form class="page-header__search page-header__search-opened" method="POST" action="#">
-        <button type="submit" class="page-header__search-button" aria-label="Search">
+        <button type="submit" aria-label="Search">
           <svg class="page-header__search-icon" width="14" height="14" role="img" aria-label="Icon loupe">
             <use xlink:href="#icon-loupe"></use>
           </svg>
@@ -48,10 +47,10 @@
         </svg>
       </a>
       <ul class="page-header__user-navigation user-navigation user-navigation--menu-opened">
-        <li class="user-navigation__login">
+        <li class="user-navigation__item user-navigation__item--login">
           <a class="user-navigation__login-link" href="#">Login</a>
         </li>
-        <li class="user-navigation__cart">
+        <li class="user-navigation__item user-navigation__item--cart">
           <a class="user-navigation__cart-link" href="#">
             <span class="user-navigation__cart-text">Cart</span>
             <span class="user-navigation__cart-counter">0</span>
@@ -119,87 +118,82 @@
                 <use xlink:href="#icon-cross-on-black"></use>
               </svg>
             </button>
-            <fieldset class="filter__block">
-              <legend class="filter__subtitle"><a class="filter__subtitle-link" tabindex="0" href="#">Product</a>
+            <fieldset>
+              <legend><a class="filter__subtitle-link" tabindex="0" href="#">Product</a>
               </legend>
               <ul class="filter__list">
                 <li class="filter__option">
-                  <input class="filter__input filter__input-checkbox" type="checkbox" name="necklaces" id="necklaces"
-                    checked>
+                  <input type="checkbox" name="necklaces" id="necklaces" checked>
                   <label for="necklaces">Necklaces</label>
                 </li>
                 <li class="filter__option">
-                  <input class="filter__input filter__input-checkbox" type="checkbox" name="chokers" id="chokers"
-                    checked>
+                  <input type="checkbox" name="chokers" id="chokers" checked>
                   <label for="chokers">Chokers</label>
                 </li>
                 <li class="filter__option">
-                  <input class="filter__input filter__input-checkbox" type="checkbox" name="rings" id="rings">
+                  <input type="checkbox" name="rings" id="rings">
                   <label for="rings">Rings</label>
                 </li>
                 <li class="filter__option">
-                  <input class="filter__input filter__input-checkbox" type="checkbox" name="earrings" id="earrings"
-                    checked>
+                  <input type="checkbox" name="earrings" id="earrings" checked>
                   <label for="earrings">Earrings</label>
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="filter__block">
-              <legend class="filter__subtitle"><a class="filter__subtitle-link filter__subtitle-link--close"
+            <fieldset>
+              <legend><a class="filter__subtitle-link filter__subtitle-link--close"
                   tabindex="0" href="#">Material</a></legend>
               <ul class="filter__list filter__list--close">
                 <li class="filter__option">
-                  <input class="filter__input filter__input-checkbox" type="checkbox" name="gold" id="gold">
+                  <input type="checkbox" name="gold" id="gold">
                   <label for="gold">Gold</label>
                 </li>
                 <li class="filter__option">
-                  <input class="filter__input filter__input-checkbox" type="checkbox" name="silver" id="silver">
+                  <input type="checkbox" name="silver" id="silver">
                   <label for="silver">Silver</label>
                 </li>
                 <li class="filter__option">
-                  <input class="filter__input filter__input-checkbox" type="checkbox" name="platinum" id="platinum">
+                  <input type="checkbox" name="platinum" id="platinum">
                   <label for="platinum">Platinum</label>
                 </li>
                 <li class="filter__option">
-                  <input class="filter__input filter__input-checkbox" type="checkbox" name="zinc alloy" id="zinc-alloy">
+                  <input type="checkbox" name="zinc alloy" id="zinc-alloy">
                   <label for="zinc-alloy">Zinc alloy</label>
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="filter__block">
-              <legend class="filter__subtitle"><a class="filter__subtitle-link filter__subtitle-link--close"
+            <fieldset>
+              <legend><a class="filter__subtitle-link filter__subtitle-link--close"
                   tabindex="0" href="#">Collection</a></legend>
               <ul class="filter__list filter__list--close">
                 <li class="filter__option">
-                  <input class="filter__input filter__input-checkbox" type="checkbox" name="inspiration"
-                    id="inspiration">
+                  <input type="checkbox" name="inspiration" id="inspiration">
                   <label for="inspiration">Inspiration</label>
                 </li>
                 <li class="filter__option">
-                  <input class="filter__input filter__input-checkbox" type="checkbox" name="2020" id="2020">
+                  <input type="checkbox" name="2020" id="2020">
                   <label for="2020">2020</label>
                 </li>
                 <li class="filter__option">
-                  <input class="filter__input filter__input-checkbox" type="checkbox" name="boho" id="boho">
+                  <input type="checkbox" name="boho" id="boho">
                   <label for="boho">Boho</label>
                 </li>
                 <li class="filter__option">
-                  <input class="filter__input filter__input-checkbox" type="checkbox" name="my preciousss"
-                    id="my-preciousss">
+                  <input type="checkbox" name="my preciousss" id="my-preciousss">
                   <label for="my-preciousss">My preciousss</label>
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="filter__block">
-              <legend class="filter__subtitle"><a class="filter__subtitle-link" tabindex="0" href="#">Price</a></legend>
+            <fieldset>
+              <legend><a class="filter__subtitle-link" tabindex="0" href="#">Price</a></legend>
               <div class="filter__price-range price-range">
                 <div class="price-range__scale">
                   <div class="price-range__scale-fill"></div>
-                  <label class="price-range__lever price-range__lever--left" tabindex="0">
+                  <label tabindex="0">
                     <input class="price-range__min-value" type="text" name="min-value" placeholder="$ 55"
                       value="$ 55">
                     </label>
-                  <label class="price-range__lever price-range__lever--right" tabindex="0">
+                  <label tabindex="0">
                     <input class="price-range__max-value" type="text" name="max-value" placeholder="$ 155"
                       value="$ 155">
                     </label>
@@ -480,7 +474,7 @@
 
                   <!-- 1х: 270px*272px; 2x: 540px*544px -->
                   <source media="(min-width: 1024px)"
-                    srcset="img/threader-necklace-desktop@1x.png 1x, img/threader-necklace-desktop@2x.png 2x">
+                    srcset="img/threader-necklace-closeup-desktop@1x.png 1x, img/threader-necklace-closeup-desktop@2x.png 2x">
                   <!-- 1x: 206px*208px; 2x: 412px*416px -->
                   <source media="(min-width: 768px)"
                     srcset="img/threader-necklace-tablet@1x.png 1x, img/threader-necklace-tablet@2x.png 2x">
@@ -578,12 +572,11 @@
             News and updates from CH. No spam, we promise.
           </p>
           <form class="subscription__form" method="POST" action="#">
-            <label class="subscription__label" for="subscription-email"><span
-                class="visually-hidden">E-mail</span></label>
-            <input class="subscription__input" type="email" name="email" id="subscription-email"
+            <label for="subscription-email"><span class="visually-hidden">E-mail</span></label>
+            <input type="email" name="email" id="subscription-email"
               placeholder="Your E-mail" required>
-            <button class="subscription__submit" type="submit">Sign Up
-              <svg class="subscription__submit-icon" width="29" height="9" role="img" aria-label="Icon arrow">
+            <button type="submit">Sign Up
+              <svg width="29" height="9" role="img" aria-label="Icon arrow">
                 <use xlink:href="#icon-arrow-right"></use>
               </svg>
             </button>
@@ -670,14 +663,15 @@
           </li>
         </ul>
         <a class="login__forgot-password-link" href="#">Forgot your password?</a>
-        <button class="login__submit-button button" type="submit">Log In</button>
+        <button class=" button" type="submit">Log In</button>
       </form>
       <p class="login__new-account">Don’t have an account?
         <a class="login__new-account-link" href="#">Sign up</a>
       </p>
     </div>
   </div>
-  <script src="js/script.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/picturefill.js"></script>
 </body>
 
 </html>

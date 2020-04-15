@@ -17,6 +17,7 @@
 
 .blog__link {
   display: inline-block;
+  vertical-align: middle;
   width: 64px;
   margin-left: calc(50% - 33px);
   padding-bottom: 4px;
@@ -26,6 +27,10 @@
   font-size: 16px;
   line-height: 21px;
   border-bottom: 1px solid $brown;
+
+  &:hover {
+    color: $gray-font;
+  }
 }
 
 .blog__wrapper {

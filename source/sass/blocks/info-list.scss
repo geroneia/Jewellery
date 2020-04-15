@@ -17,4 +17,8 @@
   font-size: 18px;
   line-height: 23px;
   color: $pale-white;
+
+  &:hover {
+    color: $black;
+  }
 }

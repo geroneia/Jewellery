@@ -24,7 +24,11 @@
   color: $white;
 
   &:hover {
-    color: $white;
+    color: $gray-font;
+  }
+
+  &:hover .social__icon{
+    fill: $gray-font;
   }
 }
 

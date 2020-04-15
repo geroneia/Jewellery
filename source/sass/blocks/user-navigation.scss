@@ -18,8 +18,16 @@
     list-style: none;
   }
 
+  .user-navigation__item {
+    margin-left: 5px;
+  }
+
   .user-navigation__login-link {
     padding-bottom: 2px;
+
+    &:hover {
+      color: $gray-font;
+    }
   }
 
   .user-navigation__cart-link {
@@ -31,7 +39,7 @@
     line-height: 21px;
 
     &:hover {
-      color: $black;
+      color: $gray-font;
     }
   }
 
@@ -55,7 +63,7 @@
   }
 
   .user-navigation--menu-closed {
-    .user-navigation__login {
+    .user-navigation__item--login{
       display: none;
     }
 
@@ -75,7 +83,7 @@
       margin-top: 54px;
     }
 
-    .user-navigation__login {
+    .user-navigation__item--login{
       position: absolute;
       width: 49px;
       height: 13px;
@@ -83,11 +91,14 @@
       left: 5.9%;
     }
 
-    .user-navigation__login-link,
-    .user-navigation__login-link:hover {
+    .user-navigation__login-link {
       font-size: 18px;
       line-height: 23px;
       color: $white;
+
+      &:hover {
+        color: $black;
+      }
     }
   }
 }
@@ -103,7 +114,7 @@
   }
 
   .user-navigation--menu-closed {
-    .user-navigation__login {
+    .user-navigation__item--login{
       display: none;
     }
 
@@ -118,7 +129,7 @@
       stroke: $white;
     }
 
-    .user-navigation__login {
+    .user-navigation__item--login{
       position: absolute;
       width: 49px;
       height: 13px;
@@ -126,11 +137,14 @@
       left: 4.68%;
     }
 
-    .user-navigation__login-link,
-    .user-navigation__login-link:hover {
+    .user-navigation__login-link {
       font-size: 18px;
       line-height: 23px;
       color: $white;
+
+      &:hover {
+        color: $black;
+      }
     }
   }
 }

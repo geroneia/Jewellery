@@ -20,7 +20,7 @@
   background-color: $brown;
 }
 
-.price-range__lever {
+.price-range__scale label {
   position: absolute;
   width: 15px;
   height: 15px;
@@ -29,18 +29,18 @@
   border-radius: 50%;
 }
 
-.price-range__lever--left {
+.price-range__scale label:first-of-type {
   left: 23%;
 }
 
-.price-range__lever--right {
+.price-range__scale label:last-of-type {
   right: 17%;
 }
 
-.price-range__min-value,
-.price-range__max-value {
+.price-range__scale input {
   position: absolute;
   top: 20px;
+  left: -7px;
   font-family: $font;
   font-weight: 500;
   font-size: 14px;
@@ -61,14 +61,6 @@
   }
 }
 
-.price-range__min-value {
-  left: -5px;
-}
-
-.price-range__max-value {
-  right: -17px;
-}
-
 @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
   .price-range__scale {
     display: block;
@@ -83,32 +75,28 @@
     left: 20%;
   }
 
-  .price-range__lever {
+  .price-range__scale label {
     top: -8px;
     width: 18px;
     height: 18px;
   }
 
-  .price-range__lever--left {
+  .price-range__scale label:first-of-type {
     left: 15%;
   }
 
-  .price-range__lever--right {
+  .price-range__scale label:last-of-type {
     right: 21%;
   }
 
-  .price-range__min-value,
-  .price-range__max-value {
-    top: 20px;
+  .price-range__scale input {
+    top: 25px;
+    left: -7px;
     font-size: 16px;
-  }
 
-  .price-range__min-value {
-    left: 12%;
-  }
-
-  .price-range__max-value {
-    right: 17.5%;
+    &:last-of-type {
+      left: -11px;
+    }
   }
 }
 
@@ -122,35 +110,35 @@
   }
 
   .price-range__scale-fill {
-    width: 53%;
+    width: 55%;
     left: 20%;
   }
 
-  .price-range__lever {
+  .price-range__scale label {
     top: -8px;
     width: 18px;
     height: 18px;
   }
 
-  .price-range__lever--left {
-    left: 16%;
+  .price-range__scale label:first-of-type {
+    left: 20%;
   }
 
-  .price-range__lever--right {
-    right: 22%;
+  .price-range__scale label:last-of-type {
+    right: 17.6%;
   }
 
-  .price-range__min-value,
-  .price-range__max-value {
-    top: 16px;
+  .price-range__scale input {
+    top: 25px;
+    left: -5px;
     font-size: 16px;
   }
 
-  .price-range__min-value {
-    left: 13%;
+  .price-range__scale input:first-of-type {
+    left: 0;
   }
 
-  .price-range__max-value {
-    right: 17%;
+  .price-range__scale input:last-of-type {
+    right: 0;
   }
 }

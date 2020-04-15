@@ -1,34 +1,34 @@
 /* poppins-regular - latin */
 @font-face {
-  font-family: "Poppins";
+  font-family: "poppins";
   font-style: normal;
   font-weight: 400;
-  src: local("Poppins Regular"),
-    local("Poppins-Regular"),
-    url("../fonts/Poppins/poppins-v9-latin-regular.woff2") format("woff2"),
-    url("../fonts/Poppins/poppins-v9-latin-regular.woff") format("woff");
+  src: local("poppins Regular"),
+    local("poppins-Regular"),
+    url("../fonts/poppins/poppins-v9-latin-regular.woff2") format("woff2"),
+    url("../fonts/poppins/poppins-v9-latin-regular.woff") format("woff");
   font-display: swap;
 }
 /* poppins-500 - latin */
 @font-face {
-  font-family: "Poppins";
+  font-family: "poppins";
   font-style: normal;
   font-weight: 500;
-  src: local("Poppins Medium"),
-    local("Poppins-Medium"),
-    url("../fonts/Poppins/poppins-v9-latin-500.woff2") format("woff2"),
-    url("../fonts/Poppins/poppins-v9-latin-500.woff") format("woff");
+  src: local("poppins Medium"),
+    local("poppins-Medium"),
+    url("../fonts/poppins/poppins-v9-latin-500.woff2") format("woff2"),
+    url("../fonts/poppins/poppins-v9-latin-500.woff") format("woff");
   font-display: swap;
 }
 /* poppins-700 - latin */
 @font-face {
-  font-family: "Poppins";
+  font-family: "poppins";
   font-style: normal;
   font-weight: 700;
-  src: local("Poppins Bold"),
-    local("Poppins-Bold"),
-    url("../fonts/Poppins/poppins-v9-latin-700.woff2") format("woff2"),
-    url("../fonts/Poppins/poppins-v9-latin-700.woff") format("woff");
+  src: local("poppins Bold"),
+    local("poppins-Bold"),
+    url("../fonts/poppins/poppins-v9-latin-700.woff2") format("woff2"),
+    url("../fonts/poppins/poppins-v9-latin-700.woff") format("woff");
   font-display: swap;
 }
 /* cormorant-garamond-italic - latin */
@@ -38,8 +38,8 @@
   font-weight: 400;
   src: local("Cormorant Garamond Italic"),
     local("CormorantGaramond-Italic"),
-    url("../fonts/Cormorant-Garamond/cormorant-garamond-v7-latin-italic.woff2") format("woff2"),
-    url("../fonts/Cormorant-Garamond/cormorant-garamond-v7-latin-italic.woff") format("woff");
+    url("../fonts/cormorant-garamond/cormorant-garamond-v7-latin-italic.woff2") format("woff2"),
+    url("../fonts/cormorant-garamond/cormorant-garamond-v7-latin-italic.woff") format("woff");
   font-display: swap;
 }
 /* cormorant-garamond-500 - latin */
@@ -49,8 +49,8 @@
   font-weight: 500;
   src: local("Cormorant Garamond Medium"),
     local("CormorantGaramond-Medium"),
-    url("../fonts/Cormorant-Garamond/cormorant-garamond-v7-latin-500.woff2") format("woff2"),
-    url("../fonts/Cormorant-Garamond/cormorant-garamond-v7-latin-500.woff") format("woff");
+    url("../fonts/cormorant-garamond/cormorant-garamond-v7-latin-500.woff2") format("woff2"),
+    url("../fonts/cormorant-garamond/cormorant-garamond-v7-latin-500.woff") format("woff");
   font-display: swap;
 }
 /* cormorant-garamond-500italic - latin */
@@ -60,8 +60,8 @@
   font-weight: 500;
   src: local("Cormorant Garamond Medium Italic"),
     local("CormorantGaramond-MediumItalic"),
-    url("../fonts/Cormorant-Garamond/cormorant-garamond-v7-latin-500italic.woff2") format("woff2"),
-    url("../fonts/Cormorant-Garamond/cormorant-garamond-v7-latin-500italic.woff") format("woff");
+    url("../fonts/cormorant-garamond/cormorant-garamond-v7-latin-500italic.woff2") format("woff2"),
+    url("../fonts/cormorant-garamond/cormorant-garamond-v7-latin-500italic.woff") format("woff");
   font-display: swap;
 }
 /* cormorant-garamond-600 - latin */
@@ -71,8 +71,8 @@
   font-weight: 600;
   src: local("Cormorant Garamond SemiBold"),
     local("CormorantGaramond-SemiBold"),
-    url("../fonts/Cormorant-Garamond/cormorant-garamond-v7-latin-600.woff2") format("woff2"),
-    url("../fonts/Cormorant-Garamond/cormorant-garamond-v7-latin-600.woff") format("woff");
+    url("../fonts/cormorant-garamond/cormorant-garamond-v7-latin-600.woff2") format("woff2"),
+    url("../fonts/cormorant-garamond/cormorant-garamond-v7-latin-600.woff") format("woff");
   font-display: swap;
 }
 /* cormorant-garamond-700 - latin */
@@ -82,7 +82,7 @@
   font-weight: 700;
   src: local("Cormorant Garamond Bold"),
     local("CormorantGaramond-Bold"),
-    url("../fonts/Cormorant-Garamond/cormorant-garamond-v7-latin-700.woff2") format("woff2"),
-    url("../fonts/Cormorant-Garamond/cormorant-garamond-v7-latin-700.woff") format("woff");
+    url("../fonts/cormorant-garamond/cormorant-garamond-v7-latin-700.woff2") format("woff2"),
+    url("../fonts/cormorant-garamond/cormorant-garamond-v7-latin-700.woff") format("woff");
   font-display: swap;
 }

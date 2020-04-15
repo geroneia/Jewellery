@@ -16,6 +16,7 @@
 
 .follow-us__follow-link {
   display: inline-block;
+  vertical-align: middle;
   width: 74px;
   margin-left: calc(50% - 37px);
   padding-bottom: 4px;
@@ -25,6 +26,10 @@
   font-size: 16px;
   line-height: 21px;
   border-bottom: 1px solid #a87b62;
+
+  &:hover {
+    color: $gray-font;
+  }
 }
 
 .follow-us__images-list {
@@ -70,7 +75,7 @@
   .follow-us__wrapper {
     margin-left: 6.07%;
     margin-right: 6.07%;
-    margin-bottom: 116px;
+    margin-bottom: 114px;
   }
 
   .follow-us__column--first {
@@ -142,7 +147,7 @@
   .follow-us__wrapper {
     margin-left: 4.7%;
     margin-right: 4.7%;
-    margin-bottom: 53px;
+    margin-bottom: 70px;
   }
 
   .follow-us__column--first {
@@ -165,7 +170,7 @@
       position: absolute;
       left: 0;
       bottom: 0;
-      width: calc(37.68% - 30px);
+      width: calc(37.68% - 18px);
     }
   }
 

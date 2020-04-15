@@ -4,25 +4,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jewerely store">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Jellewelly</title>
+  <title>Jewellery store CH</title>
   <link rel="stylesheet" href="css/style.min.css">
-  <link rel="preload" href="fonts/Poppins/poppins-v9-latin-regular.woff2" as="font">
-  <link rel="preload" href="fonts/Poppins/poppins-v9-latin-regular.woff" as="font">
-  <link rel="preload" href="fonts/Poppins/poppins-v9-latin-500.woff2" as="font">
-  <link rel="preload" href="fonts/Poppins/poppins-v9-latin-500.woff" as="font">
-  <link rel="preload" href="fonts/Poppins/poppins-v9-latin-700.woff2" as="font">
-  <link rel="preload" href="fonts/Poppins/poppins-v9-latin-700.woff" as="font">
-  <link rel="preload" href="fonts/Cormorant-Garamond/cormorant-garamond-v7-latin-italic.woff2" as="font">
-  <link rel="preload" href="fonts/Cormorant-Garamond/cormorant-garamond-v7-latin-italic.woff" as="font">
-  <link rel="preload" href="fonts/Cormorant-Garamond/cormorant-garamond-v7-latin-500.woff2" as="font">
-  <link rel="preload" href="fonts/Cormorant-Garamond/cormorant-garamond-v7-latin-500.woff" as="font">
-  <link rel="preload" href="fonts/Cormorant-Garamond/cormorant-garamond-v7-latin-500italic.woff2" as="font">
-  <link rel="preload" href="fonts/Cormorant-Garamond/cormorant-garamond-v7-latin-500italic.woff" as="font">
-  <link rel="preload" href="fonts/Cormorant-Garamond/cormorant-garamond-v7-latin-600.woff2" as="font">
-  <link rel="preload" href="fonts/Cormorant-Garamond/cormorant-garamond-v7-latin-600.woff" as="font">
-  <link rel="preload" href="fonts/Cormorant-Garamond/cormorant-garamond-v7-latin-700.woff2" as="font">
-  <link rel="preload" href="fonts/Cormorant-Garamond/cormorant-garamond-v7-latin-700.woff" as="font">
+  <link rel="preload" href="fonts/poppins/poppins-v9-latin-regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/poppins/poppins-v9-latin-regular.woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/poppins/poppins-v9-latin-500.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/poppins/poppins-v9-latin-500.woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/poppins/poppins-v9-latin-700.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/poppins/poppins-v9-latin-700.woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/cormorant-garamond/cormorant-garamond-v7-latin-italic.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/cormorant-garamond/cormorant-garamond-v7-latin-italic.woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/cormorant-garamond/cormorant-garamond-v7-latin-500italic.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/cormorant-garamond/cormorant-garamond-v7-latin-500italic.woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/cormorant-garamond/cormorant-garamond-v7-latin-600.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/cormorant-garamond/cormorant-garamond-v7-latin-600.woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/cormorant-garamond/cormorant-garamond-v7-latin-700.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/cormorant-garamond/cormorant-garamond-v7-latin-700.woff" as="font" crossorigin="anonymous">
 </head>
 
 <body>
@@ -32,15 +31,14 @@
 
   <header class="page-header page-header--menu-opened">
     <div class="page-header__wrapper">
-      <form class="page-header__search page-header__search-opened" method="POST" action="#">
-        <button type="submit" class="page-header__search-button" aria-label="Search">
+      <form class="page-header__search page-header__search--opened" method="POST" action="#">
+        <button type="submit" aria-label="Search">
           <svg class="page-header__search-icon" width="14" height="14" role="img" aria-label="Icon loupe">
             <use xlink:href="#icon-loupe"></use>
           </svg>
         </button>
         <label for="search"><span class="visually-hidden">Searching</span></label>
-        <input type="search" id="search" class="page-header__search-input page-header__search-input--menu-opened"
-          placeholder="Type here to search">
+        <input type="search" id="search" placeholder="Type here to search">
       </form>
       <a class="page-header__logo">
         <svg class="page-header__logo-icon" width="66" height="66" role="img" aria-label="CH shop logo">
@@ -48,10 +46,10 @@
         </svg>
       </a>
       <ul class="page-header__user-navigation user-navigation user-navigation--menu-opened">
-        <li class="user-navigation__login">
+        <li class="user-navigation__item user-navigation__item--login">
           <a class="user-navigation__login-link" href="#">Login</a>
         </li>
-        <li class="user-navigation__cart">
+        <li class="user-navigation__item user-navigation__item--cart">
           <a class="user-navigation__cart-link" href="#" aria-label="Go to cart">
             <span class="user-navigation__cart-text">Cart</span>
             <span class="user-navigation__cart-counter">0</span>
@@ -103,6 +101,7 @@
   </header>
   <div class="page-wrapper">
     <main class="main">
+      <h1 class="visually-hidden">Jewellery store</h1>
       <section class="main__promo">
         <h2 class="visually-hidden">Slogan</h2>
         <p class="main__promo-slogan">
@@ -558,30 +557,39 @@
             <div class="follow-us__column follow-us__column--first">
               <div class="follow-us__images-item">
                 <picture class="follow-us__images-wrap">
+                  <!-- 230px*230px -->
                   <source media="(min-width: 1024px)"
                     srcset="img/square-earrings-desktop@1x.png 1x, img/square-earrings-desktop@2x.png 2x">
+                  <!-- 133px*133px -->
                   <source media="(min-width: 768px)"
                     srcset="img/square-earrings-tablet@1x.png 1x, img/square-earrings-tablet@2x.png 2x">
+                  <!-- 130px*130px -->
                   <img class="follow-us__image" src="img/square-earrings-mobile@1x.png"
                     srcset="img/square-earrings-mobile@2x.png 2x" width="130" height="130" alt="Square earrings">
                 </picture>
               </div>
               <div class="follow-us__images-item">
                 <picture class="follow-us__images-wrap">
+                  <!-- 400px*414px -->
                   <source media="(min-width: 1024px)"
                     srcset="img/woman-hands-up-desktop@1x.png 1x, img/woman-hands-up-desktop@1x.png 2x">
+                  <!-- 231px*240px -->
                   <source media="(min-width: 768px)"
                     srcset="img/woman-hands-up-tablet@1x.jpg 1x, img/woman-hands-up-tablet@2x.jpg 2x">
+                  <!-- 145px*226px -->
                   <img class="follow-us__image" src="img/woman-hands-up-mobile@1x.jpg"
                     srcset="img/woman-hands-up-mobile@2x.jpg 2x" width="145" height="226" alt="Woman with hands up">
                 </picture>
               </div>
               <div class="follow-us__images-item">
                 <picture class="follow-us__images-wrap">
+                  <!-- 230px*154px -->
                   <source media="(min-width: 1024px)"
                     srcset="img/big-gem-earrings-desktop@1x.png 1x, img/big-gem-earrings-desktop@2x.png 2x">
+                  <!-- 133px*89px -->
                   <source media="(min-width: 768px)"
                     srcset="img/big-gem-earrings-tablet@1x.png 1x, img/big-gem-earrings-tablet@2x.png 2x">
+                  <!-- 130px*87px -->
                   <img class="follow-us__image" src="img/big-gem-earrings-mobile@1x.png"
                     srcset="img/big-gem-earrings-mobile@2x.png 2x" width="130" height="87" alt="Big gem earrings">
                 </picture>
@@ -591,26 +599,34 @@
             <div class="follow-us__column follow-us__column--second">
               <div class="follow-us__images-item">
                 <picture class="follow-us__images-wrap">
+                  <!-- 232px*193px -->
                   <source media="(min-width: 1024px)"
                     srcset="img/hands-in-bracelets-desktop@1x.png 1x, img/hands-in-bracelets-desktop@2x.png 2x">
+                  <!-- 134px*111px -->
                   <source media="(min-width: 768px)"
                     srcset="img/hands-in-bracelets-tablet@1x.jpg 1x, img/hands-in-bracelets-tablet@2x.jpg 2x">
+                  <!-- 145px*121px -->
                   <img class="follow-us__image" src="img/hands-in-bracelets-mobile@1x.png"
                     srcset="img/hands-in-bracelets-mobile@2x.png 2x" width="145" height="121" alt="Hands in bracelets">
                 </picture>
               </div>
               <div class="follow-us__images-item follow-us__images-item-mobile-no">
                 <picture class="follow-us__images-wrap">
+                  <!-- 218px*218px -->
                   <source media="(min-width: 1024px)"
                     srcset="img/twisted-earrings-desktop@1x.png 1x, img/twisted-earrings-desktop@2x.png 2x">
+                  <!-- 126px*126px -->
                   <img class="follow-us__image" src="img/twisted-earrings-tablet@1x.jpg"
                     srcset="img/twisted-earrings-tablet@1x.jpg 2x" width="126" height="126" alt="Twisted earrings">
                 </picture>
               </div>
               <div class="follow-us__images-item">
                 <picture class="follow-us__images-wrap">
+                  <!-- 218px*191px -->
                   <source media="(min-width: 1024px)" srcset="img/kit-desktop@1x.png 1x, img/kit-desktop@2x.png 2x">
+                  <!-- 126px*111px -->
                   <source media="(min-width: 768px)" srcset="img/kit-tablet@1x.jpg 1x, img/kit-tablet@2x.jpg 2x">
+                  <!-- 130px*115px -->
                   <img class="follow-us__image" src="img/kit-mobile@1x.png" srcset="img/kit-mobile@2x.png 2x"
                     width="130" height="115" alt="Jewelry set">
                 </picture>
@@ -618,8 +634,10 @@
 
               <div class="follow-us__images-item follow-us__images-item-mobile-no">
                 <picture class="follow-us__images-wrap">
+                  <!-- 232px*166px -->
                   <source media="(min-width: 1024px)"
                     srcset="img/hands-cross-desktop@1x.png 1x, img/hands-cross-desktop@1x.png 2x">
+                  <!-- 134px*96px -->
                   <img class="follow-us__image" src="img/hands-cross-tablet@1x.png"
                     srcset="img/hands-cross-tablet@2x.png 2x" width="134" height="96" alt="Crossed heands">
                 </picture>
@@ -639,12 +657,12 @@
             News and updates from CH. No spam, we promise.
           </p>
           <form class="subscription__form" method="POST" action="#">
-            <label class="subscription__label" for="subscription-email"><span
+            <label for="subscription-email"><span
                 class="visually-hidden">E-mail</span></label>
-            <input class="subscription__input" type="email" name="email" id="subscription-email"
+            <input type="email" name="email" id="subscription-email"
               placeholder="Your E-mail" required>
-            <button class="subscription__submit" type="submit">Sign Up
-              <svg class="subscription__submit-icon" width="29" height="9" role="img" aria-label="Icon right arrow">
+            <button type="submit">Sign Up
+              <svg width="29" height="9" role="img" aria-label="Icon right arrow">
                 <use xlink:href="#icon-arrow-right"></use>
               </svg>
             </button>
@@ -721,24 +739,25 @@
             <label for="email">
               <span class="visually-hidden">Your E-mail</span>
             </label>
-            <input type="email" id="email" name="email" placeholder="Your E-mail" autofocus>
+            <input type="email" id="email" name="email" placeholder="Your E-mail" autofocus required>
           </li>
           <li class="login__item">
             <label for="password">
               <span class="visually-hidden">Password</span>
             </label>
-            <input type="password" id="password" name="password" placeholder="Password">
+            <input type="password" id="password" name="password" placeholder="Password" required>
           </li>
         </ul>
         <a class="login__forgot-password-link" href="#">Forgot your password?</a>
-        <button class="login__submit-button button">Log In</button>
+        <button class="button" type="submit">Log In</button>
       </form>
       <p class="login__new-account">Don’t have an account?
         <a class="login__new-account-link" href="#">Sign up</a>
       </p>
     </div>
   </div>
-  <script src="js/script.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/picturefill.js"></script>
 </body>
 
 </html>

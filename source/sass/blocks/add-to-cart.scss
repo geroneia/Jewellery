@@ -150,12 +150,20 @@
   color: $black;
   background-color: $white;
   border: 1px solid $brown;
+
+  &:hover {
+    color: $gray-font;
+  }
 }
 
 .add-to-cart__checkout-button {
   height: 68px;
   width: 200px;
   padding-top: 24px;
+
+  &:hover {
+    color: $black;
+  }
 }
 
 @media (min-width: $desktop-width) {
