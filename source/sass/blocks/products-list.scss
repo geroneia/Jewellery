@@ -35,6 +35,13 @@
   .products-list__item-link:hover {
     color: $gray-font;
   }
+
+  .products-list__item-link {
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 2px 1px $brown;
+    }
+  }
 }
 
 @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
@@ -65,6 +72,11 @@
     &:hover {
       color: $black;
     }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 2px 1px $white;
+    }
   }
 }
 
@@ -94,6 +106,11 @@
 
     &:hover {
       color: $black;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 2px 1px $white;
     }
   }
 }

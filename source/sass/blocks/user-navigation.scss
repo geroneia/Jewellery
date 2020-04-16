@@ -2,9 +2,22 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 21px;
+  outline: none;
 
   &:hover {
     color: $black;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 2px 2px $brown;
+  }
+}
+
+.user-navigation__cart-link {
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 2px 2px $brown;
   }
 }
 
@@ -62,6 +75,19 @@
     margin-top: 54px;
   }
 
+  .user-navigation__cart-link {
+    width: 20px;
+    height: 18px;
+
+    &:focus {
+      box-shadow: none;
+    }
+
+    &:focus .user-navigation__cart-icon {
+      box-shadow: 0 0 2px 1px $brown;
+    }
+  }
+
   .user-navigation--menu-closed {
     .user-navigation__item--login {
       display: none;
@@ -83,6 +109,16 @@
       margin-top: 54px;
     }
 
+    .user-navigation__cart-link {
+      &:focus {
+        box-shadow: none;
+      }
+
+      &:focus .user-navigation__cart-icon {
+        box-shadow: 0 0 2px 1px $white;
+      }
+    }
+
     .user-navigation__item--login {
       position: absolute;
       width: 49px;
@@ -99,6 +135,13 @@
       &:hover {
         color: $black;
       }
+
+      &:focus {
+        width: 20px;
+        height: 14px;
+        outline: none;
+        box-shadow: 0 0 2px 2px $white;
+      }
     }
   }
 }
@@ -107,6 +150,20 @@
   .user-navigation__cart-text,
   .user-navigation__cart-counter {
     display: none;
+  }
+
+
+  .user-navigation__cart-link {
+    width: 20px;
+    height: 18px;
+
+    &:focus {
+      box-shadow: none;
+    }
+
+    &:focus .user-navigation__cart-icon {
+      box-shadow: 0 0 2px 1px $brown;
+    }
   }
 
   .user-navigation__cart-icon {
@@ -129,6 +186,16 @@
       stroke: $white;
     }
 
+    .user-navigation__cart-link {
+      &:focus {
+        box-shadow: none;
+      }
+
+      &:focus .user-navigation__cart-icon {
+        box-shadow: 0 0 2px 1px $white;
+      }
+    }
+
     .user-navigation__item--login {
       position: absolute;
       width: 49px;
@@ -144,6 +211,11 @@
 
       &:hover {
         color: $black;
+      }
+
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 2px 2px $white;
       }
     }
   }

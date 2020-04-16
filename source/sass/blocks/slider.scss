@@ -20,18 +20,28 @@
   &:hover {
     color: $gray-font;
   }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 2px 1px $brown;
+  }
 }
 
 .slider__controls {
   stroke: $brown;
   position: absolute;
   width: 29px;
-  height: 9px;
+  height: 25px;
   outline: none;
   cursor: pointer;
 
   &:hover {
     stroke: $black;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 2px 1px $brown;
   }
 }
 
@@ -99,6 +109,11 @@
   &:hover {
     color: $black;
   }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 2px 1px $brown;
+  }
 }
 
 .slider__pagination-link--active {
@@ -107,6 +122,13 @@
 
   &:hover {
     color: $gray-font;
+  }
+}
+
+.slider__product-link {
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 2px 1px $brown;
   }
 }
 

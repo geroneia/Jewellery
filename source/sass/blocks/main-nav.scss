@@ -43,6 +43,11 @@
       &:hover {
         background-color: $white;
       }
+
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 2px 1px $brown;
+      }
     }
   }
 
@@ -57,6 +62,11 @@
       left: 5.85%;
       border: none;
       background-color: $brown;
+
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 2px 1px $white;
+      }
     }
 
     .main-nav__toggle-icon {
@@ -95,12 +105,22 @@
     .main-nav__toggle {
       background-color: $white;
       stroke: $black;
+
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 2px 1px $brown;
+      }
     }
   }
 
   .main-nav--opened {
     .main-nav__toggle {
       background-color: transparent;
+
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 2px 1px $white;
+      }
     }
 
     .main-nav__toggle-icon {

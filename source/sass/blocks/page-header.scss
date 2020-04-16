@@ -8,6 +8,11 @@
   &:hover {
     stroke: $brown;
   }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 2px 1px $brown;
+  }
 }
 
 .page-header__user-navigation {
@@ -37,6 +42,11 @@
   &:hover {
     background-color: transparent;
   }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 2px 2px $brown;
+  }
 }
 
 .page-header__search input {
@@ -55,7 +65,9 @@
     color: $gray-font;
   }
 
-  &:hover {
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 2px 1px $brown;
     background-color: $white;
   }
 }
@@ -71,6 +83,16 @@
 
   &::placeholder {
     color: transparent;
+  }
+
+  &:focus {
+    box-shadow: 0 0 2px 1px $white;
+  }
+}
+
+.page-header__search--opened button {
+  &:focus {
+    box-shadow: 0 0 2px 1px $white;
   }
 }
 
@@ -159,6 +181,13 @@
     min-height: 778px;
     background-color: $brown;
 
+    .page-header__logo {
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 2px 1px $white;
+      }
+    }
+
     .page-header__logo-icon {
       stroke: $white;
       fill: $white;
@@ -217,6 +246,13 @@
   .page-header--menu-opened {
     min-height: 778px;
     background-color: $brown;
+
+    .page-header__logo {
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 2px 1px $white;
+      }
+    }
 
     .page-header__logo-icon {
       stroke: $white;

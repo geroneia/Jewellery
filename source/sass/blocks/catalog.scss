@@ -24,6 +24,13 @@
   flex-shrink: 2;
 }
 
+.catalog__product-link {
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 2px 1px $brown;
+  }
+}
+
 .catalog__product-image-wrapper {
   display: flex;
   width: 100%;
@@ -94,6 +101,13 @@
   .catalog__pagination {
     padding-top: 32px;
     padding-bottom: 75px;
+  }
+
+  .catalog__pagination-item-link {
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 2px 1px $brown;
+    }
   }
 
   .pagination-item-previous {

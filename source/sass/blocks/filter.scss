@@ -45,7 +45,11 @@
 .filter__form legend {
   padding-left: 0;
   padding-right: 0;
-  outline: none;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 2px $brown;
+  }
 }
 
 .filter__subtitle-link {
@@ -62,6 +66,11 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url("../img/angle-top.svg");
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 2px 1px $brown;
   }
 }
 
@@ -121,6 +130,10 @@
   box-shadow: 0 0 2px $brown;
 }
 
+.filter__option input:focus + label::before {
+  box-shadow: 0 0 2px 1px $brown;
+}
+
 .filter__buttons-wrapper {
   display: flex;
   flex-direction: column;
@@ -139,6 +152,11 @@
   &:hover {
     color: $black;
   }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 2px 2px $brown;
+  }
 }
 
 .filter__clear-button {
@@ -155,6 +173,11 @@
 
   &:hover {
     color: $gray-font;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 2px 1px $brown;
   }
 }
 

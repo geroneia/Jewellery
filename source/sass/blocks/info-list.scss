@@ -22,3 +22,12 @@
     color: $black;
   }
 }
+
+@media (min-width: $min-mobile-width) and (max-width: $max-tablet-width) {
+  .info-list__item-link {
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 2px 1px $white;
+    }
+  }
+}

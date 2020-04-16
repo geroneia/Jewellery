@@ -13,8 +13,12 @@
   position: relative;
   display: block;
   color: $black;
-  outline: none;
   cursor: pointer;
+
+  &:hover {
+    outline: none;
+    box-shadow: 0 0 2px $brown;
+  }
 }
 
 .faq__list {
@@ -59,6 +63,13 @@
 .faq__link--open > .faq__question {
   &::after {
     background-image: url("../img/angle-top.svg");
+  }
+}
+
+.faq__link {
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 2px 2px $brown;
   }
 }
 

@@ -27,6 +27,11 @@
   top: -7px;
   background-color: $brown;
   border-radius: 50%;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 2px 1px $brown;
+  }
 }
 
 .price-range__scale label:first-of-type {
@@ -53,7 +58,8 @@
   }
 
   &:focus {
-    background-color: $white;
+    outline: none;
+    box-shadow: 0 0 2px 1px $brown;
   }
 
   &:hover {

@@ -31,6 +31,11 @@
   &:hover {
     color: $gray-font;
   }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 2px 1px $brown;
+  }
 }
 
 .blog__wrapper {
