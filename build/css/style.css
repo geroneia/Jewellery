@@ -1285,7 +1285,8 @@ img {
   font-weight: 500;
   font-size: 16px;
   line-height: 21px;
-  color: #9b9997; }
+  color: #9b9997;
+  cursor: pointer; }
   .slider__pagination-link:hover {
     color: #1d1613; }
   .slider__pagination-link:focus {
@@ -2761,7 +2762,12 @@ img {
   font-weight: 500;
   font-size: 16px;
   line-height: 21px;
-  color: #1d1613; }
+  color: #1d1613;
+  cursor: pointer; }
+  .product-info__control-link:focus {
+    outline: none;
+    -webkit-box-shadow: 0 0 2px 1px #a87b62;
+            box-shadow: 0 0 2px 1px #a87b62; }
 
 .product-info__control-link--active,
 .product-info__control-link:hover {

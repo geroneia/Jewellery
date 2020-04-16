@@ -36,6 +36,12 @@
   font-size: 16px;
   line-height: 21px;
   color: $black;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 2px 1px $brown;
+  }
 }
 
 .product-info__control-link--active,
