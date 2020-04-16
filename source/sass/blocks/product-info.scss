@@ -24,10 +24,10 @@
 .product-info__controls {
   display: flex;
   padding-left: 0;
-  margin-top: 0;
   margin-bottom: 0;
   justify-content: flex-start;
   list-style: none;
+  margin-top: auto;
 }
 
 .product-info__control-link {
@@ -56,7 +56,7 @@
 .product-info__control {
   padding-top: 37px;
   padding-bottom: 13px;
-  margin-right: 33px;
+  margin-right: 35px;
 }
 
 .product-info__order-conditions-list {
@@ -112,6 +112,8 @@
 }
 
 .product-info__cart-button {
+  padding: 0;
+
   &:hover {
     color: $black;
   }
@@ -148,7 +150,7 @@
 
   .product-info__column:nth-of-type(2) {
     flex-direction: column;
-    width: 31.62%;
+    width: 31.5%;
   }
 
   .product-info__image-list {

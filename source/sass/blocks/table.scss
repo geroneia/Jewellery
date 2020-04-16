@@ -29,14 +29,14 @@
 
 @media (min-width: $desktop-width) {
   .table {
-    margin-top: auto;
+    margin-top: 3px;
     padding-bottom: 50px;
   }
 }
 
 @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
   .table {
-    margin-top: auto;
+    margin-top: 4px;
     padding-bottom: 50px;
   }
 }
