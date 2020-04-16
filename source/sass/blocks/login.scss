@@ -3,6 +3,7 @@
   margin: auto;
   display: flex;
   flex-direction: column;
+  text-align: center;
 }
 
 .login-wrapper picture {
@@ -23,8 +24,6 @@
 }
 
 .login__heading {
-  margin-left: 39.76%;
-  margin-right: 39.76%;
   margin-bottom: 0;
   font-family: $font-headings;
   font-weight: 700;

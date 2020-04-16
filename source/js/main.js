@@ -336,12 +336,16 @@
     questionList.addEventListener('click', onQuestionClick);
   }
 
-  // Открытие/закрытие фильтра
+
+  var filter = document.querySelector('.filter');
+  var filterlists = document.querySelectorAll('.filter__list');
+  var filterLinks = document.querySelectorAll('.filter__subtitle-link');
+  var priceBlock = document.querySelector('.price-range');
   var filterHeading = document.querySelector('.filter__heading-link');
   var filterForm = document.querySelector('.filter__form');
   var closeFilterButton = document.querySelector('.filter__close-form-button');
 
-
+  // Открытие/закрытие фильтра
   var onCloseButtonClick = function () {
     filterForm.classList.add('filter__form--close');
   };
@@ -352,27 +356,27 @@
   };
 
   // Открытие/закрытие блоков фильтра
-  var filter = document.querySelector('.filter');
-  var filterlists = document.querySelectorAll('.filter__list');
-  var filterLinks = document.querySelectorAll('.filter__subtitle-link');
-  var priceBlock = document.querySelector('.price-range');
-
-  if (filter) {
-    filter.addEventListener('click', function (evt) {
+  var onFilterLinkClick = function (evt) {
+    var target = evt.target;
+    if (target.classList.contains('filter__subtitle-link')) {
       evt.preventDefault();
-      var target = evt.target;
-      if (target.classList.contains('filter__subtitle-link')) {
-        for (var i = 0; i < filterLinks.length; i++) {
-          if (target === filterLinks[i] && target !== filterLinks[filterLinks.length - 1]) {
-            filterlists[i].classList.toggle('filter__list--close');
-          } else if (target === filterLinks[i] && target === filterLinks[filterLinks.length - 1]) {
-            priceBlock.classList.toggle('price-range--close');
-          }
+      for (var i = 0; i < filterLinks.length; i++) {
+        if (target === filterLinks[i] && target !== filterLinks[filterLinks.length - 1]) {
+          filterlists[i].classList.toggle('filter__list--close');
+        } else if (target === filterLinks[i] && target === filterLinks[filterLinks.length - 1]) {
+          priceBlock.classList.toggle('price-range--close');
         }
-        target.classList.toggle('filter__subtitle-link--close');
       }
-    });
+      target.classList.toggle('filter__subtitle-link--close');
+    }
+  };
+
+  if (filter && document.body.clientWidth < DESKTOP_WIDTH) {
     filterForm.classList.add('filter__form--close');
     filterHeading.addEventListener('click', onFilterHeadingClick);
+  }
+
+  if (filter) {
+    filter.addEventListener('click', onFilterLinkClick);
   }
 })();

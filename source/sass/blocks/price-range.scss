@@ -13,7 +13,7 @@
 
 .price-range__scale-fill {
   position: absolute;
-  width: 53%;
+  width: 55.5%;
   height: 1px;
   top: 0;
   left: 24%;
@@ -45,7 +45,6 @@
 .price-range__scale input {
   position: absolute;
   top: 20px;
-  left: -7px;
   font-family: $font;
   font-weight: 500;
   font-size: 14px;
@@ -67,6 +66,14 @@
   }
 }
 
+.price-range__scale input[name="min-value"] {
+  left: -7px;
+}
+
+.price-range__scale input[name="max-value"] {
+  left: -9px;
+}
+
 @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
   .price-range__scale {
     display: block;
@@ -77,7 +84,7 @@
   }
 
   .price-range__scale-fill {
-    width: 53%;
+    width: 55.5%;
     left: 20%;
   }
 
@@ -97,12 +104,15 @@
 
   .price-range__scale input {
     top: 25px;
-    left: -7px;
     font-size: 16px;
+  }
 
-    &:last-of-type {
-      left: -11px;
-    }
+  .price-range__scale input[name="min-value"] {
+    left: -8px;
+  }
+
+  .price-range__scale input[name="max-value"] {
+    left: -11px;
   }
 }
 
@@ -111,12 +121,12 @@
     position: absolute;
     display: block;
     width: 93%;
-    left: 0;
+    left: 3.7%;
     top: 75px;
   }
 
   .price-range__scale-fill {
-    width: 55%;
+    width: 58%;
     left: 20%;
   }
 
@@ -127,11 +137,11 @@
   }
 
   .price-range__scale label:first-of-type {
-    left: 20%;
+    left: 16%;
   }
 
   .price-range__scale label:last-of-type {
-    right: 17.6%;
+    right: 21.8%;
   }
 
   .price-range__scale input {
@@ -140,11 +150,11 @@
     font-size: 16px;
   }
 
-  .price-range__scale input:first-of-type {
-    left: 0;
+  .price-range__scale input[name="min-value"] {
+    left: -8px;
   }
 
-  .price-range__scale input:last-of-type {
-    right: 0;
+  .price-range__scale input[name="max-value"] {
+    left: -10px;
   }
 }

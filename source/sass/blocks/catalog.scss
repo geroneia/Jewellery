@@ -17,7 +17,7 @@
 
 .catalog__product-description {
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
   vertical-align: middle;
   align-items: center;
   flex-direction: column;
@@ -63,19 +63,26 @@
   justify-content: flex-start;
 }
 
-.catalog__pagination-item-link,
-.catalog__pagination-item-link:hover {
+.catalog__pagination-item-link {
   font-family: $font;
   font-weight: 500;
   font-size: 16px;
   line-height: 21px;
   color: $gray-font;
+
+  &:hover {
+    color: $black;
+  }
 }
 
 .catalog__pagination-item-link--active,
 .catalog__pagination-item-link-previous,
 .catalog__pagination-item-link-next {
   color: $black;
+
+  &:hover {
+    color: $gray-font;
+  }
 }
 
 .pagination-item-next {

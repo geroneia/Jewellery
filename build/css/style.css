@@ -781,9 +781,9 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   vertical-align: middle;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -834,18 +834,23 @@ img {
       -ms-flex-pack: start;
           justify-content: flex-start; }
 
-.catalog__pagination-item-link,
-.catalog__pagination-item-link:hover {
+.catalog__pagination-item-link {
   font-family: "poppins", "Arial", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 21px;
   color: #9b9997; }
+  .catalog__pagination-item-link:hover {
+    color: #1d1613; }
 
 .catalog__pagination-item-link--active,
 .catalog__pagination-item-link-previous,
 .catalog__pagination-item-link-next {
   color: #1d1613; }
+  .catalog__pagination-item-link--active:hover,
+  .catalog__pagination-item-link-previous:hover,
+  .catalog__pagination-item-link-next:hover {
+    color: #9b9997; }
 
 .pagination-item-next {
   margin-left: auto; }
@@ -2491,7 +2496,7 @@ img {
     left: 0;
     bottom: 40px;
     width: 100%;
-    padding-top: 42px;
+    padding-top: 40px;
     padding-left: 9%;
     padding-right: 9%; }
   .filter__apply-button {
@@ -2615,7 +2620,7 @@ img {
 
 .price-range__scale-fill {
   position: absolute;
-  width: 53%;
+  width: 55.5%;
   height: 1px;
   top: 0;
   left: 24%;
@@ -2642,7 +2647,6 @@ img {
 .price-range__scale input {
   position: absolute;
   top: 20px;
-  left: -7px;
   font-family: "poppins", "Arial", sans-serif;
   font-weight: 500;
   font-size: 14px;
@@ -2666,6 +2670,12 @@ img {
   .price-range__scale input:hover {
     background-color: #ffffff; }
 
+.price-range__scale input[name="min-value"] {
+  left: -7px; }
+
+.price-range__scale input[name="max-value"] {
+  left: -9px; }
+
 @media (min-width: 768px) and (max-width: 1023px) {
   .price-range__scale {
     display: block;
@@ -2674,7 +2684,7 @@ img {
     margin-bottom: 59px;
     margin-left: 10px; }
   .price-range__scale-fill {
-    width: 53%;
+    width: 55.5%;
     left: 20%; }
   .price-range__scale label {
     top: -8px;
@@ -2686,37 +2696,38 @@ img {
     right: 21%; }
   .price-range__scale input {
     top: 25px;
-    left: -7px;
     font-size: 16px; }
-    .price-range__scale input:last-of-type {
-      left: -11px; } }
+  .price-range__scale input[name="min-value"] {
+    left: -8px; }
+  .price-range__scale input[name="max-value"] {
+    left: -11px; } }
 
 @media (min-width: 320px) and (max-width: 767px) {
   .price-range__scale {
     position: absolute;
     display: block;
     width: 93%;
-    left: 0;
+    left: 3.7%;
     top: 75px; }
   .price-range__scale-fill {
-    width: 55%;
+    width: 58%;
     left: 20%; }
   .price-range__scale label {
     top: -8px;
     width: 18px;
     height: 18px; }
   .price-range__scale label:first-of-type {
-    left: 20%; }
+    left: 16%; }
   .price-range__scale label:last-of-type {
-    right: 17.6%; }
+    right: 21.8%; }
   .price-range__scale input {
     top: 25px;
     left: -5px;
     font-size: 16px; }
-  .price-range__scale input:first-of-type {
-    left: 0; }
-  .price-range__scale input:last-of-type {
-    right: 0; } }
+  .price-range__scale input[name="min-value"] {
+    left: -8px; }
+  .price-range__scale input[name="max-value"] {
+    left: -10px; } }
 
 .product-info {
   display: -webkit-box;
@@ -2750,7 +2761,6 @@ img {
   display: -ms-flexbox;
   display: flex;
   padding-left: 0;
-  margin-top: 0;
   margin-bottom: 0;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
@@ -3569,7 +3579,8 @@ img {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
-          flex-direction: column; }
+          flex-direction: column;
+  text-align: center; }
 
 .login-wrapper picture {
   display: -webkit-box;
@@ -3590,8 +3601,6 @@ img {
   cursor: pointer; }
 
 .login__heading {
-  margin-left: 39.76%;
-  margin-right: 39.76%;
   margin-bottom: 0;
   font-family: "Cormorant Garamond", "Georgia", serif;
   font-weight: 700;
