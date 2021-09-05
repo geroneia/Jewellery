@@ -1820,17 +1820,19 @@ img {
   font-size: 34px;
   line-height: 44px; }
 
-.faq__link,
-.faq__link:hover {
+.faq__link {
   position: relative;
   display: block;
   color: #1d1613;
   cursor: pointer; }
-  .faq__link:hover,
-  .faq__link:hover:hover {
+  .faq__link:hover {
     outline: none;
-    -webkit-box-shadow: 0 0 2px #a87b62;
-            box-shadow: 0 0 2px #a87b62; }
+    -webkit-box-shadow: 0 0 2px 2px #a87b62;
+            box-shadow: 0 0 2px 2px #a87b62; }
+  .faq__link:active {
+    outline: none;
+    -webkit-box-shadow: 0 0 2px 2px #a87b62;
+            box-shadow: 0 0 2px 2px #a87b62; }
 
 .faq__list {
   padding-left: 0;
@@ -1864,11 +1866,6 @@ img {
 
 .faq__link--open > .faq__question::after {
   background-image: url("../img/angle-top.svg"); }
-
-.faq__link:focus {
-  outline: none;
-  -webkit-box-shadow: 0 0 2px 2px #a87b62;
-          box-shadow: 0 0 2px 2px #a87b62; }
 
 .faq__answer {
   display: none; }
@@ -1948,7 +1945,7 @@ img {
     line-height: 140%; }
     .faq__question::after {
       width: 20px;
-      height: 10px;
+      height: 12px;
       top: calc(50% - 17px);
       right: -14.5%;
       background-size: cover; }

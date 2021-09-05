@@ -8,8 +8,7 @@
   line-height: 44px;
 }
 
-.faq__link,
-.faq__link:hover {
+.faq__link {
   position: relative;
   display: block;
   color: $black;
@@ -17,7 +16,12 @@
 
   &:hover {
     outline: none;
-    box-shadow: 0 0 2px $brown;
+    box-shadow: 0 0 2px 2px $brown;
+  }
+
+  &:active {
+    outline: none;
+    box-shadow: 0 0 2px 2px $brown;
   }
 }
 
@@ -63,13 +67,6 @@
 .faq__link--open > .faq__question {
   &::after {
     background-image: url("../img/angle-top.svg");
-  }
-}
-
-.faq__link {
-  &:focus {
-    outline: none;
-    box-shadow: 0 0 2px 2px $brown;
   }
 }
 
@@ -182,7 +179,7 @@
 
     &::after {
       width: 20px;
-      height: 10px;
+      height: 12px;
       top: calc(50% - 17px);
       right: -14.5%;
       background-size: cover;
